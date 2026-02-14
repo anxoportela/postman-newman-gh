@@ -5,12 +5,17 @@ RUN npm install -g newman newman-reporter-htmlextra
 
 WORKDIR /app
 
-# Copy files
-COPY rick-and-morty-api.json rick-and-morty-env.json ./
-COPY docs ./docs
+# Copy all project files
+COPY . .
+
+# Install deps
+RUN npm install --legacy-peer-deps
+
+# Build Docusaurus docs
+RUN npm run docs:build
 
 # Create reports dir
 RUN mkdir -p reports
 
-# Run tests
-CMD ["newman", "run", "rick-and-morty-api.json", "-e", "rick-and-morty-env.json", "--reporters", "cli,htmlextra", "--reporter-htmlextra-export", "reports/newman-report.html"]
+# Default: run tests
+CMD ["npm", "test"]

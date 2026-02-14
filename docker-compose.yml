@@ -1,26 +1,24 @@
 services:
-  newman:
+  test:
     build: .
     image: rick-morty-newman:latest
     volumes:
       - ./reports:/app/reports
-    environment:
-      - NODE_ENV=test
-    profiles:
-      - test
 
-  newman-report:
+  test-report:
     build: .
     image: rick-morty-newman:latest
-    command: >
-      newman run rick-and-morty-api.json 
-      -e rick-and-morty-env.json 
-      --reporters cli,htmlextra,json 
-      --reporter-htmlextra-export reports/newman-report.html 
-      --reporter-json-export reports/newman-report.json
+    command: npm test
     volumes:
       - ./reports:/app/reports
-    environment:
-      - NODE_ENV=test
     profiles:
       - report
+
+  docs-serve:
+    build: .
+    image: rick-morty-newman:latest
+    command: npm run docs:serve
+    ports:
+      - "3000:3000"
+    profiles:
+      - docs
