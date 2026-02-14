@@ -1,4 +1,4 @@
-name: Newman API Tests
+name: Newman API Tests & Docs
 
 on:
   push:
@@ -41,33 +41,52 @@ jobs:
           name: newman-report
           path: reports/
           retention-days: 30
+
+  build-docs:
+    name: Build Docusaurus Docs
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
       
-      - name: Upload HTML report for Pages
-        if: github.ref == 'refs/heads/main'
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install Docusaurus dependencies
+        run: cd docs && npm install
+      
+      - name: Build Docusaurus
+        run: cd docs && npm run build
+      
+      - name: Upload docs build
         uses: actions/upload-artifact@v4
         with:
-          name: html-report
-          path: reports/newman-report.html
+          name: docs-build
+          path: docs/build/
           retention-days: 1
 
   deploy-gh-pages:
     name: Deploy to GitHub Pages
-    needs: newman-tests
+    needs: [newman-tests, build-docs]
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pages: write
+      id-token: write
     
     steps:
-      - name: Download HTML report
+      - name: Download docs build
         uses: actions/download-artifact@v4
         with:
-          name: html-report
-          path: html-report
+          name: docs-build
+          path: docs-build
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
       
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./html-report
-          keep_files: true
+        uses: actions/deploy-pages@v4
