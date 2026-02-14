@@ -1,7 +1,7 @@
 FROM node:20-alpine
 
 # Install Newman and reporters
-RUN npm install -g newman newman-reporter-html
+RUN npm install -g newman newman-reporter-htmlextra
 
 # Set working directory
 WORKDIR /app
@@ -14,4 +14,4 @@ COPY rick-and-morty-env.json .
 RUN mkdir -p reports
 
 # Default command runs tests
-CMD ["newman", "run", "rick-and-morty-api.json", "-e", "rick-and-morty-env.json", "--reporters", "cli,html", "--reporter-html-export", "reports/newman-report.html"]
+CMD ["newman", "run", "rick-and-morty-api.json", "-e", "rick-and-morty-env.json", "--reporters", "cli,htmlextra", "--reporter-htmlextra-export", "reports/newman-report.html"]
