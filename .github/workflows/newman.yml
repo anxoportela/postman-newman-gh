@@ -14,8 +14,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-      - run: npm install --legacy-peer-deps
+      - run: npm install --legacy-peer-deps --no-package-lock
       - run: mkdir -p reports && npm test
       - uses: actions/upload-artifact@v4
         if: always()
@@ -32,12 +31,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
       - uses: actions/download-artifact@v4
         with:
           name: test-report
           path: reports/
-      - run: npm install --legacy-peer-deps
+      - run: npm install --legacy-peer-deps --no-package-lock
       - run: npm run docs:build
       - name: Copy Newman report to docs
         run: |
