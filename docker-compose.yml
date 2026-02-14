@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   newman:
     build: .
@@ -8,8 +6,6 @@ services:
       - ./reports:/app/reports
     environment:
       - NODE_ENV=test
-    networks:
-      - api-tests
 
   newman-with-report:
     build: .
@@ -24,9 +20,3 @@ services:
       - ./reports:/app/reports
     environment:
       - NODE_ENV=test
-    networks:
-      - api-tests
-
-networks:
-  api-tests:
-    driver: bridge
