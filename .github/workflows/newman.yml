@@ -22,17 +22,15 @@ jobs:
           node-version: '20'
           cache: 'npm'
       
-      - name: Install Newman and HTML reporter
-        run: |
-          npm install -g newman
-          npm install -g newman-reporter-html
+      - name: Install dependencies
+        run: npm install
       
       - name: Run Newman tests
         run: |
-          newman run rick-and-morty-api.json \
+          mkdir -p reports
+          ./node_modules/.bin/newman run rick-and-morty-api.json \
             -e rick-and-morty-env.json \
             --reporters cli,html \
-            --reporter-html-template node_modules/newman-reporter-html/templates/html-template.hbs \
             --reporter-html-export reports/newman-report.html \
             --reporter-json-export reports/newman-report.json
       

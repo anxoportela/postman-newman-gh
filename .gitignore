@@ -1,9 +1,9 @@
 # Dependencies
 node_modules/
 package-lock.json
+package.json.bak
 
 # Newman
-newman/
 reports/
 *.log
 

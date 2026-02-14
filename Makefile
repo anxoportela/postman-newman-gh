@@ -5,27 +5,26 @@ help:
 	@echo "Rick and Morty API Test Suite - Make Commands"
 	@echo ""
 	@echo "Available commands:"
-	@echo "  make install          - Install Newman and HTML reporter locally"
+	@echo "  make install          - Install dependencies locally (npm install)"
 	@echo "  make test            - Run tests with Newman (CLI output)"
-	@echo "  make test-verbose    - Run tests with verbose output"
-	@echo "  make docker-build    - Build Docker image"
-	@echo "  make docker-test     - Run tests using Docker"
+	@echo "  make test-verbose   - Run tests with verbose output"
+	@echo "  make docker-build   - Build Docker image"
+	@echo "  make docker-test    - Run tests using Docker"
 	@echo "  make docker-test-report - Run tests with Docker and generate HTML report"
-	@echo "  make reports         - Open HTML report in browser"
-	@echo "  make clean           - Clean up reports and temporary files"
+	@echo "  make reports        - Open HTML report in browser"
+	@echo "  make clean          - Clean up reports and temporary files"
 
-# Install dependencies
+# Install dependencies locally
 install:
-	@echo "Installing Newman and HTML reporter..."
-	npm install -g newman
-	npm install -g newman-reporter-html
+	@echo "Installing dependencies locally..."
+	npm install
 	@echo "Installation complete!"
 
 # Run tests with Newman
 test:
 	@echo "Running Newman tests..."
 	mkdir -p reports
-	newman run rick-and-morty-api.json \
+	./node_modules/.bin/newman run rick-and-morty-api.json \
 		-e rick-and-morty-env.json \
 		--reporters cli,html \
 		--reporter-html-export reports/newman-report.html
@@ -34,7 +33,7 @@ test:
 test-verbose:
 	@echo "Running Newman tests (verbose)..."
 	mkdir -p reports
-	newman run rick-and-morty-api.json \
+	./node_modules/.bin/newman run rick-and-morty-api.json \
 		-e rick-and-morty-env.json \
 		--verbose \
 		--reporters cli,html,json \

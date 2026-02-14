@@ -15,6 +15,7 @@ Comprehensive API test suite for the [Rick and Morty API](https://rickandmortyap
 - **Multiple Execution Methods**: Local (npm), Docker, or GitHub Actions
 - **Beautiful HTML Reports**: Visual test results with Newman HTML reporter
 - **GitHub Pages Integration**: Automatic deployment of test reports
+- **Local Installation**: Dependencies installed locally in the project (no global packages)
 
 ## 🗂️ Project Structure
 
@@ -28,6 +29,7 @@ postman-newman-gh/
 ├── docker-compose.yml          # Docker Compose services
 ├── Makefile                   # Make commands for easy execution
 ├── README.md                  # This file
+├── package.json               # NPM dependencies
 ├── rick-and-morty-api.json   # Postman collection
 └── rick-and-morty-env.json   # Environment configuration
 ```
@@ -78,11 +80,15 @@ postman-newman-gh/
 
 1. Install dependencies:
    ```bash
+   npm install
+   # or
    make install
    ```
 
 2. Run tests:
    ```bash
+   npm test
+   # or
    make test
    ```
 
@@ -113,7 +119,7 @@ postman-newman-gh/
 1. Push to GitHub:
    ```bash
    git add .
-   git commit -m "Initial commit"
+   git commit -m "Update to use local npm packages"
    git remote add origin https://github.com/YOUR_USERNAME/postman-newman-gh.git
    git push -u origin main
    ```
@@ -132,7 +138,7 @@ postman-newman-gh/
 
 | Command | Description |
 |---------|-------------|
-| `make install` | Install Newman and HTML reporter locally |
+| `make install` | Install dependencies locally (npm install) |
 | `make test` | Run tests with Newman (CLI output) |
 | `make test-verbose` | Run tests with verbose output |
 | `make docker-build` | Build Docker image |
@@ -141,6 +147,13 @@ postman-newman-gh/
 | `make reports` | Open HTML report in browser |
 | `make clean` | Clean up reports and temporary files |
 | `make help` | Show help message |
+
+## 📦 NPM Scripts
+
+| Script | Description |
+|--------|-------------|
+| `npm test` | Run tests with Newman |
+| `npm run test:verbose` | Run tests with verbose output |
 
 ## 🔧 Configuration
 
@@ -204,10 +217,10 @@ Iterations:      25  |  ✓ Passed: 25 |  ✗ Failed: 0
 
 ```bash
 # Run specific collection
-newman run rick-and-morty-api.json -e rick-and-morty-env.json
+./node_modules/.bin/newman run rick-and-morty-api.json -e rick-and-morty-env.json
 
 # Run specific folder
-newman run rick-and-morty-api.json -e rick-and-morty-env.json --folder "Characters"
+./node_modules/.bin/newman run rick-and-morty-api.json -e rick-and-morty-env.json --folder "Characters"
 ```
 
 ## 📝 License
