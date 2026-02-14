@@ -1,15 +1,17 @@
 services:
   newman:
     build: .
-    container_name: rick-morty-api-tests
+    image: rick-morty-newman:latest
     volumes:
       - ./reports:/app/reports
     environment:
       - NODE_ENV=test
+    profiles:
+      - test
 
-  newman-with-report:
+  newman-report:
     build: .
-    container_name: rick-morty-api-tests-report
+    image: rick-morty-newman:latest
     command: >
       newman run rick-and-morty-api.json 
       -e rick-and-morty-env.json 
@@ -20,3 +22,5 @@ services:
       - ./reports:/app/reports
     environment:
       - NODE_ENV=test
+    profiles:
+      - report

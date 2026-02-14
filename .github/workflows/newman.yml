@@ -1,89 +1,56 @@
-name: Newman API Tests & Docs
+name: Tests & Docs
 
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
-  workflow_dispatch:
 
 jobs:
-  newman-tests:
-    name: Run API Tests
+  test:
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-      
-      - name: Install dependencies
-        run: npm install
-      
-      - name: Run Newman tests
-        run: |
-          mkdir -p reports
-          npm run test
-      
-      - name: Upload test results
-        uses: actions/upload-artifact@v4
+      - run: npm install --legacy-peer-deps
+      - run: mkdir -p reports && npm test
+      - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: newman-report
+          name: test-report
           path: reports/
-          retention-days: 30
+          retention-days: 7
 
-  build-docs:
-    name: Build Docusaurus Docs
+  docs:
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-      
-      - name: Install dependencies
-        run: npm install
-      
-      - name: Build Docusaurus
-        run: npm run docs:build
-      
-      - name: Upload docs build
-        uses: actions/upload-artifact@v4
+      - run: npm install --legacy-peer-deps
+      - run: npm run docs:build
+      - uses: actions/upload-artifact@v4
         with:
-          name: docs-build
+          name: docs
           path: docs/build/
           retention-days: 1
 
-  deploy-gh-pages:
-    name: Deploy to GitHub Pages
-    needs: [newman-tests, build-docs]
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+  deploy:
+    needs: [test, docs]
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
-      contents: write
       pages: write
       id-token: write
-    
     steps:
-      - name: Download docs build
-        uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v4
         with:
-          name: docs-build
+          name: docs
           path: docs-build
-      
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+      - uses: actions/configure-pages@v4
+      - uses: actions/deploy-pages@v4
