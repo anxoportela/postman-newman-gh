@@ -1,0 +1,22 @@
+{
+  "id": "characters",
+  "title": "Characters API",
+  "description": "The Characters API provides access to all characters from the Rick and Morty universe.",
+  "source": "@site/docs/characters.md",
+  "sourceDirName": ".",
+  "slug": "/characters",
+  "permalink": "/postman-newman-gh/docs/characters",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "defaultSidebar",
+  "next": {
+    "title": "Locations API",
+    "permalink": "/postman-newman-gh/docs/locations"
+  }
+}
