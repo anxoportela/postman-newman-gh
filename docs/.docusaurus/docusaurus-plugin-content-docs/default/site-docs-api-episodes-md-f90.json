@@ -1,0 +1,26 @@
+{
+  "id": "api/episodes",
+  "title": "Episodes API",
+  "description": "The Episodes API provides access to all episodes from the Rick and Morty series.",
+  "source": "@site/docs/api/episodes.md",
+  "sourceDirName": "api",
+  "slug": "/api/episodes",
+  "permalink": "/postman-newman-gh/docs/api/episodes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "Locations API",
+    "permalink": "/postman-newman-gh/docs/api/locations"
+  },
+  "next": {
+    "title": "Setup Guide",
+    "permalink": "/postman-newman-gh/docs/setup"
+  }
+}

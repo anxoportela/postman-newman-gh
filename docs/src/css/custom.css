@@ -1,0 +1,16 @@
+/* Custom CSS for Rick and Morty API Test Suite */
+
+:root {
+  --ifm-color-primary: #00b0ff;
+  --ifm-color-primary-dark: #0099cc;
+  --ifm-color-primary-darker: #008fb3;
+  --ifm-color-primary-darkest: #007399;
+  --ifm-color-primary-light: #33beff;
+  --ifm-color-primary-lighter: #4dc6ff;
+  --ifm-color-primary-lightest: #80d4ff;
+  --ifm-code-font-size: 95%;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #4dc6ff;
+}
