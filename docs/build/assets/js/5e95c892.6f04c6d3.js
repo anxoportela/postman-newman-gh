@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkrick_and_morty_api_docs=self.webpackChunkrick_and_morty_api_docs||[]).push([[647],{7121(e,r,s){s.r(r),s.d(r,{default:()=>i});s(6540);var a=s(4164),c=s(7559),d=s(5500),n=s(2831),t=s(1656),u=s(4848);function i(e){return(0,u.jsx)(d.e3,{className:(0,a.A)(c.G.wrapper.docsPages),children:(0,u.jsx)(t.A,{children:(0,n.v)(e.route.routes)})})}}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkrick_and_morty_api_docs=self.webpackChunkrick_and_morty_api_docs||[]).push([[742],{7093(s){s.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"default"}')}}]);
