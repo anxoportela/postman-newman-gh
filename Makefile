@@ -5,14 +5,14 @@ help:
 	@echo "Rick and Morty API Test Suite - Make Commands"
 	@echo ""
 	@echo "Available commands:"
-	@echo "  make install          - Install dependencies locally (npm install)"
-	@echo "  make test            - Run tests with Newman (CLI output)"
-	@echo "  make test-verbose   - Run tests with verbose output"
-	@echo "  make docker-build   - Build Docker image"
-	@echo "  make docker-test    - Run tests using Docker"
+	@echo "  make install            - Install dependencies locally (npm install)"
+	@echo "  make test              - Run tests with Newman (CLI output)"
+	@echo "  make test-verbose      - Run tests with verbose output"
+	@echo "  make docker-build      - Build Docker image"
+	@echo "  make docker-test       - Run tests using Docker"
 	@echo "  make docker-test-report - Run tests with Docker and generate HTML report"
-	@echo "  make reports        - Open HTML report in browser"
-	@echo "  make clean          - Clean up reports and temporary files"
+	@echo "  make reports           - Open HTML report in browser"
+	@echo "  make clean             - Clean up reports and temporary files"
 
 # Install dependencies locally
 install:
@@ -64,9 +64,11 @@ reports:
 		echo "No report found. Run 'make test' or 'make docker-test-report' first."; \
 	fi
 
-# Clean up
+# Clean up (use sudo for docker-created files)
 clean:
 	@echo "Cleaning up..."
-	rm -rf reports/
-	rm -f newman-report.json
+	@if [ -d reports ]; then \
+		sudo rm -rf reports/* 2>/dev/null || rm -rf reports/*; \
+	fi
+	@rm -f newman-report.json 2>/dev/null || true
 	@echo "Cleanup complete!"
