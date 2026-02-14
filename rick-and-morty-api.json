@@ -1,15 +1,12 @@
 {
 	"info": {
 		"_postman_id": "rick-and-morty-api-tests",
-		"name": "Rick and Morty API",
-		"description": "Comprehensive test suite for the Rick and Morty API with extensive test cases",
+		"name": "Rick and Morty API - Comprehensive Tests",
+		"description": "Advanced API test suite demonstrating Postman/Newman features",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"variable": [
-		{
-			"key": "baseUrl",
-			"value": "https://rickandmortyapi.com/api"
-		}
+		{ "key": "baseUrl", "value": "https://rickandmortyapi.com/api" }
 	],
 	"event": [
 		{
@@ -17,390 +14,516 @@
 			"script": {
 				"type": "text/javascript",
 				"exec": [
-					"pm.test('Response time is acceptable', function() {",
-					"    pm.expect(pm.response.responseTime).to.be.below(5000);",
+					"// Global test - response time",
+					"pm.test('Global: Response time < 3s', function() {",
+					"    pm.expect(pm.response.responseTime).to.be.below(3000);",
+					"});",
+					"",
+					"// Global test - status code (skip for expected errors)",
+					"pm.test('Global: Status code is success', function() {",
+					"    if (pm.response.code !== 404) {",
+					"        pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+					"    }",
 					"});"
+				]
+			}
+		},
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"// Set timestamp for tracking",
+					"pm.environment.set('requestTimestamp', Date.now());"
 				]
 			}
 		}
 	],
 	"item": [
 		{
-			"name": "Characters",
+			"name": "Characters - Advanced Tests",
 			"item": [
 				{
-					"name": "List All Characters",
+					"name": "1. List All Characters with Pagination",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test('Status code is 200', function() { pm.response.to.have.status(200); });",
-									"pm.test('Response has info object', function() {",
-									"    const jsonData = pm.response.json();",
-									"    pm.expect(jsonData).to.have.property('info');",
+									"pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+									"",
+									"// Validate response structure",
+									"pm.test('Response has info with pagination', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json.info).to.have.property('count');",
+									"    pm.expect(json.info).to.have.property('pages');",
+									"    pm.expect(json.info.pages).to.be.above(0);",
 									"});",
-									"pm.test('Response has results array', function() {",
-									"    const jsonData = pm.response.json();",
-									"    pm.expect(jsonData.results).to.be.an('array');",
+									"",
+									"// Validate results array",
+									"pm.test('Results is an array with items', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json.results).to.be.an('array');",
+									"    pm.expect(json.results.length).to.be.greaterThan(0);",
 									"});",
-									"pm.test('First character has required properties', function() {",
-									"    const jsonData = pm.response.json();",
-									"    const char = jsonData.results[0];",
-									"    pm.expect(char).to.have.property('id'); pm.expect(char).to.have.property('name'); pm.expect(char).to.have.property('status'); pm.expect(char).to.have.property('species');",
+									"",
+									"// Save data for chained requests",
+									"pm.test('Save first character ID for next test', () => {",
+									"    const json = pm.response.json();",
+									"    pm.environment.set('savedCharacterId', json.results[0].id);",
+									"    pm.environment.set('savedCharacterName', json.results[0].name);",
+									"    pm.expect(json.results[0].id).to.be.a('number');",
+									"});",
+									"",
+									"// Validate character structure with schema-like check",
+									"pm.test('Character has all required fields', () => {",
+									"    const json = pm.response.json();",
+									"    const char = json.results[0];",
+									"    pm.expect(char.id).to.be.a('number');",
+									"    pm.expect(char.name).to.be.a('string');",
+									"    pm.expect(char.status).to.be.oneOf(['Alive', 'Dead', 'unknown']);",
+									"    pm.expect(char.species).to.be.a('string');",
+									"    pm.expect(char.gender).to.be.oneOf(['Male', 'Female', 'Genderless', 'unknown']);",
+									"    pm.expect(char.origin).to.be.an('object');",
+									"    pm.expect(char.location).to.be.an('object');",
+									"    pm.expect(char.image).to.include('http');",
+									"});",
+									"",
+									"// Response contains headers check",
+									"pm.test('Has Content-Type header', () => {",
+									"    pm.response.to.have.header('Content-Type');",
 									"});"
-								],
-								"type": "text/javascript"
+								]
 							}
 						}
 					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": { "raw": "{{baseUrl}}/character", "host": ["{{baseUrl}}"], "path": ["character"] }
-					},
+					"request": { "method": "GET", "url": { "raw": "{{baseUrl}}/character", "host": ["{{baseUrl}}"], "path": ["character"] } },
 					"response": []
 				},
 				{
-					"name": "Get Character by ID",
+					"name": "2. Get Character by ID (Using Variable)",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test('Status code is 200', function() { pm.response.to.have.status(200); });",
-									"pm.test('Character has all properties', function() {",
-									"    const jsonData = pm.response.json();",
-									"    pm.expect(jsonData.id).to.be.a('number'); pm.expect(jsonData.name).to.be.a('string');",
+									"pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+									"",
+									"// Use saved variable",
+									"pm.test('Character ID matches saved value', () => {",
+									"    const json = pm.response.json();",
+									"    const savedId = pm.environment.get('savedCharacterId');",
+									"    pm.expect(json.id).to.equal(savedId);",
+									"});",
+									"",
+									"// Validate name from saved variable",
+									"pm.test('Character name matches saved value', () => {",
+									"    const json = pm.response.json();",
+									"    const savedName = pm.environment.get('savedCharacterName');",
+									"    pm.expect(json.name).to.equal(savedName);",
+									"});",
+									"",
+									"// Type validation",
+									"pm.test('Character fields have correct types', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(typeof json.id).to.equal('number');",
+									"    pm.expect(typeof json.name).to.equal('string');",
+									"    pm.expect(typeof json.status).to.equal('string');",
+									"    pm.expect(typeof json.created).to.equal('string');",
+									"});",
+									"",
+									"// URL validation",
+									"pm.test('Character URLs are valid', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json.url).to.include('rickandmortyapi');",
+									"    pm.expect(json.image).to.include('http');",
 									"});"
-								],
-								"type": "text/javascript"
+								]
 							}
 						}
 					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": { "raw": "{{baseUrl}}/character/1", "host": ["{{baseUrl}}"], "path": ["character", "1"] }
-					},
+					"request": { "method": "GET", "url": { "raw": "{{baseUrl}}/character/{{savedCharacterId}}", "host": ["{{baseUrl}}"], "path": ["character", "{{savedCharacterId}}"] } },
 					"response": []
 				},
 				{
-					"name": "Get Character by Invalid ID",
+					"name": "3. Filter Characters - Multiple Filters",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test('Status code is 404', function() { pm.response.to.have.status(404); });",
-									"pm.test('Error response', function() {",
-									"    const jsonData = pm.response.json();",
-									"    pm.expect(jsonData).to.have.property('error');",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": { "raw": "{{baseUrl}}/character/999999999", "host": ["{{baseUrl}}"], "path": ["character", "999999999"] }
-					},
-					"response": []
-				},
-				{
-					"name": "Filter Characters by Name",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test('Status code is 200', function() { pm.response.to.have.status(200); });",
-									"pm.test('Results contain Rick', function() {",
-									"    const jsonData = pm.response.json();",
-									"    const found = jsonData.results.some(c => c.name.toLowerCase().includes('rick'));",
+									"pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+									"",
+									"// Filter by name - partial match",
+									"pm.test('Results contain Rick', () => {",
+									"    const json = pm.response.json();",
+									"    const found = json.results.some(c => c.name.toLowerCase().includes('rick'));",
 									"    pm.expect(found).to.be.true;",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": { "raw": "{{baseUrl}}/character?name=Rick", "host": ["{{baseUrl}}"], "path": ["character"], "query": [{"key": "name", "value": "Rick"}] }
-					},
-					"response": []
-				},
-				{
-					"name": "Filter Characters by Status",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test('Status code is 200', function() { pm.response.to.have.status(200); });",
-									"pm.test('All characters are Alive', function() {",
-									"    const jsonData = pm.response.json();",
-									"    const allAlive = jsonData.results.every(c => c.status === 'Alive');",
+									"});",
+									"",
+									"// Filter validation - all characters alive",
+									"pm.test('All characters are Alive', () => {",
+									"    const json = pm.response.json();",
+									"    const allAlive = json.results.every(c => c.status === 'Alive');",
 									"    pm.expect(allAlive).to.be.true;",
+									"});",
+									"",
+									"// Count validation",
+									"pm.test('Results count matches info', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json.results.length).to.be.at.most(20);",
+									"});",
+									"",
+									"// Multiple assertions in one test",
+									"pm.test('All characters have valid properties', () => {",
+									"    const json = pm.response.json();",
+									"    json.results.forEach(char => {",
+									"        pm.expect(char.id).to.be.a('number');",
+									"        pm.expect(char.name).to.be.a('string');",
+									"        pm.expect(['Alive', 'Dead', 'unknown']).to.include(char.status);",
+									"    });",
 									"});"
-								],
-								"type": "text/javascript"
+								]
 							}
 						}
 					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": { "raw": "{{baseUrl}}/character?status=alive", "host": ["{{baseUrl}}"], "path": ["character"], "query": [{"key": "status", "value": "alive"}] }
-					},
+					"request": { "method": "GET", "url": { "raw": "{{baseUrl}}/character?name=Rick&status=alive", "host": ["{{baseUrl}}"], "path": ["character"], "query": [{"key": "name", "value": "Rick"}, {"key": "status", "value": "alive"}] } },
 					"response": []
 				},
 				{
-					"name": "Get Characters Page 2",
+					"name": "4. Pagination Test",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test('Status code is 200', function() { pm.response.to.have.status(200); });",
-									"pm.test('Has next page', function() {",
-									"    const jsonData = pm.response.json();",
-									"    pm.expect(jsonData.info.next).to.not.be.null;",
+									"pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+									"",
+									"// First page has next",
+									"pm.test('Page 1 has next page', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json.info.next).to.not.equal(null);",
+									"});",
+									"",
+									"// Previous is null for first page",
+									"pm.test('Page 1 has no previous', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json.info.prev).to.equal(null);",
+									"});",
+									"",
+									"// Different characters on different pages",
+									"pm.test('Results are unique', () => {",
+									"    const json = pm.response.json();",
+									"    const ids = json.results.map(c => c.id);",
+									"    const uniqueIds = [...new Set(ids)];",
+									"    pm.expect(ids.length).to.equal(uniqueIds.length);",
 									"});"
-								],
-								"type": "text/javascript"
+								]
 							}
 						}
 					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": { "raw": "{{baseUrl}}/character?page=2", "host": ["{{baseUrl}}"], "path": ["character"], "query": [{"key": "page", "value": "2"}] }
-					},
+					"request": { "method": "GET", "url": { "raw": "{{baseUrl}}/character?page=1", "host": ["{{baseUrl}}"], "path": ["character"], "query": [{"key": "page", "value": "1"}] } },
+					"response": []
+				},
+				{
+					"name": "5. Get Multiple Characters",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+									"",
+									"// Returns array",
+									"pm.test('Response is an array', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.be.an('array');",
+									"});",
+									"",
+									"// Correct count",
+									"pm.test('Returns 3 characters', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json.length).to.equal(3);",
+									"});",
+									"",
+									"// Order preserved",
+									"pm.test('Characters in correct order', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json[0].id).to.equal(1);",
+									"    pm.expect(json[1].id).to.equal(2);",
+									"    pm.expect(json[2].id).to.equal(3);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": { "method": "GET", "url": { "raw": "{{baseUrl}}/character/1,2,3", "host": ["{{baseUrl}}"], "path": ["character", "1,2,3"] } },
 					"response": []
 				}
 			]
 		},
 		{
-			"name": "Locations",
+			"name": "Locations - Advanced Tests",
 			"item": [
 				{
-					"name": "List All Locations",
+					"name": "1. List All Locations",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test('Status code is 200', function() { pm.response.to.have.status(200); });",
-									"pm.test('Response has results', function() {",
-									"    const jsonData = pm.response.json();",
-									"    pm.expect(jsonData.results).to.be.an('array');",
+									"pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+									"",
+									"// Structure validation",
+									"pm.test('Has info and results', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.have.property('info');",
+									"    pm.expect(json).to.have.property('results');",
+									"});",
+									"",
+									"// Location properties",
+									"pm.test('Location has required properties', () => {",
+									"    const json = pm.response.json();",
+									"    const loc = json.results[0];",
+									"    pm.expect(loc).to.have.property('id');",
+									"    pm.expect(loc).to.have.property('name');",
+									"    pm.expect(loc).to.have.property('type');",
+									"    pm.expect(loc).to.have.property('dimension');",
+									"    pm.expect(loc).to.have.property('residents');",
+									"    pm.expect(loc.residents).to.be.an('array');",
+									"});",
+									"",
+									"// Save location for later",
+									"pm.test('Save first location', () => {",
+									"    const json = pm.response.json();",
+									"    pm.environment.set('firstLocationId', json.results[0].id);",
+									"    pm.environment.set('firstLocationName', json.results[0].name);",
 									"});"
-								],
-								"type": "text/javascript"
+								]
 							}
 						}
 					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": { "raw": "{{baseUrl}}/location", "host": ["{{baseUrl}}"], "path": ["location"] }
-					},
+					"request": { "method": "GET", "url": { "raw": "{{baseUrl}}/location", "host": ["{{baseUrl}}"], "path": ["location"] } },
 					"response": []
 				},
 				{
-					"name": "Get Location by ID",
+					"name": "2. Get Location by ID",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test('Status code is 200', function() { pm.response.to.have.status(200); });",
-									"pm.test('Location has properties', function() {",
-									"    const jsonData = pm.response.json();",
-									"    pm.expect(jsonData.id).to.be.a('number'); pm.expect(jsonData.name).to.be.a('string');",
+									"pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+									"",
+									"// Match saved ID",
+									"pm.test('Location ID matches', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json.id).to.equal(pm.environment.get('firstLocationId'));",
+									"});",
+									"",
+									"// Dimension validation",
+									"pm.test('Has valid dimension', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json.dimension).to.be.a('string');",
+									"});",
+									"",
+									"// Type validation",
+									"pm.test('Has valid type', () => {",
+									"    const json = pm.response.json();",
+									"    const validTypes = ['Planet', 'Cluster', 'Space station', 'Microverse', 'TV', 'Resort', 'Fantasy town', 'Game', 'Celestial', 'Unknown', 'Dimension', 'Multiverse'];",
+									"    pm.expect(validTypes).to.include(json.type);",
 									"});"
-								],
-								"type": "text/javascript"
+								]
 							}
 						}
 					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": { "raw": "{{baseUrl}}/location/1", "host": ["{{baseUrl}}"], "path": ["location", "1"] }
-					},
+					"request": { "method": "GET", "url": { "raw": "{{baseUrl}}/location/{{firstLocationId}}", "host": ["{{baseUrl}}"], "path": ["location", "{{firstLocationId}}"] } },
 					"response": []
 				},
 				{
-					"name": "Get Location by Invalid ID",
+					"name": "3. Filter Locations",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test('Status code is 404', function() { pm.response.to.have.status(404); });"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": { "raw": "{{baseUrl}}/location/999999999", "host": ["{{baseUrl}}"], "path": ["location", "999999999"] }
-					},
-					"response": []
-				},
-				{
-					"name": "Filter Locations by Name",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test('Status code is 200', function() { pm.response.to.have.status(200); });",
-									"pm.test('Results contain Earth', function() {",
-									"    const jsonData = pm.response.json();",
-									"    const found = jsonData.results.some(l => l.name.toLowerCase().includes('earth'));",
+									"pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+									"",
+									"// Filter by name",
+									"pm.test('Results contain Earth', () => {",
+									"    const json = pm.response.json();",
+									"    const found = json.results.some(l => l.name.toLowerCase().includes('earth'));",
 									"    pm.expect(found).to.be.true;",
+									"});",
+									"",
+									"// Filter by type",
+									"pm.test('All are planets', () => {",
+									"    const json = pm.response.json();",
+									"    const allPlanets = json.results.every(l => l.type === 'Planet');",
+									"    pm.expect(allPlanets).to.be.true;",
+									"});",
+									"",
+									"// Filter by dimension",
+									"pm.test('All from C-137 dimension', () => {",
+									"    const json = pm.response.json();",
+									"    const allC137 = json.results.every(l => l.dimension && l.dimension.includes('C-137'));",
+									"    pm.expect(allC137).to.be.true;",
 									"});"
-								],
-								"type": "text/javascript"
+								]
 							}
 						}
 					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": { "raw": "{{baseUrl}}/location?name=Earth", "host": ["{{baseUrl}}"], "path": ["location"], "query": [{"key": "name", "value": "Earth"}] }
-					},
+					"request": { "method": "GET", "url": { "raw": "{{baseUrl}}/location?type=planet&dimension=C-137", "host": ["{{baseUrl}}"], "path": ["location"], "query": [{"key": "type", "value": "planet"}, {"key": "dimension", "value": "C-137"}] } },
 					"response": []
 				}
 			]
 		},
 		{
-			"name": "Episodes",
+			"name": "Episodes - Advanced Tests",
 			"item": [
 				{
-					"name": "List All Episodes",
+					"name": "1. List All Episodes",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test('Status code is 200', function() { pm.response.to.have.status(200); });",
-									"pm.test('Response has results', function() {",
-									"    const jsonData = pm.response.json();",
-									"    pm.expect(jsonData.results).to.be.an('array');",
+									"pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+									"",
+									"// Episode structure",
+									"pm.test('Episode has required fields', () => {",
+									"    const json = pm.response.json();",
+									"    const ep = json.results[0];",
+									"    pm.expect(ep).to.have.property('id');",
+									"    pm.expect(ep).to.have.property('name');",
+									"    pm.expect(ep).to.have.property('air_date');",
+									"    pm.expect(ep).to.have.property('episode');",
+									"    pm.expect(ep).to.have.property('characters');",
+									"    pm.expect(ep).to.have.property('url');",
+									"});",
+									"",
+									"// Episode code format SxxExx",
+									"pm.test('Episode code format SxxExx', () => {",
+									"    const json = pm.response.json();",
+									"    const code = json.results[0].episode;",
+									"    pm.expect(code).to.match(/^S\\d{2}E\\d{2}$/);",
+									"});",
+									"",
+									"// Characters is array",
+									"pm.test('Characters is an array', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json.results[0].characters).to.be.an('array');",
+									"});",
+									"",
+									"// Save episode for later",
+									"pm.test('Save first episode', () => {",
+									"    const json = pm.response.json();",
+									"    pm.environment.set('firstEpisodeId', json.results[0].id);",
+									"    pm.environment.set('firstEpisodeCode', json.results[0].episode);",
 									"});"
-								],
-								"type": "text/javascript"
+								]
 							}
 						}
 					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": { "raw": "{{baseUrl}}/episode", "host": ["{{baseUrl}}"], "path": ["episode"] }
-					},
+					"request": { "method": "GET", "url": { "raw": "{{baseUrl}}/episode", "host": ["{{baseUrl}}"], "path": ["episode"] } },
 					"response": []
 				},
 				{
-					"name": "Get Episode by ID",
+					"name": "2. Get Episode by ID",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test('Status code is 200', function() { pm.response.to.have.status(200); });",
-									"pm.test('Episode has properties', function() {",
-									"    const jsonData = pm.response.json();",
-									"    pm.expect(jsonData.id).to.be.a('number'); pm.expect(jsonData.name).to.be.a('string');",
+									"pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+									"",
+									"// Match saved ID",
+									"pm.test('Episode ID matches', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json.id).to.equal(pm.environment.get('firstEpisodeId'));",
+									"});",
+									"",
+									"// Validate episode code",
+									"pm.test('Episode code is valid', () => {",
+									"    const json = pm.response.json();",
+									"    const code = json.episode;",
+									"    pm.expect(code).to.match(/^S\\d{2}E\\d{2}$/);",
+									"});",
+									"",
+									"// Air date validation",
+									"pm.test('Air date is valid date string', () => {",
+									"    const json = pm.response.json();",
+									"    const date = new Date(json.air_date);",
+									"    pm.expect(date.toString()).to.not.equal('Invalid Date');",
 									"});"
-								],
-								"type": "text/javascript"
+								]
 							}
 						}
 					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": { "raw": "{{baseUrl}}/episode/1", "host": ["{{baseUrl}}"], "path": ["episode", "1"] }
-					},
+					"request": { "method": "GET", "url": { "raw": "{{baseUrl}}/episode/{{firstEpisodeId}}", "host": ["{{baseUrl}}"], "path": ["episode", "{{firstEpisodeId}}"] } },
 					"response": []
 				},
 				{
-					"name": "Get Episode by Invalid ID",
+					"name": "3. Filter Episodes by Code",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test('Status code is 404', function() { pm.response.to.have.status(404); });"
-								],
-								"type": "text/javascript"
+									"pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+									"",
+									"// All episodes match code",
+									"pm.test('All episodes are S01E01', () => {",
+									"    const json = pm.response.json();",
+									"    const allS01E01 = json.results.every(ep => ep.episode === 'S01E01');",
+									"    pm.expect(allS01E01).to.be.true;",
+									"});",
+									"",
+									"// Results not empty",
+									"pm.test('Has results', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json.results.length).to.be.greaterThan(0);",
+									"});"
+								]
 							}
 						}
 					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": { "raw": "{{baseUrl}}/episode/999999999", "host": ["{{baseUrl}}"], "path": ["episode", "999999999"] }
-					},
+					"request": { "method": "GET", "url": { "raw": "{{baseUrl}}/episode?episode=S01E01", "host": ["{{baseUrl}}"], "path": ["episode"], "query": [{"key": "episode", "value": "S01E01"}] } },
 					"response": []
 				},
 				{
-					"name": "Filter Episodes by Name",
+					"name": "4. Get Multiple Episodes",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test('Status code is 200', function() { pm.response.to.have.status(200); });",
-									"pm.test('Results contain pilot', function() {",
-									"    const jsonData = pm.response.json();",
-									"    const found = jsonData.results.some(e => e.name.toLowerCase().includes('pilot'));",
-									"    pm.expect(found).to.be.true;",
+									"pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
+									"",
+									"// Array response",
+									"pm.test('Response is array', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.be.an('array');",
+									"});",
+									"",
+									"// Correct count",
+									"pm.test('Returns 5 episodes', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json.length).to.equal(5);",
+									"});",
+									"",
+									"// Sequential IDs",
+									"pm.test('Episodes are sequential', () => {",
+									"    const json = pm.response.json();",
+									"    for (let i = 0; i < json.length - 1; i++) {",
+									"        pm.expect(json[i+1].id).to.equal(json[i].id + 1);",
+									"    }",
 									"});"
-								],
-								"type": "text/javascript"
+								]
 							}
 						}
 					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": { "raw": "{{baseUrl}}/episode?name=pilot", "host": ["{{baseUrl}}"], "path": ["episode"], "query": [{"key": "name", "value": "pilot"}] }
-					},
-					"response": []
-				},
-				{
-					"name": "Get Multiple Episodes by IDs",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test('Status code is 200', function() { pm.response.to.have.status(200); });",
-									"pm.test('Returns 3 episodes', function() {",
-									"    const jsonData = pm.response.json();",
-									"    pm.expect(jsonData.length).to.equal(3);",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": { "raw": "{{baseUrl}}/episode/1,2,3", "host": ["{{baseUrl}}"], "path": ["episode", "1,2,3"] }
-					},
+					"request": { "method": "GET", "url": { "raw": "{{baseUrl}}/episode/1,2,3,4,5", "host": ["{{baseUrl}}"], "path": ["episode", "1,2,3,4,5"] } },
 					"response": []
 				}
 			]
@@ -409,23 +532,83 @@
 			"name": "Error Handling",
 			"item": [
 				{
-					"name": "Invalid Endpoint",
+					"name": "1. Character Not Found (404)",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test('Status code is 404', function() { pm.response.to.have.status(404); });"
-								],
-								"type": "text/javascript"
+									"pm.test('Status 404 Not Found', () => pm.response.to.have.status(404));",
+									"",
+									"// Error response",
+									"pm.test('Error object present', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.have.property('error');",
+									"});",
+									"",
+									"// Error is string",
+									"pm.test('Error is a string', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json.error).to.be.a('string');",
+									"});",
+									"",
+									"// Error message not empty",
+									"pm.test('Error message not empty', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json.error.length).to.be.greaterThan(0);",
+									"});"
+								]
 							}
 						}
 					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": { "raw": "{{baseUrl}}/invalid/endpoint", "host": ["{{baseUrl}}"], "path": ["invalid", "endpoint"] }
-					},
+					"request": { "method": "GET", "url": { "raw": "{{baseUrl}}/character/999999999", "host": ["{{baseUrl}}"], "path": ["character", "999999999"] } },
+					"response": []
+				},
+				{
+					"name": "2. Invalid Endpoint (404)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status 404 Not Found', () => pm.response.to.have.status(404));",
+									"",
+									"// Error response structure",
+									"pm.test('Has error property', () => {",
+									"    const json = pm.response.json();",
+									"    pm.expect(json).to.have.property('error');",
+									"});"
+								]
+							}
+						}
+					],
+					"request": { "method": "GET", "url": { "raw": "{{baseUrl}}/invalid/endpoint", "host": ["{{baseUrl}}"], "path": ["invalid", "endpoint"] } },
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Performance Tests",
+			"item": [
+				{
+					"name": "Response Time Check",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Response time < 500ms', () => {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"pm.test('Response time < 1s', () => {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": { "method": "GET", "url": { "raw": "{{baseUrl}}/character/1", "host": ["{{baseUrl}}"], "path": ["character", "1"] } },
 					"response": []
 				}
 			]

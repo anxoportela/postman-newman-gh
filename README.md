@@ -1,239 +1,166 @@
-# Rick and Morty API Test Suite
+# Rick and Morty API - Postman/Newman Test Suite
 
-![Postman Collection](https://img.shields.io/badge/Postman-Collection-orange)
-![Newman](https://img.shields.io/badge/Newman-CI%2FCD-blue)
-![Docker](https://img.shields.io/badge/Docker-Supported-blue)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-Enabled-green)
-![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-HTML%20Report-green)
+Comprehensive API testing suite for the [Rick and Morty API](https://rickandmortyapi.com/) using Postman collections and Newman CLI.
 
-Comprehensive API test suite for the [Rick and Morty API](https://rickandmortyapi.com/) using Postman and Newman.
+## Features
 
-## 📋 Features
+### Test Coverage (90 Assertions)
 
-- **Extensive Test Coverage**: 25+ test cases covering Characters, Locations, and Episodes endpoints
-- **Well Organized**: Structured folders with clear naming conventions
-- **Multiple Execution Methods**: Local (npm), Docker, or GitHub Actions
-- **Beautiful HTML Reports**: Visual test results with Newman HTML reporter
-- **GitHub Pages Integration**: Automatic deployment of test reports
-- **Local Installation**: Dependencies installed locally in the project (no global packages)
-
-## 🗂️ Project Structure
-
-```
-postman-newman-gh/
-├── .github/
-│   └── workflows/
-│       └── newman.yml          # GitHub Actions workflow
-├── .gitignore
-├── Dockerfile                  # Docker image definition
-├── docker-compose.yml          # Docker Compose services
-├── Makefile                   # Make commands for easy execution
-├── README.md                  # This file
-├── package.json               # NPM dependencies
-├── rick-and-morty-api.json   # Postman collection
-└── rick-and-morty-env.json   # Environment configuration
-```
-
-## 🧪 Test Coverage
-
-### Characters Endpoint (9 test cases)
+#### Characters Endpoints
 - ✅ List all characters with pagination
-- ✅ Get character by ID
-- ✅ Get character by invalid ID (404)
-- ✅ Filter characters by name
-- ✅ Filter characters by status
-- ✅ Filter characters by species
-- ✅ Filter characters by gender
-- ✅ Pagination (page 2)
+- ✅ Get character by ID (using dynamic variables)
+- ✅ Filter characters by name and status
+- ✅ Pagination tests (next/previous pages)
 - ✅ Get multiple characters by IDs
 
-### Locations Endpoint (6 test cases)
+#### Locations Endpoints  
 - ✅ List all locations
 - ✅ Get location by ID
-- ✅ Get location by invalid ID (404)
-- ✅ Filter locations by name
-- ✅ Filter locations by type
-- ✅ Filter locations by dimension
+- ✅ Filter locations by name, type, and dimension
 
-### Episodes Endpoint (6 test cases)
+#### Episodes Endpoints
 - ✅ List all episodes
 - ✅ Get episode by ID
-- ✅ Get episode by invalid ID (404)
-- ✅ Filter episodes by name
-- ✅ Filter episodes by episode code
+- ✅ Filter episodes by code (S01E01 format)
 - ✅ Get multiple episodes by IDs
 
-### Error Handling (1 test case)
-- ✅ Invalid endpoint returns 404
+#### Error Handling
+- ✅ 404 Not Found for invalid IDs
+- ✅ 404 for invalid endpoints
+- ✅ Error response structure validation
 
-**Total: 25+ test cases**
+#### Performance Tests
+- ✅ Response time < 500ms
+- ✅ Response time < 1s
 
-## 🚀 Quick Start
+### Newman/Postman Features Demonstrated
+
+- **Global test scripts** - Runs on every request (response time, status checks)
+- **Pre-request scripts** - Set environment variables before requests
+- **Environment variables** - Store and reuse data between requests
+- **Chained requests** - Save data from one request, use in next
+- **Response validation** - JSON structure, types, values
+- **Header validation** - Content-Type checks
+- **Regex matching** - Episode code format validation (SxxExx)
+- **Array operations** - every(), some(), forEach()
+- **Error handling** - Expected 404 responses
+- **Performance testing** - Response time assertions
+
+## Quick Start
 
 ### Prerequisites
+- Node.js 18+
+- npm or yarn
 
-- Node.js 18+ (for local execution)
-- Docker & Docker Compose (for containerized execution)
-- GitHub account (for CI/CD)
+### Installation
 
-### Option 1: Local Execution
+```bash
+# Install dependencies
+npm install
 
-1. Install dependencies:
-   ```bash
-   npm install
-   # or
-   make install
-   ```
+# Or with yarn
+yarn install
+```
 
-2. Run tests:
-   ```bash
-   npm test
-   # or
-   make test
-   ```
+### Running Tests
 
-3. View HTML report:
-   ```bash
-   make reports
-   ```
+```bash
+# Run locally with npm
+npm test
 
-### Option 2: Docker Execution
+# Or use make
+make test
+```
 
-1. Build the Docker image:
-   ```bash
-   make docker-build
-   ```
+### Using Docker
 
-2. Run tests with Docker:
-   ```bash
-   make docker-test
-   ```
+```bash
+# Run with Docker
+make docker-build
+make docker-test
 
-3. Run tests and generate report:
-   ```bash
-   make docker-test-report
-   ```
+# Or with docker-compose
+docker-compose up --build
+```
 
-### Option 3: GitHub Actions
+## Project Structure
 
-1. Push to GitHub:
-   ```bash
-   git add .
-   git commit -m "Update to use local npm packages"
-   git remote add origin https://github.com/YOUR_USERNAME/postman-newman-gh.git
-   git push -u origin main
-   ```
+```
+├── rick-and-morty-api.json      # Postman collection (15 requests, 90 assertions)
+├── rick-and-morty-env.json       # Postman environment configuration
+├── package.json                  # Node dependencies
+├── Makefile                      # Build commands
+├── Dockerfile                    # Docker image
+├── docker-compose.yml            # Docker Compose configuration
+├── .github/workflows/            # GitHub Actions
+│   └── newman.yml               # CI/CD workflow
+├── reports/                      # Test reports
+│   └── newman-report.html       # HTML report
+└── README.md                     # This file
+```
 
-2. Enable GitHub Pages:
-   - Go to Settings → Pages
-   - Source: Deploy from a branch
-   - Branch: gh-pages
-
-3. The workflow will automatically:
-   - Run all tests on every push/PR
-   - Generate HTML reports
-   - Deploy to GitHub Pages
-
-## 📖 Make Commands
+## Available Commands
 
 | Command | Description |
 |---------|-------------|
-| `make install` | Install dependencies locally (npm install) |
-| `make test` | Run tests with Newman (CLI output) |
-| `make test-verbose` | Run tests with verbose output |
+| `npm test` | Run Newman tests locally |
+| `make test` | Run tests with make |
+| `make install` | Install dependencies |
 | `make docker-build` | Build Docker image |
-| `make docker-test` | Run tests using Docker |
-| `make docker-test-report` | Run tests with Docker and generate HTML report |
-| `make reports` | Open HTML report in browser |
-| `make clean` | Clean up reports and temporary files |
-| `make help` | Show help message |
+| `make docker-test` | Run tests in Docker |
+| `make docker-test-report` | Run tests in Docker with report |
 
-## 📦 NPM Scripts
+## GitHub Actions
 
-| Script | Description |
-|--------|-------------|
-| `npm test` | Run tests with Newman |
-| `npm run test:verbose` | Run tests with verbose output |
+Tests automatically run on:
+- Every push to `main`
+- Every pull request
 
-## 🔧 Configuration
+Reports are available as GitHub Pages after each run.
 
-### Environment Variables
+## API Documentation
 
-Edit `rick-and-morty-env.json` to customize:
+The collection tests these endpoints:
+- `GET /character` - List all characters
+- `GET /character/{id}` - Get character by ID
+- `GET /location` - List all locations  
+- `GET /location/{id}` - Get location by ID
+- `GET /episode` - List all episodes
+- `GET /episode/{id}` - Get episode by ID
 
-- `baseUrl`: API base URL (default: `https://rickandmortyapi.com/api`)
-- `characterId`: Default character ID for tests
-- `locationId`: Default location ID for tests
-- `episodeId`: Default episode ID for tests
-- `characterName`: Name to filter characters by
-- `locationName`: Name to filter locations by
-- `episodeCode`: Episode code to filter by (e.g., "S01E01")
-
-### GitHub Actions Configuration
-
-Edit `.github/workflows/newman.yml` to customize:
-
-- Node.js version
-- Test execution parameters
-- Report retention days
-- Deployment settings
-
-## 📊 Sample Test Output
-
-```
-→ Get All Characters
-  ✓ Status code is 200
-  ✓ Content-Type is application/json
-  ✓ Response has info object
-  ✓ Response has results array
-  ✓ First character has required properties
-  ...
-
-→ Get Character by ID
-  ✓ Status code is 200
-  ✓ Character has all required properties
-  ...
-
-→ Filter Characters by Name
-  ✓ Status code is 200
-  ✓ Results contain the searched name
-  ...
-
-Collections:      1  |  ✓ Passed: 25 |  ✗ Failed: 0
-Iterations:      25  |  ✓ Passed: 25 |  ✗ Failed: 0
-```
-
-## 🔨 Development
+## Customization
 
 ### Adding New Tests
 
-1. Open `rick-and-morty-api.json` in Postman
-2. Add new requests under appropriate folders
-3. Add test scripts in the "Tests" tab
-4. Export collection (JSON format)
-5. Replace `rick-and-morty-api.json`
+1. Edit `rick-and-morty-api.json` in Postman or manually
+2. Add new test scripts using chai assertions:
 
-### Running Specific Tests
-
-```bash
-# Run specific collection
-./node_modules/.bin/newman run rick-and-morty-api.json -e rick-and-morty-env.json
-
-# Run specific folder
-./node_modules/.bin/newman run rick-and-morty-api.json -e rick-and-morty-env.json --folder "Characters"
+```javascript
+pm.test('Test name', function() {
+    const json = pm.response.json();
+    pm.expect(json.property).to.equal('value');
+});
 ```
 
-## 📝 License
+### Modifying Environment
 
-MIT License - feel free to use this project for learning or as a template.
+Edit `rick-and-morty-env.json` to change:
+- `baseUrl` - API base URL
+- Other environment-specific variables
 
-## 🤝 Contributing
+## Example Output
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
+```
+✓ Global: Response time < 3s
+✓ Global: Status code is success
+✓ Status 200 OK
+✓ Response has info with pagination
+✓ Results is an array with items
+✓ Save first character ID for next test
 
----
+Total: 90 assertions, 0 failures
+```
 
-<p align="center">Made with ❤️ using Postman & Newman</p>
+## License
+
+MIT License
