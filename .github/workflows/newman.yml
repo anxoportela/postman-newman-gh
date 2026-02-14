@@ -28,11 +28,7 @@ jobs:
       - name: Run Newman tests
         run: |
           mkdir -p reports
-          ./node_modules/.bin/newman run rick-and-morty-api.json \
-            -e rick-and-morty-env.json \
-            --reporters cli,htmlextra \
-            --reporter-htmlextra-export reports/newman-report.html \
-            --reporter-json-export reports/newman-report.json
+          npm run test
       
       - name: Upload test results
         uses: actions/upload-artifact@v4
@@ -54,12 +50,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
       
-      - name: Install Docusaurus dependencies
-        run: cd docs && npm install
+      - name: Install dependencies
+        run: npm install
       
       - name: Build Docusaurus
-        run: cd docs && npm run build
+        run: npm run docs:build
       
       - name: Upload docs build
         uses: actions/upload-artifact@v4

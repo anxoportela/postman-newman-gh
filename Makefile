@@ -1,44 +1,45 @@
-.PHONY: help install test test-verbose docker-build docker-test docker-test-report clean reports
+.PHONY: help install test test-verbose docker-build docker-test docker-test-report clean reports docs-start docs-build docs-serve
 
 # Default target
 help:
 	@echo "Rick and Morty API Test Suite - Make Commands"
 	@echo ""
-	@echo "Available commands:"
-	@echo "  make install            - Install dependencies locally (npm install)"
-	@echo "  make test              - Run tests with Newman (CLI output)"
+	@echo "=== Newman Tests ==="
+	@echo "  make install            - Install all dependencies"
+	@echo "  make test              - Run Newman tests with HTML report"
 	@echo "  make test-verbose      - Run tests with verbose output"
+	@echo ""
+	@echo "=== Docker ==="
 	@echo "  make docker-build      - Build Docker image"
-	@echo "  make docker-test       - Run tests using Docker"
-	@echo "  make docker-test-report - Run tests with Docker and generate HTML report"
-	@echo "  make reports           - Open HTML report in browser"
-	@echo "  make clean             - Clean up reports and temporary files"
+	@echo "  make docker-test      - Run tests in Docker"
+	@echo "  make docker-test-report - Run tests in Docker with report"
+	@echo ""
+	@echo "=== Documentation ==="
+	@echo "  make docs-start        - Start Docusaurus dev server"
+	@echo "  docs-serve          - Serve built docs"
+	@echo "  make docs-build       - Build Docusaurus static site"
+	@echo ""
+	@echo "=== Utilities ==="
+	@echo "  make reports          - Open HTML test report"
+	@echo "  make clean            - Clean up reports"
 
-# Install dependencies locally
+# Install all dependencies
 install:
-	@echo "Installing dependencies locally..."
+	@echo "Installing all dependencies..."
 	npm install
 	@echo "Installation complete!"
 
-# Run tests with Newman
+# Run Newman tests
 test:
 	@echo "Running Newman tests..."
 	mkdir -p reports
-	./node_modules/.bin/newman run rick-and-morty-api.json \
-		-e rick-and-morty-env.json \
-		--reporters cli,htmlextra \
-		--reporter-htmlextra-export reports/newman-report.html
+	npm run test
 
 # Run tests with verbose output
 test-verbose:
 	@echo "Running Newman tests (verbose)..."
 	mkdir -p reports
-	./node_modules/.bin/newman run rick-and-morty-api.json \
-		-e rick-and-morty-env.json \
-		--verbose \
-		--reporters cli,htmlextra,json \
-		--reporter-htmlextra-export reports/newman-report.html \
-		--reporter-json-export reports/newman-report.json
+	npm run test:verbose
 
 # Build Docker image
 docker-build:
@@ -56,15 +57,30 @@ docker-test-report:
 	docker-compose up newman-with-report
 	@echo "Report generated at: reports/newman-report.html"
 
+# Start Docusaurus dev server
+docs-start:
+	@echo "Starting Docusaurus development server..."
+	cd docs && npm run start
+
+# Serve built docs locally
+docs-serve:
+	@echo "Serving built documentation..."
+	cd docs && npm run serve
+
+# Build Docusaurus static site
+docs-build:
+	@echo "Building Docusaurus static site..."
+	cd docs && npm run build
+
 # Open HTML report
 reports:
 	@if [ -f reports/newman-report.html ]; then \
 		xdg-open reports/newman-report.html 2>/dev/null || open reports/newman-report.html 2>/dev/null || echo "Report saved at: reports/newman-report.html"; \
 	else \
-		echo "No report found. Run 'make test' or 'make docker-test-report' first."; \
+		echo "No report found. Run 'make test' first."; \
 	fi
 
-# Clean up (use sudo for docker-created files)
+# Clean up
 clean:
 	@echo "Cleaning up..."
 	@if [ -d reports ]; then \

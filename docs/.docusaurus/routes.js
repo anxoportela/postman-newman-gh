@@ -4,16 +4,22 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/postman-newman-gh/docs',
-    component: ComponentCreator('/postman-newman-gh/docs', '5e8'),
+    component: ComponentCreator('/postman-newman-gh/docs', '791'),
     routes: [
       {
         path: '/postman-newman-gh/docs',
-        component: ComponentCreator('/postman-newman-gh/docs', '108'),
+        component: ComponentCreator('/postman-newman-gh/docs', 'e06'),
         routes: [
           {
             path: '/postman-newman-gh/docs',
-            component: ComponentCreator('/postman-newman-gh/docs', 'f11'),
+            component: ComponentCreator('/postman-newman-gh/docs', '13e'),
             routes: [
+              {
+                path: '/postman-newman-gh/docs/',
+                component: ComponentCreator('/postman-newman-gh/docs/', 'f0f'),
+                exact: true,
+                sidebar: "defaultSidebar"
+              },
               {
                 path: '/postman-newman-gh/docs/api/characters',
                 component: ComponentCreator('/postman-newman-gh/docs/api/characters', 'bd5'),

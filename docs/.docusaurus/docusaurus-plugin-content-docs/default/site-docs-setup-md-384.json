@@ -15,8 +15,8 @@
   },
   "sidebar": "defaultSidebar",
   "previous": {
-    "title": "Episodes API",
-    "permalink": "/postman-newman-gh/docs/api/episodes"
+    "title": "Welcome to Rick and Morty API Test Suite",
+    "permalink": "/postman-newman-gh/docs/"
   },
   "next": {
     "title": "Test Results",

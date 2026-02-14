@@ -9,5 +9,6 @@ export default {
   "a94703ab": [() => import(/* webpackChunkName: "a94703ab" */ "@theme/DocRoot"), "@theme/DocRoot", require.resolveWeak("@theme/DocRoot")],
   "aba21aa0": [() => import(/* webpackChunkName: "aba21aa0" */ "@generated/docusaurus-plugin-content-docs/default/__plugin.json"), "@generated/docusaurus-plugin-content-docs/default/__plugin.json", require.resolveWeak("@generated/docusaurus-plugin-content-docs/default/__plugin.json")],
   "b3c99768": [() => import(/* webpackChunkName: "b3c99768" */ "@site/docs/api/locations.md"), "@site/docs/api/locations.md", require.resolveWeak("@site/docs/api/locations.md")],
+  "c377a04b": [() => import(/* webpackChunkName: "c377a04b" */ "@site/docs/index.md"), "@site/docs/index.md", require.resolveWeak("@site/docs/index.md")],
   "cb933ec4": [() => import(/* webpackChunkName: "cb933ec4" */ "@site/docs/test-results.md"), "@site/docs/test-results.md", require.resolveWeak("@site/docs/test-results.md")],
   "f900482e": [() => import(/* webpackChunkName: "f900482e" */ "@site/docs/api/episodes.md"), "@site/docs/api/episodes.md", require.resolveWeak("@site/docs/api/episodes.md")],};

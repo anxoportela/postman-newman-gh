@@ -8,7 +8,7 @@
           "label": "Next",
           "isLast": true,
           "path": "/postman-newman-gh/docs",
-          "mainDocId": "intro",
+          "mainDocId": "index",
           "docs": [
             {
               "id": "api/characters",
@@ -23,6 +23,11 @@
             {
               "id": "api/locations",
               "path": "/postman-newman-gh/docs/api/locations",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "index",
+              "path": "/postman-newman-gh/docs/",
               "sidebar": "defaultSidebar"
             },
             {
