@@ -1,0 +1,75 @@
+name: Newman API Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  newman-tests:
+    name: Run API Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install Newman and HTML reporter
+        run: |
+          npm install -g newman
+          npm install -g newman-reporter-html
+      
+      - name: Run Newman tests
+        run: |
+          newman run rick-and-morty-api.json \
+            -e rick-and-morty-env.json \
+            --reporters cli,html \
+            --reporter-html-template node_modules/newman-reporter-html/templates/html-template.hbs \
+            --reporter-html-export reports/newman-report.html \
+            --reporter-json-export reports/newman-report.json
+      
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: newman-report
+          path: reports/
+          retention-days: 30
+      
+      - name: Upload HTML report for Pages
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-report
+          path: reports/newman-report.html
+          retention-days: 1
+
+  deploy-gh-pages:
+    name: Deploy to GitHub Pages
+    needs: newman-tests
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Download HTML report
+        uses: actions/download-artifact@v4
+        with:
+          name: html-report
+          path: html-report
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./html-report
+          keep_files: true

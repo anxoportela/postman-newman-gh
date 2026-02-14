@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  newman:
+    build: .
+    container_name: rick-morty-api-tests
+    volumes:
+      - ./reports:/app/reports
+    environment:
+      - NODE_ENV=test
+    networks:
+      - api-tests
+
+  newman-with-report:
+    build: .
+    container_name: rick-morty-api-tests-report
+    command: >
+      newman run rick-and-morty-api.json 
+      -e rick-and-morty-env.json 
+      --reporters cli,html,json 
+      --reporter-html-export reports/newman-report.html 
+      --reporter-json-export reports/newman-report.json
+    volumes:
+      - ./reports:/app/reports
+    environment:
+      - NODE_ENV=test
+    networks:
+      - api-tests
+
+networks:
+  api-tests:
+    driver: bridge
