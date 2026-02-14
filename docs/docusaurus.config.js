@@ -20,7 +20,7 @@ const config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'apiSidebar',
+          sidebarId: 'defaultSidebar',
           position: 'left',
           label: 'API Docs',
         },
