@@ -17,8 +17,8 @@ services:
     command: >
       newman run rick-and-morty-api.json 
       -e rick-and-morty-env.json 
-      --reporters cli,html,json 
-      --reporter-html-export reports/newman-report.html 
+      --reporters cli,htmlextra,json 
+      --reporter-htmlextra-export reports/newman-report.html 
       --reporter-json-export reports/newman-report.json
     volumes:
       - ./reports:/app/reports

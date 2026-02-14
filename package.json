@@ -4,8 +4,8 @@
   "description": "Comprehensive API test suite for Rick and Morty API using Postman and Newman",
   "main": "index.js",
   "scripts": {
-    "test": "newman run rick-and-morty-api.json -e rick-and-morty-env.json --reporters cli,html --reporter-html-export reports/newman-report.html",
-    "test:verbose": "newman run rick-and-morty-api.json -e rick-and-morty-env.json --verbose --reporters cli,html,json --reporter-html-export reports/newman-report.html --reporter-json-export reports/newman-report.json"
+    "test": "newman run rick-and-morty-api.json -e rick-and-morty-env.json --reporters cli,htmlextra --reporter-htmlextra-export reports/newman-report.html",
+    "test:verbose": "newman run rick-and-morty-api.json -e rick-and-morty-env.json --verbose --reporters cli,htmlextra,json --reporter-htmlextra-export reports/newman-report.html --reporter-json-export reports/newman-report.json"
   },
   "keywords": [
     "postman",
@@ -16,7 +16,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "newman": "^5.3.2",
-    "newman-reporter-html": "^1.1.3"
+    "newman": "^6.2.2",
+    "newman-reporter-htmlextra": "^1.23.1"
   }
 }

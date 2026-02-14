@@ -26,8 +26,8 @@ test:
 	mkdir -p reports
 	./node_modules/.bin/newman run rick-and-morty-api.json \
 		-e rick-and-morty-env.json \
-		--reporters cli,html \
-		--reporter-html-export reports/newman-report.html
+		--reporters cli,htmlextra \
+		--reporter-htmlextra-export reports/newman-report.html
 
 # Run tests with verbose output
 test-verbose:
@@ -36,8 +36,8 @@ test-verbose:
 	./node_modules/.bin/newman run rick-and-morty-api.json \
 		-e rick-and-morty-env.json \
 		--verbose \
-		--reporters cli,html,json \
-		--reporter-html-export reports/newman-report.html \
+		--reporters cli,htmlextra,json \
+		--reporter-htmlextra-export reports/newman-report.html \
 		--reporter-json-export reports/newman-report.json
 
 # Build Docker image
