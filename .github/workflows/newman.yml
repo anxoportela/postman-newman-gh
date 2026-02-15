@@ -42,10 +42,9 @@ jobs:
           path: reports/
       - run: npm install --legacy-peer-deps --no-package-lock
       - run: npm run docs:build
-      - name: Copy Newman report to docs
+      - name: Copy Newman report to root
         run: |
-          mkdir -p build/docs
-          cp -r reports/* build/docs/ 2>/dev/null || true
+          cp -r reports/* build/ 2>/dev/null || true
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
