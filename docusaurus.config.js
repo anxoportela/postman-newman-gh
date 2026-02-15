@@ -17,6 +17,9 @@ const config = {
           sidebarPath: './sidebars.js',
           routeBasePath: '/',
         },
+        pages: {
+          path: 'src/pages',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -38,6 +41,11 @@ const config = {
           sidebarId: 'defaultSidebar',
           position: 'left',
           label: '📚 API Docs',
+        },
+        {
+          to: '/test-results',
+          label: '📊 Test Results',
+          position: 'left',
         },
       ],
     },
