@@ -21,7 +21,7 @@
     "newman": "^6.2.2",
     "newman-reporter-htmlextra": "^1.23.1",
     "prism-react-renderer": "^2.3.0",
-    "react": "^19.2.4",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
 }
