@@ -43,7 +43,7 @@ jobs:
           cp -r reports/* build/docs/ 2>/dev/null || true
       - uses: actions/upload-artifact@v4
         with:
-          name: github-pages
+          name: docs-${{ github.run_id }}
           path: build/
           retention-days: 1
 
@@ -57,7 +57,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4
         with:
-          name: github-pages
-          path: docs-build
+          name: docs-${{ github.run_id }}
+          path: .
       - uses: actions/configure-pages@v4
       - uses: actions/deploy-pages@v4
