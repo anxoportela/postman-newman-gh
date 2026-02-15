@@ -3,7 +3,6 @@ const sidebars = {
   defaultSidebar: [
     'index',
     'setup',
-    'test-results',
     {
       type: 'category',
       label: 'API Endpoints',
