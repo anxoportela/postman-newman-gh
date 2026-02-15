@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2024 Rick and Morty API Test Suite
+Copyright (c) 2026 Anxo Portela-Insua Blanco
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -38,5 +38,10 @@ newman-reporter-htmlextra
 Copyright (c) 2021 Danny Dainton
 License: MIT
 https://github.com/DannyDainton/newman-reporter-htmlextra
+
+Docusaurus
+Copyright (c) Meta Platforms, Inc. and affiliates.
+License: MIT
+https://github.com/facebook/docusaurus
 
 Each library is subject to its own license terms.

@@ -4,21 +4,13 @@ services:
     image: rick-morty-newman:latest
     volumes:
       - ./reports:/app/reports
-
-  test-report:
-    build: .
-    image: rick-morty-newman:latest
     command: npm test
-    volumes:
-      - ./reports:/app/reports
-    profiles:
-      - report
 
-  docs-serve:
+  docs:
     build: .
     image: rick-morty-newman:latest
-    command: npm run docs:serve
     ports:
       - "3000:3000"
-    profiles:
-      - docs
+    volumes:
+      - ./reports:/app/reports
+    command: npm run docs:serve
