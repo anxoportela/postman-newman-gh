@@ -11,7 +11,15 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
 
   presets: [
-    ['classic', {}],
+    [
+      'classic',
+      {
+        docs: {
+          sidebarPath: './sidebars.js',
+          routeBasePath: '/',
+        },
+      },
+    ],
   ],
 
   themeConfig: {
@@ -23,21 +31,6 @@ const config = {
           sidebarId: 'defaultSidebar',
           position: 'left',
           label: 'API Docs',
-        },
-        {
-          to: '/test-results',
-          label: 'Test Results',
-          position: 'left',
-        },
-        {
-          to: '/setup',
-          label: 'Setup',
-          position: 'left',
-        },
-        {
-          href: 'https://github.com/anxoportela/postman-newman-gh',
-          label: 'GitHub',
-          position: 'right',
         },
       ],
     },
