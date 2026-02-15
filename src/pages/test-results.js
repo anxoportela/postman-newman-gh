@@ -14,12 +14,10 @@ export default function TestResults() {
         return res.json();
       })
       .then(data => {
-        console.log('Newman JSON data:', data);
         setResults(data);
         setLoading(false);
       })
       .catch(err => {
-        console.error('Error loading results:', err);
         setError(err.message);
         setLoading(false);
       });
@@ -66,21 +64,27 @@ export default function TestResults() {
     );
   }
 
-  // Get stats safely
-  const stats = run.stats || {};
-  const assertions = stats.assertions || {};
-  const requests = stats.requests || {};
-  const tests = stats.tests || {};
-  const testSuites = stats.testSuites || {};
-
-  // Calculate pass rate
-  const total = assertions.total || 0;
-  const passed = assertions.passed || 0;
-  const failed = assertions.failed || 0;
-  const passRate = total > 0 ? ((passed / total) * 100).toFixed(1) : 0;
-
   // Get executions
   const executions = run.executions || [];
+  
+  // Calculate stats from executions
+  let totalAssertions = 0;
+  let passedAssertions = 0;
+  let failedAssertions = 0;
+  
+  executions.forEach(exec => {
+    const assertions = exec.assertions || [];
+    totalAssertions += assertions.length;
+    assertions.forEach(a => {
+      if (a.error) {
+        failedAssertions++;
+      } else {
+        passedAssertions++;
+      }
+    });
+  });
+
+  const passRate = totalAssertions > 0 ? ((passedAssertions / totalAssertions) * 100).toFixed(1) : 0;
 
   return (
     <Layout title="Test Results">
@@ -91,15 +95,15 @@ export default function TestResults() {
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2rem'}}>
           <div className="card" style={{padding: '1.5rem', textAlign: 'center'}}>
             <h3>Total Assertions</h3>
-            <p style={{fontSize: '2rem', fontWeight: 'bold', margin: 0}}>{total}</p>
+            <p style={{fontSize: '2rem', fontWeight: 'bold', margin: 0}}>{totalAssertions}</p>
           </div>
           <div className="card card--success" style={{padding: '1.5rem', textAlign: 'center'}}>
             <h3>✅ Passed</h3>
-            <p style={{fontSize: '2rem', fontWeight: 'bold', margin: 0, color: 'var(--ifm-color-success)'}}>{passed}</p>
+            <p style={{fontSize: '2rem', fontWeight: 'bold', margin: 0, color: 'var(--ifm-color-success)'}}>{passedAssertions}</p>
           </div>
           <div className="card card--danger" style={{padding: '1.5rem', textAlign: 'center'}}>
             <h3>❌ Failed</h3>
-            <p style={{fontSize: '2rem', fontWeight: 'bold', margin: 0, color: 'var(--ifm-color-danger)'}}>{failed}</p>
+            <p style={{fontSize: '2rem', fontWeight: 'bold', margin: 0, color: 'var(--ifm-color-danger)'}}>{failedAssertions}</p>
           </div>
           <div className="card" style={{padding: '1.5rem', textAlign: 'center'}}>
             <h3>📈 Pass Rate</h3>
@@ -112,9 +116,8 @@ export default function TestResults() {
           <h2>⏱️ Timing</h2>
           <table>
             <tbody>
-              <tr><td>Requests</td><td>{requests.total || 0}</td></tr>
-              <tr><td>Test Suites</td><td>{testSuites.total || 0}</td></tr>
-              <tr><td>Tests</td><td>{tests.total || 0}</td></tr>
+              <tr><td>Total Requests</td><td>{executions.length}</td></tr>
+              <tr><td>Test Suites</td><td>{run.stats?.testSuites?.total || executions.length}</td></tr>
             </tbody>
           </table>
         </div>
@@ -137,8 +140,9 @@ export default function TestResults() {
                   const name = exec.item?.name || exec.name || `Request ${i + 1}`;
                   const status = exec.response?.status || exec.response?.statusCode || 'N/A';
                   const statusOk = status === 200 || status === 'OK' || status === 201;
-                  const assertionCount = exec.assertions?.length || 0;
-                  const passedCount = exec.assertions?.filter(a => !a.error).length || 0;
+                  const assertions = exec.assertions || [];
+                  const assertionCount = assertions.length;
+                  const passedCount = assertions.filter(a => !a.error).length;
                   
                   return (
                     <tr key={i}>
@@ -148,7 +152,7 @@ export default function TestResults() {
                         {statusOk ? (
                           <span style={{color: 'var(--ifm-color-success)'}}>✅ {status}</span>
                         ) : (
-                          <span style={{color: 'var(--ifm-color-danger)'}}>❌ {status}</span>
+                          <span style={{color: 'var(--ifm-color-warning)'}}>⚠️ {status}</span>
                         )}
                       </td>
                       <td>{passedCount}/{assertionCount}</td>
