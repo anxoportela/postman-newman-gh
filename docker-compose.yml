@@ -13,4 +13,4 @@ services:
       - "3000:3000"
     volumes:
       - ./reports:/app/reports
-    command: npm run docs:serve
+    command: npx docusaurus serve --port 3000 --dir build

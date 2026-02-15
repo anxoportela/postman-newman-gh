@@ -1,35 +1,34 @@
 # Rick and Morty API - Postman/Newman Test Suite
 
-Comprehensive API testing suite for the [Rick and Morty API](https://rickandmortyapi.com/) using Postman collections and Newman CLI, with Docusaurus documentation.
+![Tests](https://github.com/anxoportela/postman-newman-gh/actions/workflows/newman.yml/badge.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
+Comprehensive API testing suite for the [Rick and Morty API](https://rickandmortyapi.com/) using Postman collections and Newman CLI, with Docusaurus documentation and dynamic test results.
 
 ## Features
 
-### Test Coverage (90 Assertions)
-
-- **Characters** - 30 tests (list, get, filter, pagination)
-- **Locations** - 18 tests (list, get, filter)
-- **Episodes** - 24 tests (list, get, filter)
-- **Error Handling** - 10 tests (404, invalid endpoints)
-- **Performance** - 8 tests (response time)
-
-### Newman/Postman Features
-
-- Global test scripts, pre-request scripts
-- Environment variables, chained requests
-- Response validation, header checks
-- Regex matching, array operations
+- **90 Test Assertions** - Full coverage of all API endpoints
+- **Beautiful Reports** - Newman htmlextra with detailed HTML reports
+- **Dynamic Test Results** - React page loading JSON data in real-time
+- **Docker Support** - Containerized testing with Docker
+- **Docusaurus Docs** - Beautiful documentation site
+- **CI/CD** - GitHub Actions automation with Dependabot
+- **GitHub Pages** - Auto-deployed documentation
 
 ## Quick Start
 
 ```bash
 # Install dependencies
-npm install
+make install
+# or: npm install
 
 # Run tests
-npm test
+make test
+# or: npm test
 
 # Build docs
-npm run docs:build
+make docs:build
+# or: npm run docs:build
 
 # Serve docs locally
 npm run docs:serve
@@ -38,41 +37,71 @@ npm run docs:serve
 ## Docker
 
 ```bash
-# Build and run
+# Build Docker image
 make docker-build
+
+# Run tests in Docker
 make docker-test
-```
 
-## Project Structure
-
-```
-.
-├── src/pages/              # Docusaurus pages (homepage, setup, test-results)
-├── docs/                  # API documentation (markdown)
-├── docusaurus.config.js   # Docusaurus config
-├── rick-and-morty-api.json    # Postman collection
-├── rick-and-morty-env.json    # Environment
-├── package.json               # Dependencies
-├── Makefile                  # Commands
-├── Dockerfile                # Docker image
-├── docker-compose.yml        # Docker Compose
-└── .github/workflows/       # CI/CD
+# Serve docs in Docker
+make docker-docs
 ```
 
 ## Available Commands
 
 | Command | Description |
 |---------|-------------|
-| `npm test` | Run Newman tests |
-| `npm run docs:build` | Build Docusaurus |
-| `npm run docs:serve` | Serve docs locally |
-| `make docker-test` | Run tests in Docker |
+| `make install` | Install dependencies |
+| `make test` | Run tests locally |
 | `make docker-build` | Build Docker image |
+| `make docker-test` | Run tests in Docker |
+| `make docker-docs` | Serve docs in Docker |
+| `make docs:build` | Build Docusaurus docs |
+| `make clean` | Clean reports |
 
-## GitHub Pages
+## Project Structure
 
-Documentation deployed at: https://anxoportela.github.io/postman-newman-gh/
+```
+.
+├── src/pages/              # Docusaurus pages (React)
+│   └── test-results.js    # Dynamic test results
+├── docs/                  # API documentation (markdown)
+│   ├── index.md          # Homepage
+│   ├── setup.md          # Setup guide
+│   ├── characters.md     # Characters API
+│   ├── locations.md      # Locations API
+│   └── episodes.md      # Episodes API
+├── docusaurus.config.js  # Docusaurus config
+├── rick-and-morty-api.json    # Postman collection
+├── rick-and-morty-env.json    # Environment
+├── package.json               # Dependencies
+├── Makefile                  # Commands
+├── Dockerfile                # Docker image
+├── docker-compose.yml        # Docker Compose
+└── .github/                 # CI/CD & Dependabot
+```
+
+## Test Coverage
+
+| Endpoint | Assertions | Status |
+|----------|-----------|--------|
+| Characters | 30 | ✅ |
+| Locations | 18 | ✅ |
+| Episodes | 24 | ✅ |
+| Error Handling | 10 | ✅ |
+| Performance | 8 | ✅ |
+
+## Documentation
+
+Live at: https://anxoportela.github.io/postman-newman-gh/
+
+- `/` - Homepage
+- `/setup` - Setup guide
+- `/characters` - Characters API docs
+- `/locations` - Locations API docs
+- `/episodes` - Episodes API docs
+- `/test-results` - Dynamic test results (loads JSON)
 
 ## License
 
-MIT - Anxo Portela-Insua Blanco
+MIT - © 2026 Anxo Portela-Insua Blanco
