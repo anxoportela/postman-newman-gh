@@ -1,0 +1,21 @@
+{
+  "id": "test-results",
+  "title": "Test Results",
+  "description": "Summary",
+  "source": "@site/docs/test-results.md",
+  "sourceDirName": ".",
+  "slug": "/test-results",
+  "permalink": "/postman-newman-gh/docs/test-results",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "slug": "/test-results"
+  },
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "Setup Guide",
+    "permalink": "/postman-newman-gh/docs/setup"
+  }
+}

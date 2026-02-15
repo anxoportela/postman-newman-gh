@@ -1,0 +1,26 @@
+{
+  "id": "locations",
+  "title": "Locations API",
+  "description": "The Locations API provides access to all locations from the Rick and Morty universe.",
+  "source": "@site/docs/locations.md",
+  "sourceDirName": ".",
+  "slug": "/locations",
+  "permalink": "/postman-newman-gh/docs/locations",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "Characters API",
+    "permalink": "/postman-newman-gh/docs/characters"
+  },
+  "next": {
+    "title": "Episodes API",
+    "permalink": "/postman-newman-gh/docs/episodes"
+  }
+}

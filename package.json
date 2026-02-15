@@ -5,9 +5,9 @@
   "scripts": {
     "test": "newman run rick-and-morty-api.json -e rick-and-morty-env.json --reporters cli,htmlextra --reporter-htmlextra-export reports/newman-report.html",
     "test:verbose": "newman run rick-and-morty-api.json -e rick-and-morty-env.json --verbose --reporters cli,htmlextra,json --reporter-htmlextra-export reports/newman-report.html --reporter-json-export reports/newman-report.json",
-    "docs:start": "cd docs && npx docusaurus start --port 3000",
-    "docs:build": "cd docs && npx docusaurus build",
-    "docs:serve": "cd docs && npx docusaurus serve --port 3000"
+    "docs:start": "npx docusaurus start --port 3000",
+    "docs:build": "npx docusaurus build",
+    "docs:serve": "npx docusaurus serve --port 3000"
   },
   "keywords": ["postman", "newman", "api-testing", "rick-and-morty"],
   "author": "",

@@ -1,0 +1,25 @@
+{
+  "id": "index",
+  "title": "Rick and Morty API Test Suite",
+  "description": "Welcome to the comprehensive API testing suite for the Rick and Morty API.",
+  "source": "@site/docs/index.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/postman-newman-gh/docs/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "slug": "/"
+  },
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "Episodes API",
+    "permalink": "/postman-newman-gh/docs/episodes"
+  },
+  "next": {
+    "title": "Setup Guide",
+    "permalink": "/postman-newman-gh/docs/setup"
+  }
+}

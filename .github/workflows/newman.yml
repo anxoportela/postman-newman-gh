@@ -39,12 +39,12 @@ jobs:
       - run: npm run docs:build
       - name: Copy Newman report to docs
         run: |
-          mkdir -p docs/build/docs
-          cp -r reports/* docs/build/docs/ 2>/dev/null || true
+          mkdir -p build/docs
+          cp -r reports/* build/docs/ 2>/dev/null || true
       - uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: docs/build/
+          path: build/
           retention-days: 1
 
   deploy:
