@@ -5,11 +5,11 @@
     },
     "item": [
       {
-        "id": "61c9908c-651f-4d38-b075-1fbe25be3144",
+        "id": "4d3385db-489d-4778-ac9a-2cc55deea1a7",
         "name": "Characters - Advanced Tests",
         "item": [
           {
-            "id": "fd6e6dee-fd1d-4342-ac26-525acc0137f8",
+            "id": "4dd0cf4c-4053-4470-bb0d-87f1b0d150d8",
             "name": "1. List All Characters with Pagination",
             "request": {
               "url": {
@@ -29,7 +29,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "d8574e15-d53b-48d1-9261-ebde557612fd",
+                  "id": "1d4d173f-dcee-4e4b-91bc-d349feec8310",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -76,13 +76,13 @@
                     "    pm.response.to.have.header('Content-Type');",
                     "});"
                   ],
-                  "_lastExecutionId": "00271564-b6d4-4b3f-a582-9c8918484718"
+                  "_lastExecutionId": "0352e06e-8b7f-44e3-a6d8-dd927115a978"
                 }
               }
             ]
           },
           {
-            "id": "100b5eb2-7b75-480f-a741-5ce0e85de6f0",
+            "id": "e612b225-43dc-430a-9ddd-21f9587235e9",
             "name": "2. Get Character by ID (Using Variable)",
             "request": {
               "url": {
@@ -103,7 +103,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "3e9fa87c-b99d-454c-8481-eaac97cab4c1",
+                  "id": "28c05f52-e465-4925-aa50-198753db29de",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -138,13 +138,13 @@
                     "    pm.expect(json.image).to.include('http');",
                     "});"
                   ],
-                  "_lastExecutionId": "d11e2e99-3ab7-4dba-9cd6-a3a821c176d8"
+                  "_lastExecutionId": "e27e44ef-979e-4dba-8b3a-dfa7b005d925"
                 }
               }
             ]
           },
           {
-            "id": "c475f992-2592-4cc0-af02-42294b1ac175",
+            "id": "d13e63c8-c675-4e40-97bc-a7c7ce724bd3",
             "name": "3. Filter Characters - Multiple Filters",
             "request": {
               "url": {
@@ -173,7 +173,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "fcc5a7a3-c89f-43e0-996b-5a2c954fd054",
+                  "id": "9246c8c4-1a09-4cf6-98b6-3f794e034ef5",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -208,13 +208,13 @@
                     "    });",
                     "});"
                   ],
-                  "_lastExecutionId": "78c66a78-421c-4f01-ab4b-92581586fac8"
+                  "_lastExecutionId": "80c61039-dabc-461c-8d44-ce0cc4d6ba1e"
                 }
               }
             ]
           },
           {
-            "id": "5bbeef35-4b36-4c0f-ae70-ba4f930b7bb0",
+            "id": "a418c134-ec25-4dd0-bfb4-2d7a137a7abd",
             "name": "4. Pagination Test",
             "request": {
               "url": {
@@ -239,7 +239,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "febad007-ff27-4027-999b-d7ac571f29aa",
+                  "id": "f2bd55d2-f226-4572-9d54-ed470c554406",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -264,13 +264,13 @@
                     "    pm.expect(ids.length).to.equal(uniqueIds.length);",
                     "});"
                   ],
-                  "_lastExecutionId": "0de14075-f699-4320-b52c-54581ee1b452"
+                  "_lastExecutionId": "17039d11-0c8c-4e62-bb3d-b87a0c49484c"
                 }
               }
             ]
           },
           {
-            "id": "6f009d05-4e9d-4d14-9b70-95cd3181e15d",
+            "id": "8ecb37c9-495e-4fd5-9ad1-497996783f5f",
             "name": "5. Get Multiple Characters",
             "request": {
               "url": {
@@ -291,7 +291,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "e1813894-0418-4614-b685-51102b5a353c",
+                  "id": "a8d26148-ca7f-4f0e-992d-5540bf035f14",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -316,7 +316,7 @@
                     "    pm.expect(json[2].id).to.equal(3);",
                     "});"
                   ],
-                  "_lastExecutionId": "6a94b26c-15e9-4df6-933a-c4ceb7be3ace"
+                  "_lastExecutionId": "a051fa04-deb1-4f9b-bb1e-3a914932db33"
                 }
               }
             ]
@@ -325,11 +325,11 @@
         "event": []
       },
       {
-        "id": "09b3680e-fc11-4622-aa15-624d1f2486a6",
+        "id": "05d0c428-fb9e-48cb-8af3-779624f5be7a",
         "name": "Locations - Advanced Tests",
         "item": [
           {
-            "id": "839a7d41-bac1-471c-9844-32f50c3b0182",
+            "id": "be33eccb-0f1d-4360-98d7-9b88c6dca892",
             "name": "1. List All Locations",
             "request": {
               "url": {
@@ -349,7 +349,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "20f0dcfe-7da1-4589-8daf-1b7b345ac6c4",
+                  "id": "19882cb1-72cd-4fd5-8435-46cc3cb74662",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -380,13 +380,13 @@
                     "    pm.environment.set('firstLocationName', json.results[0].name);",
                     "});"
                   ],
-                  "_lastExecutionId": "23d5fd42-885e-4e03-8fc4-6cf75d3f869c"
+                  "_lastExecutionId": "c4a80b60-0dcd-433e-818f-89cc3a31dea3"
                 }
               }
             ]
           },
           {
-            "id": "607a1e06-e691-496c-8b30-175fe4dd5615",
+            "id": "ec3b44da-75bb-410c-876f-2f370ef3fac4",
             "name": "2. Get Location by ID",
             "request": {
               "url": {
@@ -407,7 +407,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "1ca76491-abbb-4c88-a055-d7386d01f396",
+                  "id": "07989581-b45a-478a-9ae8-d294fb64f9f9",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -431,13 +431,13 @@
                     "    pm.expect(validTypes).to.include(json.type);",
                     "});"
                   ],
-                  "_lastExecutionId": "774aeeb2-7aac-4bea-81cc-b8bcdf291995"
+                  "_lastExecutionId": "759f7b13-80f9-4180-92bf-5ca06710d428"
                 }
               }
             ]
           },
           {
-            "id": "27bfcb1e-1e2b-4618-9de9-01061170e46b",
+            "id": "7545e2b7-cbb6-412a-b4db-64209089d229",
             "name": "3. Filter Locations",
             "request": {
               "url": {
@@ -466,7 +466,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "8d00e636-204c-4509-8c0a-dcc0443bb612",
+                  "id": "3d444c41-cff1-405c-8089-5ce639ecc1b2",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -492,7 +492,7 @@
                     "    pm.expect(allC137).to.be.true;",
                     "});"
                   ],
-                  "_lastExecutionId": "1cf7bc01-b4ed-488f-a4fa-255cdb9a5961"
+                  "_lastExecutionId": "7ca8c16f-f9db-4cb2-ae4b-222153b5b481"
                 }
               }
             ]
@@ -501,11 +501,11 @@
         "event": []
       },
       {
-        "id": "9884ea71-7c4d-4d73-9bf2-8e1fe0f42cf1",
+        "id": "2bdcae77-cf74-4c81-9822-4cdd7cefe5dc",
         "name": "Episodes - Advanced Tests",
         "item": [
           {
-            "id": "70df05cb-8402-49b6-81cb-0303b2eba37e",
+            "id": "246d32d7-d1fc-4649-bbed-041342a9be4c",
             "name": "1. List All Episodes",
             "request": {
               "url": {
@@ -525,7 +525,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "782461c5-78e7-4611-b0cb-82779186c599",
+                  "id": "44f97e6b-9a3b-454b-84b7-180b36ba42b6",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -562,13 +562,13 @@
                     "    pm.environment.set('firstEpisodeCode', json.results[0].episode);",
                     "});"
                   ],
-                  "_lastExecutionId": "85c09df0-7b35-45eb-81a1-9601b443d817"
+                  "_lastExecutionId": "fad0e629-3e7f-4cec-990b-4e5d01312804"
                 }
               }
             ]
           },
           {
-            "id": "42d3d006-a9a6-467e-9a7c-ab98d1f0f917",
+            "id": "6ae0e3db-d279-4688-8ec8-c7f5981082d0",
             "name": "2. Get Episode by ID",
             "request": {
               "url": {
@@ -589,7 +589,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "cc857fa0-05f1-41bf-b682-c15fdeafdc10",
+                  "id": "93443b44-7397-429f-a0e1-449e33517151",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -614,13 +614,13 @@
                     "    pm.expect(date.toString()).to.not.equal('Invalid Date');",
                     "});"
                   ],
-                  "_lastExecutionId": "930e2329-54cd-4d9e-aba8-544278a21ff0"
+                  "_lastExecutionId": "b2a902a7-d276-4ffd-987b-b6d407733de1"
                 }
               }
             ]
           },
           {
-            "id": "3a65b1f8-8e38-4fb8-82fe-4e94faef9a11",
+            "id": "cb135219-f8ab-4fe4-b187-0f190c9fc0e4",
             "name": "3. Filter Episodes by Code",
             "request": {
               "url": {
@@ -645,7 +645,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "931247f4-baf9-4d32-b63f-11db4b9854a8",
+                  "id": "5cc75fbd-e93b-414a-a47f-e502de77ba68",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -663,13 +663,13 @@
                     "    pm.expect(json.results.length).to.be.greaterThan(0);",
                     "});"
                   ],
-                  "_lastExecutionId": "cf257da9-4bfa-4c9e-a227-aa3b95dfcd65"
+                  "_lastExecutionId": "6e6264bb-ebed-49f7-b569-35cf9df5d0e2"
                 }
               }
             ]
           },
           {
-            "id": "d9e24935-3edd-46ff-9fd0-2b3e7327f301",
+            "id": "298b357d-4f9d-4204-ade2-bc9a18d895c0",
             "name": "4. Get Multiple Episodes",
             "request": {
               "url": {
@@ -690,7 +690,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "0aa26516-80a3-4e21-8266-5aa78d5f2424",
+                  "id": "72003779-a8e3-45ff-832e-add74bd6c4c7",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -715,7 +715,7 @@
                     "    }",
                     "});"
                   ],
-                  "_lastExecutionId": "4494bb68-dd98-4462-ad3f-027b528a5384"
+                  "_lastExecutionId": "98f000b6-8297-4c54-8f84-120c1d4c7a45"
                 }
               }
             ]
@@ -724,11 +724,11 @@
         "event": []
       },
       {
-        "id": "a84df4ba-4b2c-4756-b762-42266caaba6a",
+        "id": "7e5fa634-0f02-45b8-a748-373dca84abee",
         "name": "Error Handling",
         "item": [
           {
-            "id": "be672f7d-812a-40e9-8a56-694289870109",
+            "id": "8716dfdd-419c-4949-8d51-3be7ec9e3c8b",
             "name": "1. Character Not Found (404)",
             "request": {
               "url": {
@@ -749,7 +749,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "647de1c0-69d2-4252-88bc-5f8bf2cdec56",
+                  "id": "3c02225f-46d7-463f-a4e8-799290b49cd4",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 404 Not Found', () => pm.response.to.have.status(404));",
@@ -772,13 +772,13 @@
                     "    pm.expect(json.error.length).to.be.greaterThan(0);",
                     "});"
                   ],
-                  "_lastExecutionId": "fbc16810-da24-46f0-926a-556fdaa93f55"
+                  "_lastExecutionId": "7c322581-292f-488d-9c64-18f9d2dd7789"
                 }
               }
             ]
           },
           {
-            "id": "cbbf3d7e-c83a-42d6-ab90-ab35b9df9c58",
+            "id": "58cafbe1-c152-4b28-ab88-c9afe9c797e5",
             "name": "2. Invalid Endpoint (404)",
             "request": {
               "url": {
@@ -799,7 +799,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "fde1d317-bafc-4ec3-8ed8-05afe133bafa",
+                  "id": "1859cd7e-13b2-4078-9e8b-96d7f3357249",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 404 Not Found', () => pm.response.to.have.status(404));",
@@ -810,7 +810,7 @@
                     "    pm.expect(json).to.have.property('error');",
                     "});"
                   ],
-                  "_lastExecutionId": "fd4521c1-4e74-436c-a89c-b7c684c62177"
+                  "_lastExecutionId": "a924e8a8-9f42-4c3c-8b0e-13b45abc2e25"
                 }
               }
             ]
@@ -819,11 +819,11 @@
         "event": []
       },
       {
-        "id": "819c5a6c-437c-4919-8c0c-fe96301b9eb1",
+        "id": "553de11c-4cc1-47ad-bcc2-34d623de82c2",
         "name": "Performance Tests",
         "item": [
           {
-            "id": "bb06de17-fadf-456e-a657-945f340cd018",
+            "id": "36c38bdb-2e7c-45dc-81d8-229065ea811d",
             "name": "Response Time Check",
             "request": {
               "url": {
@@ -844,7 +844,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "830f5b85-8352-443d-b0dd-6f97f8efb4dc",
+                  "id": "ce079c80-4198-4cc3-aee8-e7cabc5928f0",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Response time < 500ms', () => {",
@@ -855,7 +855,7 @@
                     "    pm.expect(pm.response.responseTime).to.be.below(1000);",
                     "});"
                   ],
-                  "_lastExecutionId": "75c69e26-1562-4fb6-aef2-b5055add6dba"
+                  "_lastExecutionId": "6ccbb2ec-fff6-4fd6-8ebd-8555e731fd78"
                 }
               }
             ]
@@ -868,7 +868,7 @@
       {
         "listen": "test",
         "script": {
-          "id": "af6de95f-e790-49a8-a998-333035b0fede",
+          "id": "8bb7aacc-0a18-4ef4-9588-8341c8801e0a",
           "type": "text/javascript",
           "exec": [
             "// Global test - response time",
@@ -883,19 +883,19 @@
             "    }",
             "});"
           ],
-          "_lastExecutionId": "b40c2d20-eaa6-4b1a-8ca5-2c96091d4053"
+          "_lastExecutionId": "dce4edfe-922b-48fa-9344-c81367b8eb8c"
         }
       },
       {
         "listen": "prerequest",
         "script": {
-          "id": "43cf4e0e-86bb-416c-8587-cbc36b1ac2b2",
+          "id": "0010a40d-9e34-4401-98a2-e6f0b2f994c3",
           "type": "text/javascript",
           "exec": [
             "// Set timestamp for tracking",
             "pm.environment.set('requestTimestamp', Date.now());"
           ],
-          "_lastExecutionId": "188ed35f-d44e-4746-853c-6553ff82cfc2"
+          "_lastExecutionId": "8253e820-8e9b-4936-a35d-4273aa6758f0"
         }
       }
     ],
@@ -962,7 +962,7 @@
       },
       {
         "type": "any",
-        "value": 1771120958193,
+        "value": 1771121249576,
         "key": "requestTimestamp"
       },
       {
@@ -998,7 +998,7 @@
     ]
   },
   "globals": {
-    "id": "f26d3c78-a1e2-4362-b5a6-3ed48dda0c3f",
+    "id": "e333fdaa-5578-4670-8e2b-bcbb3899e1c3",
     "values": []
   },
   "run": {
@@ -1050,10 +1050,10 @@
       }
     },
     "timings": {
-      "responseAverage": 17.399999999999995,
-      "responseMin": 10,
-      "responseMax": 97,
-      "responseSd": 21.312906887611554,
+      "responseAverage": 26.4,
+      "responseMin": 12,
+      "responseMax": 168,
+      "responseSd": 37.99614015484556,
       "dnsAverage": 0,
       "dnsMin": 0,
       "dnsMax": 0,
@@ -1062,8 +1062,8 @@
       "firstByteMin": 0,
       "firstByteMax": 0,
       "firstByteSd": 0,
-      "started": 1771120957552,
-      "completed": 1771120958217
+      "started": 1771121248826,
+      "completed": 1771121249602
     },
     "executions": [
       {
@@ -1076,11 +1076,11 @@
           "eof": false,
           "bof": true,
           "cr": false,
-          "ref": "21fbc932-39f9-4dad-9cc4-63266515e6e4",
-          "httpRequestId": "99da1464-ea82-44bf-8fb5-64c0ce4ba219"
+          "ref": "e3bbb1ff-e201-4509-bc5c-fe56ecd87eaa",
+          "httpRequestId": "bbbc158c-0aa9-47e4-813f-cd99610f22b8"
         },
         "item": {
-          "id": "fd6e6dee-fd1d-4342-ac26-525acc0137f8",
+          "id": "4dd0cf4c-4053-4470-bb0d-87f1b0d150d8",
           "name": "1. List All Characters with Pagination",
           "request": {
             "url": {
@@ -1100,7 +1100,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "d8574e15-d53b-48d1-9261-ebde557612fd",
+                "id": "1d4d173f-dcee-4e4b-91bc-d349feec8310",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -1147,7 +1147,7 @@
                   "    pm.response.to.have.header('Content-Type');",
                   "});"
                 ],
-                "_lastExecutionId": "00271564-b6d4-4b3f-a582-9c8918484718"
+                "_lastExecutionId": "0352e06e-8b7f-44e3-a6d8-dd927115a978"
               }
             }
           ]
@@ -1184,7 +1184,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "285fe3dc-996c-49fc-af89-80a291e7b940",
+              "value": "4ec79ab8-12ee-4647-b935-437ca7439ad8",
               "system": true
             },
             {
@@ -1206,13 +1206,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "bd6e9050-7356-4a57-826e-7500a796f630",
+          "id": "d60dc5af-8be2-4a9a-a33a-48b23e6879ab",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 15 Feb 2026 02:02:37 GMT"
+              "value": "Sun, 15 Feb 2026 02:07:29 GMT"
             },
             {
               "key": "Content-Type",
@@ -1256,11 +1256,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=v2RMBctpiPUT1yjMxP5pxnbbgEltaagVAQ1riEJFZUMfseSZXbX363%2Fbp6JTVa%2FZReW%2FSvUwFGbsoRmum%2BwKyvv4j5Ykp5Wg35i4gmHHw6nR%2Fe4%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=c632qGW1eAQebJx92vUv5iuMFqMtAJ%2FRRbwWzz2tBnapMasADoHznRPqX06S99JSRg%2BnRCxNuaB19rMWHAeJsJ0%2Flw5DBNDp0x%2FcOjemk1NWhNA%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "903430"
+              "value": "903721"
             },
             {
               "key": "cf-cache-status",
@@ -1272,7 +1272,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9ce139615fecde42-SJC"
+              "value": "9ce1407e3f9aead7-ORD"
             },
             {
               "key": "alt-svc",
@@ -20781,10 +20781,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 97,
+          "responseTime": 168,
           "responseSize": 19496
         },
-        "id": "fd6e6dee-fd1d-4342-ac26-525acc0137f8",
+        "id": "4dd0cf4c-4053-4470-bb0d-87f1b0d150d8",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -20822,15 +20822,15 @@
       },
       {
         "cursor": {
-          "ref": "6a0eaa33-6549-4def-b700-6e1e856a7a18",
+          "ref": "9e41e1d7-8c8e-4359-83fb-b89636a21ce0",
           "length": 15,
           "cycles": 1,
           "position": 1,
           "iteration": 0,
-          "httpRequestId": "b0a3106f-3e75-4221-8813-cc98e4dc36a1"
+          "httpRequestId": "3f464bfe-1905-4a8d-8a24-55887f3693aa"
         },
         "item": {
-          "id": "100b5eb2-7b75-480f-a741-5ce0e85de6f0",
+          "id": "e612b225-43dc-430a-9ddd-21f9587235e9",
           "name": "2. Get Character by ID (Using Variable)",
           "request": {
             "url": {
@@ -20851,7 +20851,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "3e9fa87c-b99d-454c-8481-eaac97cab4c1",
+                "id": "28c05f52-e465-4925-aa50-198753db29de",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -20886,7 +20886,7 @@
                   "    pm.expect(json.image).to.include('http');",
                   "});"
                 ],
-                "_lastExecutionId": "d11e2e99-3ab7-4dba-9cd6-a3a821c176d8"
+                "_lastExecutionId": "e27e44ef-979e-4dba-8b3a-dfa7b005d925"
               }
             }
           ]
@@ -20924,7 +20924,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "e693cb25-0fda-499c-9137-867b619dbda7",
+              "value": "cb63c2ca-2655-4e2c-aa61-b5d4acbc6cc0",
               "system": true
             },
             {
@@ -20946,13 +20946,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "15fd74bf-5c92-43f6-826d-cbc90de74dfb",
+          "id": "8f27f762-a5a8-4afc-af28-15d80e37c3ef",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 15 Feb 2026 02:02:37 GMT"
+              "value": "Sun, 15 Feb 2026 02:07:29 GMT"
             },
             {
               "key": "Content-Type",
@@ -20996,11 +20996,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=sPz4QBwhHSAgc6dpSJlqXmzAVYent0yNiDEWrYyhpRU2eUnQqjXgjJ0SfLGx736etoj0%2B6jzIdl9pISqAqJTrvn4%2F%2BXTbgpuTwS%2B7iA7xgs9Qyg%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=UwpIJlZxr%2FbfbFaLfPlvQXKZ0kaO5Xmtzu7OvC%2FAcfgzN8gboJPy0EXHSN5jXdWlPBY7IcOmwnUzIw1Wkp39hkamvlgFYb7VTlPg%2FX6hB6%2BNSn4%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "903434"
+              "value": "903726"
             },
             {
               "key": "cf-cache-status",
@@ -21012,7 +21012,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9ce13961c956de42-SJC"
+              "value": "9ce1407ea8baead7-ORD"
             },
             {
               "key": "alt-svc",
@@ -23747,7 +23747,7 @@
           "responseTime": 14,
           "responseSize": 2719
         },
-        "id": "100b5eb2-7b75-480f-a741-5ce0e85de6f0",
+        "id": "e612b225-43dc-430a-9ddd-21f9587235e9",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -23781,15 +23781,15 @@
       },
       {
         "cursor": {
-          "ref": "bf1a5a53-e8bd-4860-a417-409a8c98379d",
+          "ref": "0748c24c-b9b1-412d-ae37-c6eb9721355a",
           "length": 15,
           "cycles": 1,
           "position": 2,
           "iteration": 0,
-          "httpRequestId": "26dbb77a-5531-4705-94e1-4acff4699ef1"
+          "httpRequestId": "fc72c2ee-f3a1-4ee7-8442-07dbaa1b78c2"
         },
         "item": {
-          "id": "c475f992-2592-4cc0-af02-42294b1ac175",
+          "id": "d13e63c8-c675-4e40-97bc-a7c7ce724bd3",
           "name": "3. Filter Characters - Multiple Filters",
           "request": {
             "url": {
@@ -23818,7 +23818,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "fcc5a7a3-c89f-43e0-996b-5a2c954fd054",
+                "id": "9246c8c4-1a09-4cf6-98b6-3f794e034ef5",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -23853,7 +23853,7 @@
                   "    });",
                   "});"
                 ],
-                "_lastExecutionId": "78c66a78-421c-4f01-ab4b-92581586fac8"
+                "_lastExecutionId": "80c61039-dabc-461c-8d44-ce0cc4d6ba1e"
               }
             }
           ]
@@ -23899,7 +23899,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "ffe4cf38-43ee-4f0c-a8c5-f7680d57804f",
+              "value": "efb5c7ad-b4e1-4e34-af28-095da6c267cb",
               "system": true
             },
             {
@@ -23921,13 +23921,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "aa10ceb4-ec6e-4d9e-b3eb-25a00470c97d",
+          "id": "45b1d65a-fb9a-497f-a7d3-4468e4d791ae",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 15 Feb 2026 02:02:37 GMT"
+              "value": "Sun, 15 Feb 2026 02:07:29 GMT"
             },
             {
               "key": "Content-Type",
@@ -23971,11 +23971,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=b7falwEtUGuub7cYMuBFNRiOd1leLZ4P5IMH%2BTyXHCi3Zquv%2BCCwjUkCem8OGbrUXP86A7KnIDQBR%2BnZEK8pZgom%2FM7RY1tDsuMkJAwGyZTQiEk%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=M0jJfVaYJ4TCsFI3Z7G2AY4mkbO%2FDGlXodenP0nrPCruE%2BZwFkNnbRZ9%2FPxaNDu7421LcAu%2BIBjGBlkJy%2BBG7mAAvHcb0DCZi7JYUo%2B1edDN6JY%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "14547"
+              "value": "14838"
             },
             {
               "key": "cf-cache-status",
@@ -23987,7 +23987,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9ce1396209f0de42-SJC"
+              "value": "9ce1407ee98bead7-ORD"
             },
             {
               "key": "alt-svc",
@@ -35577,10 +35577,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 13,
+          "responseTime": 19,
           "responseSize": 11577
         },
-        "id": "c475f992-2592-4cc0-af02-42294b1ac175",
+        "id": "d13e63c8-c675-4e40-97bc-a7c7ce724bd3",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -35614,15 +35614,15 @@
       },
       {
         "cursor": {
-          "ref": "028ac3f8-5dbd-41d2-88bc-475256fb339f",
+          "ref": "f0100af4-1fa6-4218-8421-868de7905c04",
           "length": 15,
           "cycles": 1,
           "position": 3,
           "iteration": 0,
-          "httpRequestId": "34e4e404-c457-4c47-b226-174099fc4a6c"
+          "httpRequestId": "fcde2e74-783b-4d4c-a7b3-9d0452cd2bfd"
         },
         "item": {
-          "id": "5bbeef35-4b36-4c0f-ae70-ba4f930b7bb0",
+          "id": "a418c134-ec25-4dd0-bfb4-2d7a137a7abd",
           "name": "4. Pagination Test",
           "request": {
             "url": {
@@ -35647,7 +35647,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "febad007-ff27-4027-999b-d7ac571f29aa",
+                "id": "f2bd55d2-f226-4572-9d54-ed470c554406",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -35672,7 +35672,7 @@
                   "    pm.expect(ids.length).to.equal(uniqueIds.length);",
                   "});"
                 ],
-                "_lastExecutionId": "0de14075-f699-4320-b52c-54581ee1b452"
+                "_lastExecutionId": "17039d11-0c8c-4e62-bb3d-b87a0c49484c"
               }
             }
           ]
@@ -35714,7 +35714,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "463967b3-de84-4143-bd36-bd02a601a387",
+              "value": "a76ba933-3113-40ad-b2b5-8e77335481d5",
               "system": true
             },
             {
@@ -35736,13 +35736,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "02cb5dbf-2a4e-4e21-bccf-0d48462b3dfa",
+          "id": "e452a5f2-abff-420b-82ed-fcda3917c72d",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 15 Feb 2026 02:02:37 GMT"
+              "value": "Sun, 15 Feb 2026 02:07:29 GMT"
             },
             {
               "key": "Content-Type",
@@ -35786,11 +35786,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=hMMTAOnYo7mf0oz1P4QN7tJWCrUYbnwXJIgl6JvEowkO8ZfN4WwmQ%2B%2FPwQmXXyH9Ztyl75ICFjU1R96d84n%2F1LKPUQTO0TZFyHlRQ61CLwhB%2BTk%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=q%2BLGIdwlwNChN%2FdWDEv0T4Ht5RzV9fbhB6%2F84uNxFIELH10O4ebJSiPWLmgG90nBesPSK7Of12%2FrI7jP4qYG6kPUQHEcy74sMEePYzLA7jjRHvo%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "903434"
+              "value": "903725"
             },
             {
               "key": "cf-cache-status",
@@ -35802,7 +35802,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9ce139626b02de42-SJC"
+              "value": "9ce1407f4a6eead7-ORD"
             },
             {
               "key": "alt-svc",
@@ -55311,10 +55311,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 13,
+          "responseTime": 22,
           "responseSize": 19496
         },
-        "id": "5bbeef35-4b36-4c0f-ae70-ba4f930b7bb0",
+        "id": "a418c134-ec25-4dd0-bfb4-2d7a137a7abd",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -55344,15 +55344,15 @@
       },
       {
         "cursor": {
-          "ref": "3e5673c8-a84e-4f1c-a7ea-7f3feeb35f05",
+          "ref": "9d10f7fa-3a40-49a5-8181-e49a2827afd7",
           "length": 15,
           "cycles": 1,
           "position": 4,
           "iteration": 0,
-          "httpRequestId": "7760f596-0be2-422b-930c-fa4b6652c63f"
+          "httpRequestId": "731bca30-bae1-4a0d-972d-cca3dd503f3b"
         },
         "item": {
-          "id": "6f009d05-4e9d-4d14-9b70-95cd3181e15d",
+          "id": "8ecb37c9-495e-4fd5-9ad1-497996783f5f",
           "name": "5. Get Multiple Characters",
           "request": {
             "url": {
@@ -55373,7 +55373,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "e1813894-0418-4614-b685-51102b5a353c",
+                "id": "a8d26148-ca7f-4f0e-992d-5540bf035f14",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -55398,7 +55398,7 @@
                   "    pm.expect(json[2].id).to.equal(3);",
                   "});"
                 ],
-                "_lastExecutionId": "6a94b26c-15e9-4df6-933a-c4ceb7be3ace"
+                "_lastExecutionId": "a051fa04-deb1-4f9b-bb1e-3a914932db33"
               }
             }
           ]
@@ -55436,7 +55436,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "efc81910-3678-47f8-9920-e70245b114c1",
+              "value": "0b6b4920-0f9a-4c8b-a37d-343ddba24d6d",
               "system": true
             },
             {
@@ -55458,13 +55458,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "e6a76fec-d580-46be-b91c-4a820249886a",
+          "id": "bcd0a0e9-27dc-47b7-bf2c-74929ea4bb36",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 15 Feb 2026 02:02:37 GMT"
+              "value": "Sun, 15 Feb 2026 02:07:29 GMT"
             },
             {
               "key": "Content-Type",
@@ -55508,11 +55508,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=7GHuaxPd%2BYM2VmVYw522Y%2B0pq0lwgsuHI5WKT3Wr2HrI0eH0VMyuBKQJBgUo4bGI4UPzK%2BuSVveoynwN3VqsE4uDn0sOKY03Oy63khsDo0G6voQ%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=YZ774g4%2BK6TqRmg%2F%2B1d%2FoZEhnRJq886UuYP%2F%2FZTGheMUsGxAVbRNw1xzpbsr2Q38zdL%2FePrm2SY4AE%2B9KkySgdIxrPnpZNk%2FnLEwddQL%2BGfJDV4%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "239571"
+              "value": "239862"
             },
             {
               "key": "cf-cache-status",
@@ -55524,7 +55524,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9ce13962abc0de42-SJC"
+              "value": "9ce1407f9b40ead7-ORD"
             },
             {
               "key": "alt-svc",
@@ -63282,10 +63282,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 12,
+          "responseTime": 14,
           "responseSize": 7745
         },
-        "id": "6f009d05-4e9d-4d14-9b70-95cd3181e15d",
+        "id": "8ecb37c9-495e-4fd5-9ad1-497996783f5f",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -63315,15 +63315,15 @@
       },
       {
         "cursor": {
-          "ref": "10a80e1d-4948-4ffe-93da-f0788e9c2163",
+          "ref": "77662a3e-d0ef-4aa6-8620-7a80698853fb",
           "length": 15,
           "cycles": 1,
           "position": 5,
           "iteration": 0,
-          "httpRequestId": "0e6803db-afda-4549-8edc-e1fbc2886f70"
+          "httpRequestId": "7ad5d997-8147-4d6d-84d9-afa7a8f24fd4"
         },
         "item": {
-          "id": "839a7d41-bac1-471c-9844-32f50c3b0182",
+          "id": "be33eccb-0f1d-4360-98d7-9b88c6dca892",
           "name": "1. List All Locations",
           "request": {
             "url": {
@@ -63343,7 +63343,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "20f0dcfe-7da1-4589-8daf-1b7b345ac6c4",
+                "id": "19882cb1-72cd-4fd5-8435-46cc3cb74662",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -63374,7 +63374,7 @@
                   "    pm.environment.set('firstLocationName', json.results[0].name);",
                   "});"
                 ],
-                "_lastExecutionId": "23d5fd42-885e-4e03-8fc4-6cf75d3f869c"
+                "_lastExecutionId": "c4a80b60-0dcd-433e-818f-89cc3a31dea3"
               }
             }
           ]
@@ -63411,7 +63411,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "6f5b5710-dad8-4731-8e24-25098a95033b",
+              "value": "0977bc25-bd51-4231-b971-85f6bb990366",
               "system": true
             },
             {
@@ -63433,13 +63433,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "901ee9f8-6292-4391-a062-008160aa62d6",
+          "id": "e99c3ec9-3797-4a99-afa4-211ae6489c5c",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 15 Feb 2026 02:02:37 GMT"
+              "value": "Sun, 15 Feb 2026 02:07:29 GMT"
             },
             {
               "key": "Content-Type",
@@ -63483,11 +63483,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=kibppPhz4XBq8%2FeyFfsju%2B8FiHbErWNoAZsms4yB8FfjrNOv8LXCyS4IMYlkpvCJ5B%2BkQp0n7FFQ9QvwDlM4BTcnbMlhckB2VvTPT8oDQn2lTzE%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=CdikAWAvdl0tbqWOslGFhWLr2lTcgJYFANyWSMmO%2B54rVG84tUlUwDweKAiZz4LM4Dj20W162SrjWl3D%2BzBrbKnFw8CtSyOYEOCUY%2BQopJj0iLs%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "903408"
+              "value": "903700"
             },
             {
               "key": "cf-cache-status",
@@ -63499,7 +63499,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9ce13962ec50de42-SJC"
+              "value": "9ce1407fcc16ead7-ORD"
             },
             {
               "key": "alt-svc",
@@ -90766,10 +90766,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 10,
+          "responseTime": 20,
           "responseSize": 27254
         },
-        "id": "839a7d41-bac1-471c-9844-32f50c3b0182",
+        "id": "be33eccb-0f1d-4360-98d7-9b88c6dca892",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -90799,15 +90799,15 @@
       },
       {
         "cursor": {
-          "ref": "2de1118b-9f00-44ad-90ef-ae2ae5f62fce",
+          "ref": "8755bea6-755c-4351-8e76-957183326283",
           "length": 15,
           "cycles": 1,
           "position": 6,
           "iteration": 0,
-          "httpRequestId": "cd8e9b34-0610-4d51-8e39-1eb7cc3faa23"
+          "httpRequestId": "f74443a0-03b8-48b3-884e-1b4676ef9b9a"
         },
         "item": {
-          "id": "607a1e06-e691-496c-8b30-175fe4dd5615",
+          "id": "ec3b44da-75bb-410c-876f-2f370ef3fac4",
           "name": "2. Get Location by ID",
           "request": {
             "url": {
@@ -90828,7 +90828,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "1ca76491-abbb-4c88-a055-d7386d01f396",
+                "id": "07989581-b45a-478a-9ae8-d294fb64f9f9",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -90852,7 +90852,7 @@
                   "    pm.expect(validTypes).to.include(json.type);",
                   "});"
                 ],
-                "_lastExecutionId": "774aeeb2-7aac-4bea-81cc-b8bcdf291995"
+                "_lastExecutionId": "759f7b13-80f9-4180-92bf-5ca06710d428"
               }
             }
           ]
@@ -90890,7 +90890,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "2a915216-260b-470e-84b5-08aeec93405f",
+              "value": "bd91fd6f-a47f-4d61-9c56-aec3d529bd34",
               "system": true
             },
             {
@@ -90912,13 +90912,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "ebba53f7-6074-42d1-b5e9-b126d4f2da54",
+          "id": "3456044d-7629-4ca6-a3bb-7f2b232375c6",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 15 Feb 2026 02:02:37 GMT"
+              "value": "Sun, 15 Feb 2026 02:07:29 GMT"
             },
             {
               "key": "Content-Type",
@@ -90962,11 +90962,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=nzpUWc6C1dS3wa6eWa0Bz8CmqGG0si068oFQ1CeRPAfCfFBKEOoAvLIgAVMWCUAqm0F5O%2BpsQ1%2BPtKAQnsELjBFo7Ba9mzqwmf8yLXWlOm%2B3KPI%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=3NYAPbkRppsj%2F2arGpa2FZP3KM9twDgvcjNcvVPdqg8G68tU8Ze827jSGFVoUyswY4g21FcH%2F2jvTp3exW9Muwo2M2DREzT5mBSuPjUfv%2BWH4fk%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "166002"
+              "value": "166294"
             },
             {
               "key": "cf-cache-status",
@@ -90978,7 +90978,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9ce139631cf6de42-SJC"
+              "value": "9ce140801cd7ead7-ORD"
             },
             {
               "key": "alt-svc",
@@ -92460,10 +92460,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 11,
+          "responseTime": 15,
           "responseSize": 1469
         },
-        "id": "607a1e06-e691-496c-8b30-175fe4dd5615",
+        "id": "ec3b44da-75bb-410c-876f-2f370ef3fac4",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -92493,15 +92493,15 @@
       },
       {
         "cursor": {
-          "ref": "86f2f072-b0d1-4ad3-be86-eac22b326a60",
+          "ref": "c2b68bac-8daa-4239-a1a8-b6e70928bd2a",
           "length": 15,
           "cycles": 1,
           "position": 7,
           "iteration": 0,
-          "httpRequestId": "d4e6df54-7100-48ba-9dcf-2b01d9d00981"
+          "httpRequestId": "a4b5347f-3d3b-4bc3-9c7a-e65fa3eec62f"
         },
         "item": {
-          "id": "27bfcb1e-1e2b-4618-9de9-01061170e46b",
+          "id": "7545e2b7-cbb6-412a-b4db-64209089d229",
           "name": "3. Filter Locations",
           "request": {
             "url": {
@@ -92530,7 +92530,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "8d00e636-204c-4509-8c0a-dcc0443bb612",
+                "id": "3d444c41-cff1-405c-8089-5ce639ecc1b2",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -92556,7 +92556,7 @@
                   "    pm.expect(allC137).to.be.true;",
                   "});"
                 ],
-                "_lastExecutionId": "1cf7bc01-b4ed-488f-a4fa-255cdb9a5961"
+                "_lastExecutionId": "7ca8c16f-f9db-4cb2-ae4b-222153b5b481"
               }
             }
           ]
@@ -92602,7 +92602,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "9f5f14eb-ad07-4707-b589-05247f6e4f05",
+              "value": "04a999e7-9556-4d1f-899b-996e4294d99d",
               "system": true
             },
             {
@@ -92624,13 +92624,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "a2835ed3-7c98-4dc9-bddd-906e8754b88a",
+          "id": "9a7c24b1-6640-4d89-a2d7-ef648d3f6c0f",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 15 Feb 2026 02:02:37 GMT"
+              "value": "Sun, 15 Feb 2026 02:07:29 GMT"
             },
             {
               "key": "Content-Type",
@@ -92674,11 +92674,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=cmAw%2FqaRAC95wxmH6DmSH%2FyAGWy86VE6F87rTnRyp%2F8323Cqcbc4nG96BPbGeyGtBD0ZR6SbSwewpQRQybbBEcWfVzMN23UD7hxk%2BMHtcaHxh%2Fo%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=77PqAqgTomSvel7l3ix%2BXIwOBc3pxwyL5Qr0LfFlmsYL%2B%2FIinpchGZ%2B9lVqZ%2BzNzwDIp5Z2sQEeephwInymFOlbRQTG0GIiXWYdafCLYFIsHEJA%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "14547"
+              "value": "14838"
             },
             {
               "key": "cf-cache-status",
@@ -92690,7 +92690,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9ce139635dabde42-SJC"
+              "value": "9ce140804d91ead7-ORD"
             },
             {
               "key": "alt-svc",
@@ -94239,10 +94239,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 12,
+          "responseTime": 15,
           "responseSize": 1536
         },
-        "id": "27bfcb1e-1e2b-4618-9de9-01061170e46b",
+        "id": "7545e2b7-cbb6-412a-b4db-64209089d229",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -94272,15 +94272,15 @@
       },
       {
         "cursor": {
-          "ref": "a99da9b6-fe43-422f-81f4-a4abe37116bb",
+          "ref": "273856a3-1f71-44c1-ba88-264fe92539ce",
           "length": 15,
           "cycles": 1,
           "position": 8,
           "iteration": 0,
-          "httpRequestId": "8f13f1f3-facc-4aae-a0fe-a7a9ed61127b"
+          "httpRequestId": "28195968-4e0f-4de0-bd88-0db8312ab939"
         },
         "item": {
-          "id": "70df05cb-8402-49b6-81cb-0303b2eba37e",
+          "id": "246d32d7-d1fc-4649-bbed-041342a9be4c",
           "name": "1. List All Episodes",
           "request": {
             "url": {
@@ -94300,7 +94300,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "782461c5-78e7-4611-b0cb-82779186c599",
+                "id": "44f97e6b-9a3b-454b-84b7-180b36ba42b6",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -94337,7 +94337,7 @@
                   "    pm.environment.set('firstEpisodeCode', json.results[0].episode);",
                   "});"
                 ],
-                "_lastExecutionId": "85c09df0-7b35-45eb-81a1-9601b443d817"
+                "_lastExecutionId": "fad0e629-3e7f-4cec-990b-4e5d01312804"
               }
             }
           ]
@@ -94374,7 +94374,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "7ce7fb1a-497f-4d08-b9bd-8c6dbd2f5588",
+              "value": "99ae08ca-3068-4927-9520-c08a423ffc97",
               "system": true
             },
             {
@@ -94396,13 +94396,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "befb606c-c178-4e9f-9f80-93ff3c2215f4",
+          "id": "32651221-053d-4755-b774-2b700329e260",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 15 Feb 2026 02:02:38 GMT"
+              "value": "Sun, 15 Feb 2026 02:07:29 GMT"
             },
             {
               "key": "Content-Type",
@@ -94446,11 +94446,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=nsdlpSXLMrvsBHHPb6m7nLIRmYB48oWWm5y5IwIJQyHgmLj1m2r%2BHVuR5guxBAP21IN4WddDHBB07ibaE5NpIRB7%2FRWjJoYAZFvn5DXZHO9nsjg%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=rqwM6F%2Bw3F2IO33Zw4G6b8DeJqUbJzscqYRpEwIZ22TLRA97DPYAHAKzO9%2FlgONXT7ZcT98HpMtYOFRrGwDx0x2N2QrVQ0dXvWrAEjyA8XGDXZ8%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "903434"
+              "value": "903726"
             },
             {
               "key": "cf-cache-status",
@@ -94462,7 +94462,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9ce139638e3fde42-SJC"
+              "value": "9ce140808e2fead7-ORD"
             },
             {
               "key": "alt-svc",
@@ -122618,10 +122618,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 11,
+          "responseTime": 23,
           "responseSize": 28143
         },
-        "id": "70df05cb-8402-49b6-81cb-0303b2eba37e",
+        "id": "246d32d7-d1fc-4649-bbed-041342a9be4c",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -122655,15 +122655,15 @@
       },
       {
         "cursor": {
-          "ref": "57ec2297-269a-49ad-a16e-54dab0d97357",
+          "ref": "1b9c7423-a61f-4f08-add9-b05c51662f77",
           "length": 15,
           "cycles": 1,
           "position": 9,
           "iteration": 0,
-          "httpRequestId": "0e4d186a-2aee-49c2-b3bb-91744ce7c452"
+          "httpRequestId": "c5c3b411-f18b-4357-a7cb-e0d97a269ae9"
         },
         "item": {
-          "id": "42d3d006-a9a6-467e-9a7c-ab98d1f0f917",
+          "id": "6ae0e3db-d279-4688-8ec8-c7f5981082d0",
           "name": "2. Get Episode by ID",
           "request": {
             "url": {
@@ -122684,7 +122684,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "cc857fa0-05f1-41bf-b682-c15fdeafdc10",
+                "id": "93443b44-7397-429f-a0e1-449e33517151",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -122709,7 +122709,7 @@
                   "    pm.expect(date.toString()).to.not.equal('Invalid Date');",
                   "});"
                 ],
-                "_lastExecutionId": "930e2329-54cd-4d9e-aba8-544278a21ff0"
+                "_lastExecutionId": "b2a902a7-d276-4ffd-987b-b6d407733de1"
               }
             }
           ]
@@ -122747,7 +122747,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "a4ab780e-97a4-4e2b-ade2-11e15fba1599",
+              "value": "88d23af5-c234-498e-ad63-6a2ff15ae7a2",
               "system": true
             },
             {
@@ -122769,13 +122769,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "a5b973e7-91e0-4061-84b2-add6fb26d6ba",
+          "id": "f80c7f54-9faa-40b3-92e9-5f521c16ce76",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 15 Feb 2026 02:02:38 GMT"
+              "value": "Sun, 15 Feb 2026 02:07:29 GMT"
             },
             {
               "key": "Content-Type",
@@ -122819,11 +122819,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=evIGkLjUw3nWA0zgNFnXjGsHI5A%2Bns3Nrg32im5BCHoLBbghR5xOvC7iwtAA%2BYCCI%2FufmCbWUNRuq2%2FXAM9deyVmu8tZEo7j%2Fs9ZqObXvpYBq6k%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=LAaGIvxtwDRyblT%2ButYw%2FpP3uoXZWlsTY0xprU6rmiQm9WXMU%2FuPp5xOKznMKVPK9yDNmokeh4UT%2FYXkNoP3WiVPjlZ8LFOXQozipiLCTETSYpg%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "903058"
+              "value": "903349"
             },
             {
               "key": "cf-cache-status",
@@ -122835,7 +122835,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9ce13963cee2de42-SJC"
+              "value": "9ce14080df20ead7-ORD"
             },
             {
               "key": "alt-svc",
@@ -123926,10 +123926,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 12,
+          "responseTime": 14,
           "responseSize": 1078
         },
-        "id": "42d3d006-a9a6-467e-9a7c-ab98d1f0f917",
+        "id": "6ae0e3db-d279-4688-8ec8-c7f5981082d0",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -123959,15 +123959,15 @@
       },
       {
         "cursor": {
-          "ref": "4e05634c-b3a7-4fdc-83c8-578fabc340ca",
+          "ref": "81737d81-245f-4e49-a2ad-48f24e872821",
           "length": 15,
           "cycles": 1,
           "position": 10,
           "iteration": 0,
-          "httpRequestId": "71f264be-b984-43a5-8642-5b82f9795a9a"
+          "httpRequestId": "45ec2aeb-8134-4331-86e8-e2311f6bba11"
         },
         "item": {
-          "id": "3a65b1f8-8e38-4fb8-82fe-4e94faef9a11",
+          "id": "cb135219-f8ab-4fe4-b187-0f190c9fc0e4",
           "name": "3. Filter Episodes by Code",
           "request": {
             "url": {
@@ -123992,7 +123992,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "931247f4-baf9-4d32-b63f-11db4b9854a8",
+                "id": "5cc75fbd-e93b-414a-a47f-e502de77ba68",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -124010,7 +124010,7 @@
                   "    pm.expect(json.results.length).to.be.greaterThan(0);",
                   "});"
                 ],
-                "_lastExecutionId": "cf257da9-4bfa-4c9e-a227-aa3b95dfcd65"
+                "_lastExecutionId": "6e6264bb-ebed-49f7-b569-35cf9df5d0e2"
               }
             }
           ]
@@ -124052,7 +124052,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "f288a215-4aa1-4783-b019-df7d70c896e1",
+              "value": "dc56e4d9-8410-45e8-8f10-23ddd8362592",
               "system": true
             },
             {
@@ -124074,13 +124074,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "71619393-3412-4e77-870d-397d03a70333",
+          "id": "f6600b76-469a-45f5-9573-419727ec44fa",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 15 Feb 2026 02:02:38 GMT"
+              "value": "Sun, 15 Feb 2026 02:07:29 GMT"
             },
             {
               "key": "Content-Type",
@@ -124124,11 +124124,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=HP3%2FTygydQD6RpbXgz5XTHhGJo2oDyXys1%2BJXnY%2FB3VjVdMDhU6wKho%2F%2BlTaeagui9lLvuRl3DYYmCWzhMwZxSHebjDT6q9JEj3vChhF8yirF1o%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=U%2B%2B09uxxRqLA8b1ZvVieVgoY6bkIdT0Xx1fKeBykMopjQyqXg4U8VIiNr8RvZsUgKanGlimqaoeLbAmfj6GxJ8C3oqj2HdOyJc3T%2Fa%2FV0UBv6iU%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "15035"
+              "value": "15326"
             },
             {
               "key": "cf-cache-status",
@@ -124140,7 +124140,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9ce13963ff81de42-SJC"
+              "value": "9ce140810fd1ead7-ORD"
             },
             {
               "key": "alt-svc",
@@ -125298,10 +125298,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 13,
+          "responseTime": 19,
           "responseSize": 1145
         },
-        "id": "3a65b1f8-8e38-4fb8-82fe-4e94faef9a11",
+        "id": "cb135219-f8ab-4fe4-b187-0f190c9fc0e4",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -125327,15 +125327,15 @@
       },
       {
         "cursor": {
-          "ref": "e17881f9-656d-4b23-ac4e-bd8674a257f2",
+          "ref": "1b2e3298-f84d-4bcc-973f-a5e31db89326",
           "length": 15,
           "cycles": 1,
           "position": 11,
           "iteration": 0,
-          "httpRequestId": "e5ee2393-cb7d-409b-9b8b-a4198b330b17"
+          "httpRequestId": "05bdfdf3-9c5f-4c86-b608-b95940328506"
         },
         "item": {
-          "id": "d9e24935-3edd-46ff-9fd0-2b3e7327f301",
+          "id": "298b357d-4f9d-4204-ade2-bc9a18d895c0",
           "name": "4. Get Multiple Episodes",
           "request": {
             "url": {
@@ -125356,7 +125356,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "0aa26516-80a3-4e21-8266-5aa78d5f2424",
+                "id": "72003779-a8e3-45ff-832e-add74bd6c4c7",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -125381,7 +125381,7 @@
                   "    }",
                   "});"
                 ],
-                "_lastExecutionId": "4494bb68-dd98-4462-ad3f-027b528a5384"
+                "_lastExecutionId": "98f000b6-8297-4c54-8f84-120c1d4c7a45"
               }
             }
           ]
@@ -125419,7 +125419,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "f88bda86-e29e-4ff7-8881-d7eb704e8cae",
+              "value": "d40bbde0-658f-4a61-b4ca-bc24ea9898c6",
               "system": true
             },
             {
@@ -125441,13 +125441,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "2d61d846-23d5-45b4-8781-e18e3573f19d",
+          "id": "fafb7684-3500-46d2-9e44-7fc6ab6fc471",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 15 Feb 2026 02:02:38 GMT"
+              "value": "Sun, 15 Feb 2026 02:07:29 GMT"
             },
             {
               "key": "Content-Type",
@@ -125491,11 +125491,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=11WQzHFTi6VuoZ4SNrLPSCk7ZZqEMuPdSFXjvzhTe4R8cgzF8v7no9lB%2BY%2BbmvAJ19wld3PHHYXonEb8ew%2FjMUuiyiwBLGvdVkU7PUUbjcPQacQ%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=TMXipwmxaQ%2F0vE8UrnVzDAhy28jr%2FQWhlTdiSpeskUqOZVXvwpKki47nnogl1mPbUpB8GJ0ciKViwwZtf2NXZp4Rty%2FkiTp6hm8fA1dXvf61I7w%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "14546"
+              "value": "14838"
             },
             {
               "key": "cf-cache-status",
@@ -125507,7 +125507,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9ce139642833de42-SJC"
+              "value": "9ce140814884ead7-ORD"
             },
             {
               "key": "alt-svc",
@@ -130963,10 +130963,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 10,
+          "responseTime": 13,
           "responseSize": 5443
         },
-        "id": "d9e24935-3edd-46ff-9fd0-2b3e7327f301",
+        "id": "298b357d-4f9d-4204-ade2-bc9a18d895c0",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -130996,15 +130996,15 @@
       },
       {
         "cursor": {
-          "ref": "81131890-4fcf-4ffe-8440-e0cfe6326f67",
+          "ref": "7aadeec1-3cfa-4bb0-8160-cf953db78376",
           "length": 15,
           "cycles": 1,
           "position": 12,
           "iteration": 0,
-          "httpRequestId": "b0c7c30d-4b7c-4a3f-aec2-1eb8be5e544f"
+          "httpRequestId": "3d73683a-2db0-41cd-b343-19b1f0873866"
         },
         "item": {
-          "id": "be672f7d-812a-40e9-8a56-694289870109",
+          "id": "8716dfdd-419c-4949-8d51-3be7ec9e3c8b",
           "name": "1. Character Not Found (404)",
           "request": {
             "url": {
@@ -131025,7 +131025,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "647de1c0-69d2-4252-88bc-5f8bf2cdec56",
+                "id": "3c02225f-46d7-463f-a4e8-799290b49cd4",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 404 Not Found', () => pm.response.to.have.status(404));",
@@ -131048,7 +131048,7 @@
                   "    pm.expect(json.error.length).to.be.greaterThan(0);",
                   "});"
                 ],
-                "_lastExecutionId": "fbc16810-da24-46f0-926a-556fdaa93f55"
+                "_lastExecutionId": "7c322581-292f-488d-9c64-18f9d2dd7789"
               }
             }
           ]
@@ -131086,7 +131086,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "3b35f375-4c8d-47f2-aa62-f47a753a7d1b",
+              "value": "c955f005-f8fd-4188-9171-40502b59f959",
               "system": true
             },
             {
@@ -131108,13 +131108,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "e8c53df5-1a19-40c0-beb8-9ee9d0a400f0",
+          "id": "a0191083-1ac4-45df-b894-c731c1d7023a",
           "status": "Not Found",
           "code": 404,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 15 Feb 2026 02:02:38 GMT"
+              "value": "Sun, 15 Feb 2026 02:07:29 GMT"
             },
             {
               "key": "Content-Type",
@@ -131158,7 +131158,7 @@
             },
             {
               "key": "Age",
-              "value": "15037"
+              "value": "15328"
             },
             {
               "key": "cf-cache-status",
@@ -131166,7 +131166,7 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=51LhRw6h%2FvBvoz0oDzau5aShGEXhwUVCVc8IEe6onR6ey48RS1KlI3pOM5TMkC7ZSpRgHzulIYTMB5bwGL%2BreucVRB1MJsW8wz4%2FYWTbHrhoVzU%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=4eKTi85tG2DHsp5xYdD5ehl3Kt3BJpq5uGg7kPQ9B2INWXCag2gtNHDc%2BkkaFO%2B%2BSMOENYmta3CZXysu8oBQ%2B5JuikU5bIrfVs4jjYZabpAW5zM%3D\"}]}"
             },
             {
               "key": "Content-Encoding",
@@ -131174,7 +131174,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9ce1396458c5de42-SJC"
+              "value": "9ce140817918ead7-ORD"
             },
             {
               "key": "alt-svc",
@@ -131218,10 +131218,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 10,
+          "responseTime": 12,
           "responseSize": 31
         },
-        "id": "be672f7d-812a-40e9-8a56-694289870109",
+        "id": "8716dfdd-419c-4949-8d51-3be7ec9e3c8b",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -131251,15 +131251,15 @@
       },
       {
         "cursor": {
-          "ref": "a5ec6d77-b4de-4f6a-bb66-9b62b9045052",
+          "ref": "df3cc0ef-97a8-4e5c-b00f-2443ec29c9f3",
           "length": 15,
           "cycles": 1,
           "position": 13,
           "iteration": 0,
-          "httpRequestId": "f472c2aa-682d-46c5-b513-c73b6c8f2ddd"
+          "httpRequestId": "6249c2e3-111e-4a7a-aec2-396d43d80166"
         },
         "item": {
-          "id": "cbbf3d7e-c83a-42d6-ab90-ab35b9df9c58",
+          "id": "58cafbe1-c152-4b28-ab88-c9afe9c797e5",
           "name": "2. Invalid Endpoint (404)",
           "request": {
             "url": {
@@ -131280,7 +131280,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "fde1d317-bafc-4ec3-8ed8-05afe133bafa",
+                "id": "1859cd7e-13b2-4078-9e8b-96d7f3357249",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 404 Not Found', () => pm.response.to.have.status(404));",
@@ -131291,7 +131291,7 @@
                   "    pm.expect(json).to.have.property('error');",
                   "});"
                 ],
-                "_lastExecutionId": "fd4521c1-4e74-436c-a89c-b7c684c62177"
+                "_lastExecutionId": "a924e8a8-9f42-4c3c-8b0e-13b45abc2e25"
               }
             }
           ]
@@ -131329,7 +131329,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "ea003962-f088-42b8-b34f-b33b3b9b087e",
+              "value": "066f915e-5fbd-44e4-9162-71a3a3c872ce",
               "system": true
             },
             {
@@ -131351,13 +131351,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "4b8e19be-168b-4008-aa70-ba43db1533ad",
+          "id": "36560b68-cffa-4afb-9209-61d4f2f82248",
           "status": "Not Found",
           "code": 404,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 15 Feb 2026 02:02:38 GMT"
+              "value": "Sun, 15 Feb 2026 02:07:29 GMT"
             },
             {
               "key": "Content-Type",
@@ -131401,7 +131401,7 @@
             },
             {
               "key": "Age",
-              "value": "15035"
+              "value": "15326"
             },
             {
               "key": "cf-cache-status",
@@ -131409,7 +131409,7 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=PvtMwwPyvGFVisK6LEFgnAQKHshqewMkcGk%2FMP2Kz81UyQsjjkvVqhVdAkMLLUWPT9ObgXaZ1MIB4HHOK4bEzYZQVavwnWZDbHr%2FOS4AKfG1928%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=zBCZvuk9ejqiv2rxOQAcQE159QvEFGF9J%2FzN%2Ft7rkPWFfz6zdCraBFWmuhReX1bGk27RyzVeW9v05xr1mkmEzk%2F3YsDw4Z4USwmYE7GGC6aE%2BGE%3D\"}]}"
             },
             {
               "key": "Content-Encoding",
@@ -131417,7 +131417,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9ce139648955de42-SJC"
+              "value": "9ce14081a995ead7-ORD"
             },
             {
               "key": "alt-svc",
@@ -131464,10 +131464,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 13,
+          "responseTime": 16,
           "responseSize": 34
         },
-        "id": "cbbf3d7e-c83a-42d6-ab90-ab35b9df9c58",
+        "id": "58cafbe1-c152-4b28-ab88-c9afe9c797e5",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -131489,15 +131489,15 @@
       },
       {
         "cursor": {
-          "ref": "fb35a644-814c-4c3d-aef3-f883e6c4cc8d",
+          "ref": "8ce96c1f-c05e-4e87-83d6-aa405d35201d",
           "length": 15,
           "cycles": 1,
           "position": 14,
           "iteration": 0,
-          "httpRequestId": "5c1276b0-baeb-4ed8-a852-5ecd8fa49d33"
+          "httpRequestId": "b2f4760d-f94b-405a-9f54-b230d4b9c150"
         },
         "item": {
-          "id": "bb06de17-fadf-456e-a657-945f340cd018",
+          "id": "36c38bdb-2e7c-45dc-81d8-229065ea811d",
           "name": "Response Time Check",
           "request": {
             "url": {
@@ -131518,7 +131518,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "830f5b85-8352-443d-b0dd-6f97f8efb4dc",
+                "id": "ce079c80-4198-4cc3-aee8-e7cabc5928f0",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Response time < 500ms', () => {",
@@ -131529,7 +131529,7 @@
                   "    pm.expect(pm.response.responseTime).to.be.below(1000);",
                   "});"
                 ],
-                "_lastExecutionId": "75c69e26-1562-4fb6-aef2-b5055add6dba"
+                "_lastExecutionId": "6ccbb2ec-fff6-4fd6-8ebd-8555e731fd78"
               }
             }
           ]
@@ -131567,7 +131567,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "f086a32c-6a81-420f-858e-e7ff0c0833a1",
+              "value": "e8810a8c-cbf6-4f9a-8b5c-828db141c416",
               "system": true
             },
             {
@@ -131589,13 +131589,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "17758603-0d84-4b36-b310-6d37cbc425e0",
+          "id": "85c2b3be-273b-4314-b6ca-a6190c5edc45",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 15 Feb 2026 02:02:38 GMT"
+              "value": "Sun, 15 Feb 2026 02:07:29 GMT"
             },
             {
               "key": "Content-Type",
@@ -131639,11 +131639,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=rxej4KY%2FyoXFCh8Xe2FYUTOcE6aCdXBosP7641nywk5ESRHDDBvIF7f4904foll%2FtVSSuNbFqtt%2BLZVphTFmi9vk8pDC43O2eo2aewAeNhAUPBo%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ESacBRLKWKUylW%2FGzP2GlqbIY8q4SNoNN5YzPSgLzOy4lP%2FFCep8FrYSRko9e7ir%2Fv4kFoiL8zaeFk51dtfqFxHHWs3pmgRZZs8rAemzFS56igc%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "903435"
+              "value": "903726"
             },
             {
               "key": "cf-cache-status",
@@ -131655,7 +131655,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9ce13964b9f6de42-SJC"
+              "value": "9ce14081ea28ead7-ORD"
             },
             {
               "key": "alt-svc",
@@ -134387,10 +134387,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 10,
+          "responseTime": 12,
           "responseSize": 2719
         },
-        "id": "bb06de17-fadf-456e-a657-945f340cd018",
+        "id": "36c38bdb-2e7c-45dc-81d8-229065ea811d",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
