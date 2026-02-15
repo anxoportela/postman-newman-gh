@@ -8,7 +8,7 @@ export default function TestResults() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('/postman-newman-gh/docs/newman-report.json')
+    fetch('/newman-report.json')
       .then(res => {
         if (!res.ok) throw new Error('Failed to fetch');
         return res.json();
@@ -42,7 +42,7 @@ export default function TestResults() {
           <div className="alert alert--warning">
             <p>Could not load test results: {error}</p>
           </div>
-          <p>View the full report: <Link href="/postman-newman-gh/docs/newman-report.html">Newman HTML Report</Link></p>
+          <p>View the full report: <Link href="/newman-report.html">Newman HTML Report</Link></p>
         </div>
       </Layout>
     );
@@ -58,7 +58,7 @@ export default function TestResults() {
           <div className="alert alert--warning">
             <p>Invalid data format</p>
           </div>
-          <p>View the full report: <Link href="/postman-newman-gh/docs/newman-report.html">Newman HTML Report</Link></p>
+          <p>View the full report: <Link href="/newman-report.html">Newman HTML Report</Link></p>
         </div>
       </Layout>
     );
@@ -168,7 +168,7 @@ export default function TestResults() {
 
         {/* Full Report Link */}
         <div style={{marginTop: '2rem', textAlign: 'center'}}>
-          <Link className="button button--primary button--lg" href="/postman-newman-gh/docs/newman-report.html">
+          <Link className="button button--primary button--lg" href="/newman-report.html">
             📄 View Full HTML Report
           </Link>
         </div>
