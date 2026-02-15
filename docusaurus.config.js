@@ -8,7 +8,6 @@ const config = {
   baseUrl: '/postman-newman-gh/',
 
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
 
   presets: [
     [
@@ -27,18 +26,12 @@ const config = {
 
   themeConfig: {
     colorMode: {
-      defaultMode: {
-        dark: true,
-        light: false,
-      },
+      defaultMode: 'dark',
+      disableSwitch: false,
       respectPrefersColorScheme: true,
     },
     navbar: {
       title: 'Rick and Morty API Tests',
-      logo: {
-        alt: 'Rick and Morty Logo',
-        src: 'https://upload.wikimedia.org/wikipedia/en/c/c4/Rick_and_Morty_season_1.jpg',
-      },
       items: [
         {
           type: 'docSidebar',
