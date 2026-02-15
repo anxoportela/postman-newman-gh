@@ -1,12 +1,14 @@
 ---
 sidebar_position: 1
+title: Characters API
+description: Complete guide to the Rick and Morty Characters API
 ---
 
-# Characters API
+# 🔵 Characters API
 
 The Characters API provides access to all characters from the Rick and Morty universe.
 
-## Endpoints
+## 📡 Endpoints
 
 ### Get All Characters
 
@@ -14,17 +16,20 @@ The Characters API provides access to all characters from the Rick and Morty uni
 GET https://rickandmortyapi.com/api/character
 ```
 
-**Parameters:**
-- `page` (optional): Page number for pagination
-- `name` (optional): Filter by character name
-- `status` (optional): Filter by status (alive, dead, unknown)
-- `species` (optional): Filter by species
-- `type` (optional): Filter by type
-- `gender` (optional): Filter by gender (male, female, genderless, unknown)
+**Query Parameters:**
+
+| Parameter | Type | Description | Example |
+|-----------|------|-------------|---------|
+| `page` | integer | Page number | `?page=2` |
+| `name` | string | Filter by name | `?name=rick` |
+| `status` | string | Filter by status | `?status=alive` |
+| `species` | string | Filter by species | `?species=human` |
+| `type` | string | Filter by type | `?type=ghost` |
+| `gender` | string | Filter by gender | `?gender=male` |
 
 **Example Request:**
 ```bash
-curl https://rickandmortyapi.com/api/character?status=alive&species=human
+curl "https://rickandmortyapi.com/api/character?status=alive&species=human"
 ```
 
 ### Get Character by ID
@@ -32,6 +37,10 @@ curl https://rickandmortyapi.com/api/character?status=alive&species=human
 ```
 GET https://rickandmortyapi.com/api/character/{id}
 ```
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `id` | integer | Character ID (1-826) |
 
 **Example:**
 ```bash
@@ -41,7 +50,7 @@ curl https://rickandmortyapi.com/api/character/1
 ### Get Multiple Characters
 
 ```
-GET https://rickandmortyapi.com/api/character/{id1,id2,id3}
+GET https://rickandmortyapi.com/api/character/[id1,id2,id3]
 ```
 
 **Example:**
@@ -49,12 +58,12 @@ GET https://rickandmortyapi.com/api/character/{id1,id2,id3}
 curl https://rickandmortyapi.com/api/character/1,2,3
 ```
 
-## Response Schema
+## 📋 Response Schema
 
 ```json
 {
-  "": 1,
-  "name":id "Rick Sanchez",
+  "id": 1,
+  "name": "Rick Sanchez",
   "status": "Alive",
   "species": "Human",
   "type": "",
@@ -76,13 +85,28 @@ curl https://rickandmortyapi.com/api/character/1,2,3
 }
 ```
 
-## Test Cases
+## ✅ Test Cases
 
-Our test suite validates:
-- ✅ Status code 200 OK
-- ✅ Response has info with pagination
-- ✅ Results is an array with items
-- ✅ Character has all required fields
-- ✅ Filter by name and status works
-- ✅ Pagination (next/previous pages)
-- ✅ Get multiple characters by IDs
+Our comprehensive test suite validates:
+
+| Test | Description |
+|------|-------------|
+| ✅ Status 200 | Verify successful response |
+| ✅ Pagination | Response includes info with next/prev pages |
+| ✅ Array validation | Results is an array with items |
+| ✅ Required fields | Character has all required fields |
+| ✅ Name filter | Filter by name works correctly |
+| ✅ Status filter | Filter by status works correctly |
+| ✅ Pagination | Navigate between pages |
+| ✅ Multiple IDs | Get multiple characters by IDs |
+
+## 🎯 Test Count
+
+- **Total Tests:** 30 assertions
+- **Coverage:** Full endpoint coverage
+
+## 📖 Related Documentation
+
+- [Locations API](/locations)
+- [Episodes API](/episodes)
+- [Rick and Morty API Official Docs](https://rickandmortyapi.com/documentation)

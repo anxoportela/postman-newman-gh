@@ -1,37 +1,91 @@
 ---
 slug: /
+title: Home
+description: Comprehensive API testing suite for the Rick and Morty API
 ---
 
-# Rick and Morty API Test Suite
+import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
-Welcome to the comprehensive API testing suite for the Rick and Morty API.
+# 🚀 Rick and Morty API Test Suite
 
-## Features
+<div style={{textAlign: 'center', padding: '2rem 0'}}>
 
-- **90 Test Assertions** covering all API endpoints
-- **Beautiful HTML Reports** with Newman htmlextra
-- **Docker Support** for containerized testing
-- **Docusaurus Documentation**
+![Rick and Morty](https://upload.wikimedia.org/wikipedia/en/c/c4/Rick_and_Morty_season_1.jpg)
 
-## Quick Links
+**Comprehensive API testing suite for the [Rick and Morty API](https://rickandmortyapi.com/) using Postman and Newman**
 
-- [API Docs](/docs/api/characters) - Explore all endpoints
-- [Setup Guide](/docs/setup) - Get started
-- [Test Results](/docs/test-results) - View test reports
+</div>
 
-## Test Coverage
+## ✨ Features
 
-| Endpoint | Tests |
-|----------|-------|
-| Characters | 30 tests |
-| Locations | 18 tests |
-| Episodes | 24 tests |
-| Error Handling | 10 tests |
-| Performance | 8 tests |
+| Feature | Description |
+|---------|-------------|
+| 🔬 **90 Test Assertions** | Full coverage of all API endpoints |
+| 📊 **Beautiful Reports** | Newman htmlextra with detailed HTML reports |
+| 🐳 **Docker Support** | Containerized testing with Docker |
+| 📚 **Documentation** | Beautiful Docusaurus docs |
+| ⚡ **CI/CD** | GitHub Actions automation |
 
-## Quick Start
+---
+
+## 📈 Test Coverage
+
+<div className="grid-cards">
+
+| Endpoint | Tests | Status |
+|----------|-------|--------|
+| Characters | 30 | ✅ |
+| Locations | 18 | ✅ |
+| Episodes | 24 | ✅ |
+| Error Handling | 10 | ✅ |
+| Performance | 8 | ✅ |
+
+</div>
+
+## 🚦 Quick Start
 
 ```bash
+# Install dependencies
 npm install
+
+# Run tests
 npm test
+
+# Build docs
+npm run docs:build
 ```
+
+## 📖 Documentation
+
+<div className="button-group">
+
+<Link className="button button--primary button--lg" to="/setup">
+  ⚡ Get Started
+</Link>
+
+<Link className="button button--secondary button--lg" to="/characters">
+  📚 API Docs
+</Link>
+
+</div>
+
+## 🏗️ Project Structure
+
+```
+.
+├── docs/                    # Documentation
+│   ├── index.md            # Homepage
+│   ├── setup.md            # Setup guide
+│   ├── test-results.md     # Test results
+│   └── api/                # API endpoints
+├── rick-and-morty-api.json # Postman collection
+├── rick-and-morty-env.json # Environment
+├── Dockerfile              # Docker image
+├── Makefile               # Commands
+└── .github/workflows/     # CI/CD
+```
+
+## 📝 License
+
+MIT License - © 2026 Anxo Portela-Insua Blanco

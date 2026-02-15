@@ -1,12 +1,14 @@
 ---
 sidebar_position: 3
+title: Episodes API
+description: Complete guide to the Rick and Morty Episodes API
 ---
 
-# Episodes API
+# 🟣 Episodes API
 
 The Episodes API provides access to all episodes from the Rick and Morty series.
 
-## Endpoints
+## 📡 Endpoints
 
 ### Get All Episodes
 
@@ -14,10 +16,13 @@ The Episodes API provides access to all episodes from the Rick and Morty series.
 GET https://rickandmortyapi.com/api/episode
 ```
 
-**Parameters:**
-- `page` (optional): Page number for pagination
-- `name` (optional): Filter by episode name
-- `episode` (optional): Filter by episode code (e.g., S01E01)
+**Query Parameters:**
+
+| Parameter | Type | Description | Example |
+|-----------|------|-------------|---------|
+| `page` | integer | Page number | `?page=2` |
+| `name` | string | Filter by name | `?name=pilot` |
+| `episode` | string | Filter by code | `?episode=S01` |
 
 ### Get Episode by ID
 
@@ -25,10 +30,20 @@ GET https://rickandmortyapi.com/api/episode
 GET https://rickandmortyapi.com/api/episode/{id}
 ```
 
+**Example:**
+```bash
+curl https://rickandmortyapi.com/api/episode/1
+```
+
 ### Get Multiple Episodes
 
 ```
-GET https://rickandmortyapi.com/api/episode/{id1,id2,id3}
+GET https://rickandmortyapi.com/api/episode/[id1,id2,id3]
+```
+
+**Example:**
+```bash
+curl https://rickandmortyapi.com/api/episode/1,2,3
 ```
 
 ### Filter by Episode Code
@@ -37,7 +52,7 @@ GET https://rickandmortyapi.com/api/episode/{id1,id2,id3}
 curl "https://rickandmortyapi.com/api/episode?episode=S01E01"
 ```
 
-## Response Schema
+## 📋 Response Schema
 
 ```json
 {
@@ -54,24 +69,45 @@ curl "https://rickandmortyapi.com/api/episode?episode=S01E01"
 }
 ```
 
-## Episode Code Format
+## 📺 Episode Code Format
 
 Episodes follow the format `SxxExx`:
-- S = Season (01, 02, 03, etc.)
-- E = Episode (01, 02, 03, etc.)
 
-Examples:
-- S01E01 - Pilot
-- S01E02 - Lawnmower Dog
-- S02E01 - A Rickle in Time
+| Format | Description |
+|--------|-------------|
+| S | Season (01, 02, 03, etc.) |
+| E | Episode (01, 02, 03, etc.) |
 
-## Test Cases
+**Examples:**
 
-Our test suite validates:
-- ✅ Status code 200 OK
-- ✅ Episode has required fields
-- ✅ Episode code format validation (SxxExx regex)
-- ✅ Air date is valid date string
-- ✅ Filter by episode code works
-- ✅ Get multiple episodes by IDs
-- ✅ Sequential ID verification
+| Code | Episode |
+|------|---------|
+| S01E01 | Pilot |
+| S01E02 | Lawnmower Dog |
+| S02E01 | A Rickle in Time |
+| S03E01 | The Rickshank Rickdemption |
+
+## ✅ Test Cases
+
+Our comprehensive test suite validates:
+
+| Test | Description |
+|------|-------------|
+| ✅ Status 200 | Verify successful response |
+| ✅ Required fields | Episode has all required properties |
+| ✅ Code format | Episode code matches SxxExx regex |
+| ✅ Air date | Valid date string format |
+| ✅ Episode filter | Filter by episode code works |
+| ✅ Multiple IDs | Get multiple episodes by IDs |
+| ✅ Sequential IDs | Sequential ID verification |
+
+## 🎯 Test Count
+
+- **Total Tests:** 24 assertions
+- **Coverage:** Full endpoint coverage
+
+## 📖 Related Documentation
+
+- [Characters API](/characters)
+- [Locations API](/locations)
+- [Rick and Morty API Official Docs](https://rickandmortyapi.com/documentation)

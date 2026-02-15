@@ -1,12 +1,14 @@
 ---
 sidebar_position: 2
+title: Locations API
+description: Complete guide to the Rick and Morty Locations API
 ---
 
-# Locations API
+# 🟢 Locations API
 
 The Locations API provides access to all locations from the Rick and Morty universe.
 
-## Endpoints
+## 📡 Endpoints
 
 ### Get All Locations
 
@@ -14,16 +16,24 @@ The Locations API provides access to all locations from the Rick and Morty unive
 GET https://rickandmortyapi.com/api/location
 ```
 
-**Parameters:**
-- `page` (optional): Page number for pagination
-- `name` (optional): Filter by location name
-- `type` (optional): Filter by type (Planet, Cluster, Space station, etc.)
-- `dimension` (optional): Filter by dimension
+**Query Parameters:**
+
+| Parameter | Type | Description | Example |
+|-----------|------|-------------|---------|
+| `page` | integer | Page number | `?page=2` |
+| `name` | string | Filter by name | `?name=earth` |
+| `type` | string | Filter by type | `?type=planet` |
+| `dimension` | string | Filter by dimension | `?dimension=C-137` |
 
 ### Get Location by ID
 
 ```
 GET https://rickandmortyapi.com/api/location/{id}
+```
+
+**Example:**
+```bash
+curl https://rickandmortyapi.com/api/location/1
 ```
 
 ### Filter Locations
@@ -32,7 +42,7 @@ GET https://rickandmortyapi.com/api/location/{id}
 curl "https://rickandmortyapi.com/api/location?type=planet&dimension=C-137"
 ```
 
-## Response Schema
+## 📋 Response Schema
 
 ```json
 {
@@ -49,26 +59,44 @@ curl "https://rickandmortyapi.com/api/location?type=planet&dimension=C-137"
 }
 ```
 
-## Location Types
+## 🌍 Location Types
 
-- Planet
-- Cluster
-- Space station
-- Microverse
-- TV
-- Resort
-- Fantasy town
-- Game
-- Celestial
-- Unknown
-- Dimension
-- Multiverse
+| Type | Description |
+|------|-------------|
+| Planet | planets like Earth |
+| Cluster | clusters of locations |
+| Space station | space stations |
+| Microverse | microverses |
+| TV | TV locations |
+| Resort | resorts |
+| Fantasy town | fantasy towns |
+| Game | game locations |
+| Celestial | celestial locations |
+| Unknown | unknown locations |
+| Dimension | dimensions |
+| Multiverse | multiverses |
 
-## Test Cases
+## ✅ Test Cases
 
-Our test suite validates:
-- ✅ Status code 200 OK
-- ✅ Response has info and results
-- ✅ Location has required properties
-- ✅ Filter by name, type, and dimension
-- ✅ Chained requests with saved variables
+Our comprehensive test suite validates:
+
+| Test | Description |
+|------|-------------|
+| ✅ Status 200 | Verify successful response |
+| ✅ Pagination | Response includes info object |
+| ✅ Required fields | Location has all required properties |
+| ✅ Name filter | Filter by name works correctly |
+| ✅ Type filter | Filter by type works correctly |
+| ✅ Dimension filter | Filter by dimension works correctly |
+| ✅ Chained requests | Saved variables used in tests |
+
+## 🎯 Test Count
+
+- **Total Tests:** 18 assertions
+- **Coverage:** Full endpoint coverage
+
+## 📖 Related Documentation
+
+- [Characters API](/characters)
+- [Episodes API](/episodes)
+- [Rick and Morty API Official Docs](https://rickandmortyapi.com/documentation)
