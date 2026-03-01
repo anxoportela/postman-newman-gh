@@ -5,11 +5,11 @@
     },
     "item": [
       {
-        "id": "1ba29d05-a929-4597-91f9-2f59e872bdf5",
+        "id": "c74c2383-52f8-488d-a0c3-6737ad0b705f",
         "name": "Characters - Advanced Tests",
         "item": [
           {
-            "id": "456ad2e6-c9f6-411a-8775-2e7a09329756",
+            "id": "4af8b2ae-37a6-4952-9630-7e728c89ddb1",
             "name": "1. List All Characters with Pagination",
             "request": {
               "url": {
@@ -29,7 +29,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "c80e9f43-0443-4fc4-b07a-11c595f55a3e",
+                  "id": "8617b066-5746-4115-8d97-a20035926560",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -76,13 +76,13 @@
                     "    pm.response.to.have.header('Content-Type');",
                     "});"
                   ],
-                  "_lastExecutionId": "2444f505-0e3b-46af-8e70-a982fd7e8bdd"
+                  "_lastExecutionId": "5532c427-5769-48db-86ad-1e9fa906d177"
                 }
               }
             ]
           },
           {
-            "id": "5966834d-1958-45e5-8d8a-9e0bc169fa79",
+            "id": "e0adf31d-b7ca-492b-a41f-296f3c63eb7b",
             "name": "2. Get Character by ID (Using Variable)",
             "request": {
               "url": {
@@ -103,7 +103,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "cb4d3751-7d5a-4136-a6fb-76f310553985",
+                  "id": "0d9069cc-866e-452b-b399-4dd258117699",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -138,13 +138,13 @@
                     "    pm.expect(json.image).to.include('http');",
                     "});"
                   ],
-                  "_lastExecutionId": "abd8b50e-b216-4ca6-b43a-208d83e85097"
+                  "_lastExecutionId": "67b2fbe8-b29d-4991-ae7a-9e1486b78210"
                 }
               }
             ]
           },
           {
-            "id": "48e51bbe-ec9b-4f43-9c00-e783f893a19e",
+            "id": "b16979d5-fee9-4ac0-8cf0-2aec8d4dd9d4",
             "name": "3. Filter Characters - Multiple Filters",
             "request": {
               "url": {
@@ -173,7 +173,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "51c50220-ef20-4380-93c2-7d5b8769ec09",
+                  "id": "17ee95f0-313a-489d-b634-003dcce7b431",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -208,13 +208,13 @@
                     "    });",
                     "});"
                   ],
-                  "_lastExecutionId": "f99815de-e143-48ef-89b6-f10c6db7d3c6"
+                  "_lastExecutionId": "d18b1b47-80e4-4ae8-9cbd-be2c2d7a86a6"
                 }
               }
             ]
           },
           {
-            "id": "ef1626ec-1fc4-4b84-b2cd-7f9d5147dab8",
+            "id": "a41add5f-2e05-4db2-b7c3-01ecbb6023d8",
             "name": "4. Pagination Test",
             "request": {
               "url": {
@@ -239,7 +239,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "863a40df-9df6-43c2-b9f1-5e990b7ba4d5",
+                  "id": "517377cf-1be4-46c3-94e3-257aa902ce3a",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -264,13 +264,13 @@
                     "    pm.expect(ids.length).to.equal(uniqueIds.length);",
                     "});"
                   ],
-                  "_lastExecutionId": "43c9d9a4-8c31-42f7-aae6-3403c7482315"
+                  "_lastExecutionId": "b9d2de25-d835-4efd-8692-e62c69ccbc53"
                 }
               }
             ]
           },
           {
-            "id": "c12c7f46-2854-4a46-adab-19f2a93702c7",
+            "id": "8c216582-4a82-4b69-94a4-9e25a12906ed",
             "name": "5. Get Multiple Characters",
             "request": {
               "url": {
@@ -291,7 +291,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "d041d254-a154-41ca-a0a3-fc53a9a51474",
+                  "id": "d60c008d-49d3-4a23-be0d-970da90bafb3",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -316,7 +316,7 @@
                     "    pm.expect(json[2].id).to.equal(3);",
                     "});"
                   ],
-                  "_lastExecutionId": "d99ebfb5-ea28-4450-a1cf-345860a0a6ac"
+                  "_lastExecutionId": "08d98438-0142-4d0b-9205-fa6b3881f69b"
                 }
               }
             ]
@@ -325,11 +325,11 @@
         "event": []
       },
       {
-        "id": "53d83d25-2987-4594-8ca8-1e0d6df864dc",
+        "id": "8bc0432c-2ae5-4272-b1d0-d34f09d7f089",
         "name": "Locations - Advanced Tests",
         "item": [
           {
-            "id": "6c42e515-8744-4eee-aed6-f53f7422d9b8",
+            "id": "3439b8cf-6861-4214-810d-0badc1a91a75",
             "name": "1. List All Locations",
             "request": {
               "url": {
@@ -349,7 +349,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "361e020b-d267-4a7a-9d02-85f2800174ae",
+                  "id": "53ebaa2d-0866-446b-ad9c-b0d25c6e0a03",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -380,13 +380,13 @@
                     "    pm.environment.set('firstLocationName', json.results[0].name);",
                     "});"
                   ],
-                  "_lastExecutionId": "00e13a58-a0bc-4fdb-a215-7dd10eb3e724"
+                  "_lastExecutionId": "434d42e0-47b7-44e7-909b-29ddeeae3147"
                 }
               }
             ]
           },
           {
-            "id": "6143f206-9e7e-4160-aa03-e842493d44aa",
+            "id": "af074f01-df09-497c-9731-1f59e8d1bc84",
             "name": "2. Get Location by ID",
             "request": {
               "url": {
@@ -407,7 +407,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "bfd55b2a-cf08-401b-88d5-643c0291f370",
+                  "id": "67a25774-8637-44d3-bf10-a3c80de96be7",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -431,13 +431,13 @@
                     "    pm.expect(validTypes).to.include(json.type);",
                     "});"
                   ],
-                  "_lastExecutionId": "d6b65e22-8ebd-43e8-890f-c3f4abfbd76f"
+                  "_lastExecutionId": "a58c8f53-7c9b-4937-95f1-ad2edc603ec5"
                 }
               }
             ]
           },
           {
-            "id": "d50923a8-280b-4ecf-8c54-71704934b81e",
+            "id": "25a1b210-f70a-4576-b53c-ced399980af6",
             "name": "3. Filter Locations",
             "request": {
               "url": {
@@ -466,7 +466,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "91b34484-de4b-4b20-8e09-0cd211bd4a9b",
+                  "id": "b6f31c83-0557-47e4-99d2-880f679ceea6",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -492,7 +492,7 @@
                     "    pm.expect(allC137).to.be.true;",
                     "});"
                   ],
-                  "_lastExecutionId": "5a33f0ef-746f-4a2c-afe1-a11089ca885d"
+                  "_lastExecutionId": "a9ef938f-36a2-46f7-8e59-5631b7200ddf"
                 }
               }
             ]
@@ -501,11 +501,11 @@
         "event": []
       },
       {
-        "id": "56559a64-a232-4e73-b9cf-f837683351ae",
+        "id": "64f5c712-76eb-4feb-bf05-0592f0c7e973",
         "name": "Episodes - Advanced Tests",
         "item": [
           {
-            "id": "1c29219d-5154-4290-b7d2-dabac451c652",
+            "id": "b82ea76d-6066-46d4-902b-ce9bf09d6a67",
             "name": "1. List All Episodes",
             "request": {
               "url": {
@@ -525,7 +525,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "9543ca4d-370f-49de-bfd5-f50d1642fc59",
+                  "id": "d45c17f0-52b7-4990-a010-bcd2c4e6b703",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -562,13 +562,13 @@
                     "    pm.environment.set('firstEpisodeCode', json.results[0].episode);",
                     "});"
                   ],
-                  "_lastExecutionId": "5cbcef43-23e7-4974-8e8e-0a58424fe81b"
+                  "_lastExecutionId": "cf738032-a55a-4401-a5d2-40968d8c28f5"
                 }
               }
             ]
           },
           {
-            "id": "cd97c528-c6c5-43de-b5c1-a2107c7f345f",
+            "id": "b507d405-0ed3-49bb-9087-e947052189f6",
             "name": "2. Get Episode by ID",
             "request": {
               "url": {
@@ -589,7 +589,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "a0dd0f47-25c4-4f5e-b449-889d4ea3d434",
+                  "id": "69cf0d34-65b4-4190-9f7f-9ead9b17155c",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -614,13 +614,13 @@
                     "    pm.expect(date.toString()).to.not.equal('Invalid Date');",
                     "});"
                   ],
-                  "_lastExecutionId": "6eb663d0-8bb0-4a80-9bfb-a24d162dc201"
+                  "_lastExecutionId": "5e101666-1aa1-4176-a487-63c05198b7b8"
                 }
               }
             ]
           },
           {
-            "id": "6059cedc-dfe4-4845-a6fa-e37516eeea52",
+            "id": "b0a2c8b1-fba4-4f9f-938f-615c9b0857a2",
             "name": "3. Filter Episodes by Code",
             "request": {
               "url": {
@@ -645,7 +645,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "01e76c91-551b-4548-866b-d94712190a80",
+                  "id": "979b0f51-06c8-42c0-96f8-9e40417bf5b1",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -663,13 +663,13 @@
                     "    pm.expect(json.results.length).to.be.greaterThan(0);",
                     "});"
                   ],
-                  "_lastExecutionId": "61f87c08-b4f9-41cd-b37c-ed064542ed8c"
+                  "_lastExecutionId": "eebd0a54-d3bd-4881-ab31-0b2f42468711"
                 }
               }
             ]
           },
           {
-            "id": "940f87b6-38eb-42d7-91f9-7115bb63982f",
+            "id": "619c4a8b-0fd8-4d89-be9e-96e7d7c51115",
             "name": "4. Get Multiple Episodes",
             "request": {
               "url": {
@@ -690,7 +690,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "0a897d86-2a98-448d-928b-fbe2bc82bdb5",
+                  "id": "eaa3c60c-6b2b-4956-b1c8-7946ff2101f2",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -715,7 +715,7 @@
                     "    }",
                     "});"
                   ],
-                  "_lastExecutionId": "414c1a81-e329-4da1-b222-4e2bcd5b3d1c"
+                  "_lastExecutionId": "c915d7e2-fd49-4a1a-8057-af574d8b4dd6"
                 }
               }
             ]
@@ -724,11 +724,11 @@
         "event": []
       },
       {
-        "id": "f5d86846-c76b-4897-b32e-11b33b93e708",
+        "id": "3c8263c6-97c6-4998-93b4-d09cbbd9b820",
         "name": "Error Handling",
         "item": [
           {
-            "id": "686d1b92-0788-4436-a74f-2178f3aa21fb",
+            "id": "486730ad-d687-44a8-a5f6-6b36d3fa9b02",
             "name": "1. Character Not Found (404)",
             "request": {
               "url": {
@@ -749,7 +749,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "bb24be38-380b-4711-a11a-caa912dab588",
+                  "id": "99632a95-50be-4ec0-ae38-ebb5ce82a6b1",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 404 Not Found', () => pm.response.to.have.status(404));",
@@ -772,13 +772,13 @@
                     "    pm.expect(json.error.length).to.be.greaterThan(0);",
                     "});"
                   ],
-                  "_lastExecutionId": "df1930a0-f78e-4a77-90a9-c93f7ddc292a"
+                  "_lastExecutionId": "053cfaf9-07d1-462f-8fb4-51712af32d19"
                 }
               }
             ]
           },
           {
-            "id": "774a37b4-aae9-470d-ab99-7bbe7cd96522",
+            "id": "a054bead-1ad3-44f5-ae21-64fbf4be38dd",
             "name": "2. Invalid Endpoint (404)",
             "request": {
               "url": {
@@ -799,7 +799,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "9e8e88e4-5491-4a24-8ae9-f2ad2689c060",
+                  "id": "02be77aa-554e-43dc-b99a-121ce295eb42",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Status 404 Not Found', () => pm.response.to.have.status(404));",
@@ -810,7 +810,7 @@
                     "    pm.expect(json).to.have.property('error');",
                     "});"
                   ],
-                  "_lastExecutionId": "67e38ce6-232f-4e05-a387-15277b3cfde5"
+                  "_lastExecutionId": "86cbb6fa-08a5-4d9a-aaca-129c0f1ac202"
                 }
               }
             ]
@@ -819,11 +819,11 @@
         "event": []
       },
       {
-        "id": "b02325f8-c751-4b16-8003-99a5776a69ff",
+        "id": "9133f4e0-d8d6-4f26-b2a6-64bbe6979391",
         "name": "Performance Tests",
         "item": [
           {
-            "id": "123443a4-5a78-4c00-9c91-75fff1da40a6",
+            "id": "bc672944-5085-4ea9-bc8b-15ddba75f88b",
             "name": "Response Time Check",
             "request": {
               "url": {
@@ -844,7 +844,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "9aa67744-d71b-4a17-ac54-6e2e5682bd5d",
+                  "id": "58c67fe1-c6e8-4ad7-b5fe-c1e0727fd65a",
                   "type": "text/javascript",
                   "exec": [
                     "pm.test('Response time < 500ms', () => {",
@@ -855,7 +855,7 @@
                     "    pm.expect(pm.response.responseTime).to.be.below(1000);",
                     "});"
                   ],
-                  "_lastExecutionId": "f3f1f99e-17d4-4116-bba5-e4af1e0b8659"
+                  "_lastExecutionId": "f1336325-3d79-48ef-aa63-804ef797bd52"
                 }
               }
             ]
@@ -868,7 +868,7 @@
       {
         "listen": "test",
         "script": {
-          "id": "50b18583-5e88-4758-abf4-a28352cc00e4",
+          "id": "513ae4c5-2772-4dcb-bd50-d21d3631ba68",
           "type": "text/javascript",
           "exec": [
             "// Global test - response time",
@@ -883,19 +883,19 @@
             "    }",
             "});"
           ],
-          "_lastExecutionId": "5d27aff1-f045-4152-8c6e-f9272f48abe7"
+          "_lastExecutionId": "d9046245-462b-48f3-9623-63cd21c4a7fe"
         }
       },
       {
         "listen": "prerequest",
         "script": {
-          "id": "a76b4b00-219d-49b7-9298-39b8fad8d74a",
+          "id": "2ba57625-84c4-4c5e-835c-913b345fddf5",
           "type": "text/javascript",
           "exec": [
             "// Set timestamp for tracking",
             "pm.environment.set('requestTimestamp', Date.now());"
           ],
-          "_lastExecutionId": "d60cc0b2-5d23-46d2-a47c-9ea424018b5b"
+          "_lastExecutionId": "a759d64c-4011-4485-bde2-b3c849ec841b"
         }
       }
     ],
@@ -962,7 +962,7 @@
       },
       {
         "type": "any",
-        "value": 1772351423532,
+        "value": 1772351416967,
         "key": "requestTimestamp"
       },
       {
@@ -998,7 +998,7 @@
     ]
   },
   "globals": {
-    "id": "ab2beee8-6aca-4a0c-96f5-1e087f00ad5c",
+    "id": "a13e5d00-e040-4d79-a712-b21de720533c",
     "values": []
   },
   "run": {
@@ -1050,10 +1050,10 @@
       }
     },
     "timings": {
-      "responseAverage": 16.066666666666666,
+      "responseAverage": 152.86666666666667,
       "responseMin": 9,
-      "responseMax": 94,
-      "responseSd": 20.85015321020181,
+      "responseMax": 549,
+      "responseSd": 138.11100205591475,
       "dnsAverage": 0,
       "dnsMin": 0,
       "dnsMax": 0,
@@ -1062,8 +1062,8 @@
       "firstByteMin": 0,
       "firstByteMax": 0,
       "firstByteSd": 0,
-      "started": 1772351422935,
-      "completed": 1772351423557
+      "started": 1772351414313,
+      "completed": 1772351416990
     },
     "executions": [
       {
@@ -1076,11 +1076,11 @@
           "eof": false,
           "bof": true,
           "cr": false,
-          "ref": "1e8ffe3a-8fb7-41ce-85f7-504396aec351",
-          "httpRequestId": "8a7ec261-3316-4885-b2ca-a1cad66e0119"
+          "ref": "a5cce7da-292d-41c0-b737-da4f1abf183f",
+          "httpRequestId": "2d4299c7-d556-4c09-81b4-f9d75a7eb315"
         },
         "item": {
-          "id": "456ad2e6-c9f6-411a-8775-2e7a09329756",
+          "id": "4af8b2ae-37a6-4952-9630-7e728c89ddb1",
           "name": "1. List All Characters with Pagination",
           "request": {
             "url": {
@@ -1100,7 +1100,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "c80e9f43-0443-4fc4-b07a-11c595f55a3e",
+                "id": "8617b066-5746-4115-8d97-a20035926560",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -1147,7 +1147,7 @@
                   "    pm.response.to.have.header('Content-Type');",
                   "});"
                 ],
-                "_lastExecutionId": "2444f505-0e3b-46af-8e70-a982fd7e8bdd"
+                "_lastExecutionId": "5532c427-5769-48db-86ad-1e9fa906d177"
               }
             }
           ]
@@ -1184,7 +1184,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "ee959a43-ba02-4850-b32d-f84438ed82a2",
+              "value": "1cfbf232-9fc9-4079-82e8-631c80009ff6",
               "system": true
             },
             {
@@ -1206,13 +1206,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "485021d4-f1e0-4b7e-af1e-3d36b9808399",
+          "id": "d261ebe6-ca19-4dd0-aafb-2e115f7c25bd",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 01 Mar 2026 07:50:23 GMT"
+              "value": "Sun, 01 Mar 2026 07:50:14 GMT"
             },
             {
               "key": "Content-Type",
@@ -1256,11 +1256,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=lfzQKsApm94UA1tb9rjNeGYpHwXedfrxP0puzR%2F4OaHfXj6te4GFQUwRVQ7B4h9xq54DqWXosfswOOZOGOCOL38cR1FcC2T6OyUwtSiDibbbNzU%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=el6MxRqZQn%2FAd7Fetyz2IS6rWxEXV%2FYLpo9ja4EsWWsqK7ckQK%2FysTjyIqcOgQs9WmJgBehxyC2zNZCKEqohYTWv%2B1B1ciSQvdmrQwE2k8CbFgM%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "840932"
+              "value": "840923"
             },
             {
               "key": "cf-cache-status",
@@ -1272,7 +1272,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9d569209fc422546-SJC"
+              "value": "9d5691d41a373354-SJC"
             },
             {
               "key": "alt-svc",
@@ -20781,10 +20781,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 94,
+          "responseTime": 91,
           "responseSize": 19496
         },
-        "id": "456ad2e6-c9f6-411a-8775-2e7a09329756",
+        "id": "4af8b2ae-37a6-4952-9630-7e728c89ddb1",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -20822,15 +20822,15 @@
       },
       {
         "cursor": {
-          "ref": "fac1a00f-f489-4880-952b-e866e0f7d880",
+          "ref": "2587d65d-eed3-427d-aefc-2e02f5226b91",
           "length": 15,
           "cycles": 1,
           "position": 1,
           "iteration": 0,
-          "httpRequestId": "391960cd-f0e8-4c1f-9cbb-659c7bc4568f"
+          "httpRequestId": "efd96ef0-4bc6-4c70-828c-d23627863d19"
         },
         "item": {
-          "id": "5966834d-1958-45e5-8d8a-9e0bc169fa79",
+          "id": "e0adf31d-b7ca-492b-a41f-296f3c63eb7b",
           "name": "2. Get Character by ID (Using Variable)",
           "request": {
             "url": {
@@ -20851,7 +20851,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "cb4d3751-7d5a-4136-a6fb-76f310553985",
+                "id": "0d9069cc-866e-452b-b399-4dd258117699",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -20886,7 +20886,7 @@
                   "    pm.expect(json.image).to.include('http');",
                   "});"
                 ],
-                "_lastExecutionId": "abd8b50e-b216-4ca6-b43a-208d83e85097"
+                "_lastExecutionId": "67b2fbe8-b29d-4991-ae7a-9e1486b78210"
               }
             }
           ]
@@ -20924,7 +20924,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "0dac7930-95eb-4d92-b791-23d33bb27bd2",
+              "value": "6786ce71-aab0-49f1-9d94-aeb1f58830ad",
               "system": true
             },
             {
@@ -20946,13 +20946,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "93cef73c-e2d9-4a25-9f8a-b49e55f6cd8e",
+          "id": "bf4878b0-87e7-49fb-8e76-75bf0295e2fd",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 01 Mar 2026 07:50:23 GMT"
+              "value": "Sun, 01 Mar 2026 07:50:14 GMT"
             },
             {
               "key": "Content-Type",
@@ -20996,11 +20996,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=MtFrnMeKsSWywMYjjdI4ruJNW6RjfzcM4%2FBVDOm7%2BIe5Qc31qNXFyEdIPaspdRrlT8zDhSQxPEG8fq%2BgHGIqQgOLztjX%2FmytZJvHmix8G7x1h94%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=2I96g2VFlUxckc6UqTr1rAgpx%2Fo94f17zKm8hT5%2BHxxs5yoDLkohUnIdrUYWNtwwSQxMqdY32OWVit%2F4GfhdvwFSy9kF2LT0zYKN6rQ9nD3nauQ%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "840939"
+              "value": "840930"
             },
             {
               "key": "cf-cache-status",
@@ -21012,7 +21012,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9d56920a6ced2546-SJC"
+              "value": "9d5691d48af63354-SJC"
             },
             {
               "key": "alt-svc",
@@ -23744,10 +23744,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 12,
+          "responseTime": 15,
           "responseSize": 2719
         },
-        "id": "5966834d-1958-45e5-8d8a-9e0bc169fa79",
+        "id": "e0adf31d-b7ca-492b-a41f-296f3c63eb7b",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -23781,15 +23781,15 @@
       },
       {
         "cursor": {
-          "ref": "14161a99-0524-4f3f-adea-c88ffd6e08c8",
+          "ref": "6e206299-dcf3-47f8-9477-b6ff17096f76",
           "length": 15,
           "cycles": 1,
           "position": 2,
           "iteration": 0,
-          "httpRequestId": "31eaa4aa-347d-4056-ae22-4fc703fb2bf4"
+          "httpRequestId": "62719033-ecf5-43ae-8cae-72cde05fd41e"
         },
         "item": {
-          "id": "48e51bbe-ec9b-4f43-9c00-e783f893a19e",
+          "id": "b16979d5-fee9-4ac0-8cf0-2aec8d4dd9d4",
           "name": "3. Filter Characters - Multiple Filters",
           "request": {
             "url": {
@@ -23818,7 +23818,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "51c50220-ef20-4380-93c2-7d5b8769ec09",
+                "id": "17ee95f0-313a-489d-b634-003dcce7b431",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -23853,7 +23853,7 @@
                   "    });",
                   "});"
                 ],
-                "_lastExecutionId": "f99815de-e143-48ef-89b6-f10c6db7d3c6"
+                "_lastExecutionId": "d18b1b47-80e4-4ae8-9cbd-be2c2d7a86a6"
               }
             }
           ]
@@ -23899,7 +23899,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "a4187f97-dedd-4d52-b3c8-b8f4abd71f79",
+              "value": "c38df46d-a741-43e2-b4e2-8799a595286c",
               "system": true
             },
             {
@@ -23921,13 +23921,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "687339b5-3be5-4dee-8ff8-247866ccdce6",
+          "id": "c57df23d-68a3-4bfe-bc2d-d4159ec09a4c",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 01 Mar 2026 07:50:23 GMT"
+              "value": "Sun, 01 Mar 2026 07:50:14 GMT"
             },
             {
               "key": "Content-Type",
@@ -23971,15 +23971,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=J9IoiW7kF1oC8uTU00YYMI4BV5AMNZ137Dp90LI24FqJP4gK%2BWGZ2xFjA94cul5%2BqSTodfB3x3I6VjGM0brR5DP1eq572%2BMjNTU9dIL0XeQSNGM%3D\"}]}"
-            },
-            {
-              "key": "Age",
-              "value": "8"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=vcaLus9PxJbYBv74sWhcXWwmTbrHdMHGiWAVN8FRqBFMGjOCE48raCqcwBPvaQ3eTkMQQlMOPLZ1folSxYsrZ44g%2FVtupJcpRhw7gqf1F%2FZBWI0%3D\"}]}"
             },
             {
               "key": "cf-cache-status",
-              "value": "HIT"
+              "value": "MISS"
             },
             {
               "key": "Content-Encoding",
@@ -23987,7 +23983,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9d56920aad582546-SJC"
+              "value": "9d5691d4cb853354-SJC"
             },
             {
               "key": "alt-svc",
@@ -35577,10 +35573,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 11,
+          "responseTime": 242,
           "responseSize": 11577
         },
-        "id": "48e51bbe-ec9b-4f43-9c00-e783f893a19e",
+        "id": "b16979d5-fee9-4ac0-8cf0-2aec8d4dd9d4",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -35614,15 +35610,15 @@
       },
       {
         "cursor": {
-          "ref": "fda5a24c-0e8d-465f-bb51-b22c56e0752b",
+          "ref": "adceafb1-09a8-4b25-a732-417f56210703",
           "length": 15,
           "cycles": 1,
           "position": 3,
           "iteration": 0,
-          "httpRequestId": "53a89887-ac6b-45d0-bc3f-de9e1cfd36b7"
+          "httpRequestId": "97794fb2-7ed8-4542-bf76-8b8133ec1ddf"
         },
         "item": {
-          "id": "ef1626ec-1fc4-4b84-b2cd-7f9d5147dab8",
+          "id": "a41add5f-2e05-4db2-b7c3-01ecbb6023d8",
           "name": "4. Pagination Test",
           "request": {
             "url": {
@@ -35647,7 +35643,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "863a40df-9df6-43c2-b9f1-5e990b7ba4d5",
+                "id": "517377cf-1be4-46c3-94e3-257aa902ce3a",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -35672,7 +35668,7 @@
                   "    pm.expect(ids.length).to.equal(uniqueIds.length);",
                   "});"
                 ],
-                "_lastExecutionId": "43c9d9a4-8c31-42f7-aae6-3403c7482315"
+                "_lastExecutionId": "b9d2de25-d835-4efd-8692-e62c69ccbc53"
               }
             }
           ]
@@ -35714,7 +35710,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "22cadd65-1405-4c50-937d-1b6a43852161",
+              "value": "369a8a20-0385-4f25-a822-1f263f3c1c9b",
               "system": true
             },
             {
@@ -35736,13 +35732,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "5cde6450-860c-40b4-8f02-63930d911fc3",
+          "id": "1d2661b5-e6fc-44ea-a89c-cfac9098b231",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 01 Mar 2026 07:50:23 GMT"
+              "value": "Sun, 01 Mar 2026 07:50:14 GMT"
             },
             {
               "key": "Content-Type",
@@ -35786,11 +35782,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=8mp%2F7E2iv0Uu0gZTBpfcXMmrxnKOKhmtGKGstNiEkkw0%2FIat8FfX%2BMqGQZj7ZGgdo4F9w2cVQAKBg%2B%2FmGF%2FWYrN22wvFUn1Ldl8XnZUuKMee%2BmA%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=1CH51He2BxlVU5QqM9K992n%2FsYc%2BXd29azhHVWZIpfUI%2BgQ%2BH9WkZfM9ryWvjxIuSjW%2BrpxZav%2BXqD8ySHyVRbD5qJtNPaA%2FsqygZlhQQgRSGGI%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "840780"
+              "value": "840771"
             },
             {
               "key": "cf-cache-status",
@@ -35802,7 +35798,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9d56920aedb92546-SJC"
+              "value": "9d5691d67e7d3354-SJC"
             },
             {
               "key": "alt-svc",
@@ -55311,10 +55307,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 11,
+          "responseTime": 10,
           "responseSize": 19496
         },
-        "id": "ef1626ec-1fc4-4b84-b2cd-7f9d5147dab8",
+        "id": "a41add5f-2e05-4db2-b7c3-01ecbb6023d8",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -55344,15 +55340,15 @@
       },
       {
         "cursor": {
-          "ref": "0a2d1659-72ad-42bd-885c-6614753e21d0",
+          "ref": "3b769da3-a57a-49d4-a628-1ab08c4e71e1",
           "length": 15,
           "cycles": 1,
           "position": 4,
           "iteration": 0,
-          "httpRequestId": "43e92cc1-251c-42cf-bd86-f4fb9b69e7da"
+          "httpRequestId": "8737395e-e02f-410e-a04e-ca0cddd77c62"
         },
         "item": {
-          "id": "c12c7f46-2854-4a46-adab-19f2a93702c7",
+          "id": "8c216582-4a82-4b69-94a4-9e25a12906ed",
           "name": "5. Get Multiple Characters",
           "request": {
             "url": {
@@ -55373,7 +55369,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "d041d254-a154-41ca-a0a3-fc53a9a51474",
+                "id": "d60c008d-49d3-4a23-be0d-970da90bafb3",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -55398,7 +55394,7 @@
                   "    pm.expect(json[2].id).to.equal(3);",
                   "});"
                 ],
-                "_lastExecutionId": "d99ebfb5-ea28-4450-a1cf-345860a0a6ac"
+                "_lastExecutionId": "08d98438-0142-4d0b-9205-fa6b3881f69b"
               }
             }
           ]
@@ -55436,7 +55432,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "532ab39b-fee2-43e3-aec0-76077c0c5844",
+              "value": "f8ad6757-bb59-40af-bc2b-accbbc127c32",
               "system": true
             },
             {
@@ -55458,13 +55454,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "24e2d4f9-e5e2-4df5-be55-79dd7be4cdf6",
+          "id": "562aae0f-9924-4738-a268-4d97b8a508a7",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 01 Mar 2026 07:50:23 GMT"
+              "value": "Sun, 01 Mar 2026 07:50:15 GMT"
             },
             {
               "key": "Content-Type",
@@ -55508,15 +55504,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=HUUq3GNw3rnpd5IHsHhQdQcrI9i1wXQcVY19dS26K%2FVz0UkUFU%2FUpZsCTI9%2BB9%2Fnzv%2B29QVVV4ADwhz6lYBKV%2BxqH3U%2FJJ4%2FMNs%2BSzAZuEO%2F66Y%3D\"}]}"
-            },
-            {
-              "key": "Age",
-              "value": "8"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=GX%2BsYse9tVifjrqaLpfxRamSntBnBlIRTzmrMKWRxU0W1FyMcprYBptokXWmDu1qMfNtAYMVPVGj1vFcr%2B4drqHV1kxqxQ2AvqxazY7cVgFvC5s%3D\"}]}"
             },
             {
               "key": "cf-cache-status",
-              "value": "HIT"
+              "value": "MISS"
             },
             {
               "key": "Content-Encoding",
@@ -55524,7 +55516,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9d56920b2e3a2546-SJC"
+              "value": "9d5691d6bef23354-SJC"
             },
             {
               "key": "alt-svc",
@@ -63282,10 +63274,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 11,
+          "responseTime": 251,
           "responseSize": 7745
         },
-        "id": "c12c7f46-2854-4a46-adab-19f2a93702c7",
+        "id": "8c216582-4a82-4b69-94a4-9e25a12906ed",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -63315,15 +63307,15 @@
       },
       {
         "cursor": {
-          "ref": "5cda998d-3ec3-4931-a617-9f636d100f3c",
+          "ref": "f976a0f8-41f4-41dc-8568-b698fb61665c",
           "length": 15,
           "cycles": 1,
           "position": 5,
           "iteration": 0,
-          "httpRequestId": "038c9ab0-9416-41e0-8b1d-04ea9e3a1493"
+          "httpRequestId": "c3539201-1509-46b5-b1bd-359607115ec1"
         },
         "item": {
-          "id": "6c42e515-8744-4eee-aed6-f53f7422d9b8",
+          "id": "3439b8cf-6861-4214-810d-0badc1a91a75",
           "name": "1. List All Locations",
           "request": {
             "url": {
@@ -63343,7 +63335,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "361e020b-d267-4a7a-9d02-85f2800174ae",
+                "id": "53ebaa2d-0866-446b-ad9c-b0d25c6e0a03",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -63374,7 +63366,7 @@
                   "    pm.environment.set('firstLocationName', json.results[0].name);",
                   "});"
                 ],
-                "_lastExecutionId": "00e13a58-a0bc-4fdb-a215-7dd10eb3e724"
+                "_lastExecutionId": "434d42e0-47b7-44e7-909b-29ddeeae3147"
               }
             }
           ]
@@ -63411,7 +63403,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "325e8819-8e24-4b22-8f00-966152114502",
+              "value": "9af3f77b-32fd-4d56-a793-3c44f98dd1a2",
               "system": true
             },
             {
@@ -63433,13 +63425,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "d3b54337-df5a-4f7f-9dba-b00b2cfde240",
+          "id": "ebcdd7f0-ad24-4b20-bebb-0c1128270040",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 01 Mar 2026 07:50:23 GMT"
+              "value": "Sun, 01 Mar 2026 07:50:15 GMT"
             },
             {
               "key": "Content-Type",
@@ -63483,11 +63475,7 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=vdjbgLLI8Bup5yDZjdZF7wlf29xuDg6TGn3eqsZSKg0Ebju82IhrssT%2BKKPfYHuhoTy9W7S0XdmiqdG23QJxalKX38VZZ0QlVSHF1UWaViCZBJ0%3D\"}]}"
-            },
-            {
-              "key": "Age",
-              "value": "840929"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=kv6x04feNBw7ayF4CFALJJGIftda7W2cb2qKoacgaWMcb5nfSNAcMXsj%2B3rAPuJ8AJycWuVxqtHY0R2fEmtuHkamCK1q8uCuP3cWQ23NJiPsOAg%3D\"}]}"
             },
             {
               "key": "cf-cache-status",
@@ -63499,7 +63487,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9d56920b6e8d2546-SJC"
+              "value": "9d5691d879f73354-SJC"
             },
             {
               "key": "alt-svc",
@@ -90766,10 +90754,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 12,
+          "responseTime": 168,
           "responseSize": 27254
         },
-        "id": "6c42e515-8744-4eee-aed6-f53f7422d9b8",
+        "id": "3439b8cf-6861-4214-810d-0badc1a91a75",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -90799,15 +90787,15 @@
       },
       {
         "cursor": {
-          "ref": "f20def60-39ac-47a8-a58e-691ecde70a82",
+          "ref": "9b309054-26bb-495b-8e62-8435cf420203",
           "length": 15,
           "cycles": 1,
           "position": 6,
           "iteration": 0,
-          "httpRequestId": "062ba298-ba7f-424a-95fc-a33093142584"
+          "httpRequestId": "a059e404-178f-49f8-adc1-fe538debfdde"
         },
         "item": {
-          "id": "6143f206-9e7e-4160-aa03-e842493d44aa",
+          "id": "af074f01-df09-497c-9731-1f59e8d1bc84",
           "name": "2. Get Location by ID",
           "request": {
             "url": {
@@ -90828,7 +90816,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "bfd55b2a-cf08-401b-88d5-643c0291f370",
+                "id": "67a25774-8637-44d3-bf10-a3c80de96be7",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -90852,7 +90840,7 @@
                   "    pm.expect(validTypes).to.include(json.type);",
                   "});"
                 ],
-                "_lastExecutionId": "d6b65e22-8ebd-43e8-890f-c3f4abfbd76f"
+                "_lastExecutionId": "a58c8f53-7c9b-4937-95f1-ad2edc603ec5"
               }
             }
           ]
@@ -90890,7 +90878,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "c4f8953a-4b5e-4815-8bfa-15a5bb0ba682",
+              "value": "62b2a6a1-334d-4aaa-82c7-ad135d06ee6e",
               "system": true
             },
             {
@@ -90912,13 +90900,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "c11fc599-2deb-4629-96cf-f54f6cc002bb",
+          "id": "08fb700a-957f-47a5-b734-cd28de4f1928",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 01 Mar 2026 07:50:23 GMT"
+              "value": "Sun, 01 Mar 2026 07:50:15 GMT"
             },
             {
               "key": "Content-Type",
@@ -90962,11 +90950,7 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=pZaVyaEyXQFBKMzy%2Fc2Mq55tQQbzB2fDp27iSTpWYZ4HFfVLB4FpKSHMcGRTgNswmiW1DnWYmkNLpqYkdhcHznN9mkedOIT9NzuvWw5U0RyzaQk%3D\"}]}"
-            },
-            {
-              "key": "Age",
-              "value": "840906"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=TFMiuiU18SAmUNdL73nEP%2Bm%2F1CrMQGuQnF9FIHKp1lFLwYAnUT%2B3PjvtDntFrlFGcqgqTUhULOUAR6p2xx7l7oiZ7NkR%2Bk9hDAPl1i42TMqOihQ%3D\"}]}"
             },
             {
               "key": "cf-cache-status",
@@ -90978,7 +90962,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9d56920b9f202546-SJC"
+              "value": "9d5691d9ac373354-SJC"
             },
             {
               "key": "alt-svc",
@@ -92460,10 +92444,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 11,
+          "responseTime": 166,
           "responseSize": 1469
         },
-        "id": "6143f206-9e7e-4160-aa03-e842493d44aa",
+        "id": "af074f01-df09-497c-9731-1f59e8d1bc84",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -92493,15 +92477,15 @@
       },
       {
         "cursor": {
-          "ref": "07381c7a-6e78-459e-816f-d34ca9664284",
+          "ref": "3436c9ac-7809-47ad-b9c6-b46d5dcabab3",
           "length": 15,
           "cycles": 1,
           "position": 7,
           "iteration": 0,
-          "httpRequestId": "d637c6a1-a3a2-49e9-814a-d5ee230373be"
+          "httpRequestId": "db9b545a-2f6a-4453-9595-e5997329bd80"
         },
         "item": {
-          "id": "d50923a8-280b-4ecf-8c54-71704934b81e",
+          "id": "25a1b210-f70a-4576-b53c-ced399980af6",
           "name": "3. Filter Locations",
           "request": {
             "url": {
@@ -92530,7 +92514,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "91b34484-de4b-4b20-8e09-0cd211bd4a9b",
+                "id": "b6f31c83-0557-47e4-99d2-880f679ceea6",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -92556,7 +92540,7 @@
                   "    pm.expect(allC137).to.be.true;",
                   "});"
                 ],
-                "_lastExecutionId": "5a33f0ef-746f-4a2c-afe1-a11089ca885d"
+                "_lastExecutionId": "a9ef938f-36a2-46f7-8e59-5631b7200ddf"
               }
             }
           ]
@@ -92602,7 +92586,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "8d2b2e9b-1687-451a-bd6d-802448856a6c",
+              "value": "4dd43fed-1ed9-488b-ac1f-a95c80c9bcad",
               "system": true
             },
             {
@@ -92624,13 +92608,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "0620f82b-9bae-4b63-8b25-9f2f765ad231",
+          "id": "8ec92bf4-16b4-470e-b83e-b5e274a08e5e",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 01 Mar 2026 07:50:23 GMT"
+              "value": "Sun, 01 Mar 2026 07:50:15 GMT"
             },
             {
               "key": "Content-Type",
@@ -92674,15 +92658,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=NX8oKXKwRHYncySzjd6Rkbe04SXrAmOKirdDvDXGGMg91P8cFwPLIIwbhrEAzTzojcCz12Fwhdhm8%2F4MwDIFzqOnPRUo5YH1FLhmqc6z6YOWe2U%3D\"}]}"
-            },
-            {
-              "key": "Age",
-              "value": "7"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=roaqitCHuvu%2FmLJ%2BjsTI7LomcR%2FFyAud1OyDJ05gYRbhpnTRUjbsUbxpH1GC1bP3eM5M82VOn75sOjCZ8vDPIdePcBe66zGJ1p6TFKb98YWFmv0%3D\"}]}"
             },
             {
               "key": "cf-cache-status",
-              "value": "HIT"
+              "value": "MISS"
             },
             {
               "key": "Content-Encoding",
@@ -92690,7 +92670,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9d56920bdf802546-SJC"
+              "value": "9d5691dade1c3354-SJC"
             },
             {
               "key": "alt-svc",
@@ -94239,10 +94219,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 11,
+          "responseTime": 207,
           "responseSize": 1536
         },
-        "id": "d50923a8-280b-4ecf-8c54-71704934b81e",
+        "id": "25a1b210-f70a-4576-b53c-ced399980af6",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -94272,15 +94252,15 @@
       },
       {
         "cursor": {
-          "ref": "323633d1-ce04-4b73-958e-fa4e5c320651",
+          "ref": "a0b3eaaf-d79e-446e-83bb-f45151f7af87",
           "length": 15,
           "cycles": 1,
           "position": 8,
           "iteration": 0,
-          "httpRequestId": "82e94f7b-f87a-4910-9185-1d05bce6f90e"
+          "httpRequestId": "98731b91-ce6b-4657-a94c-eb23d7348c25"
         },
         "item": {
-          "id": "1c29219d-5154-4290-b7d2-dabac451c652",
+          "id": "b82ea76d-6066-46d4-902b-ce9bf09d6a67",
           "name": "1. List All Episodes",
           "request": {
             "url": {
@@ -94300,7 +94280,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "9543ca4d-370f-49de-bfd5-f50d1642fc59",
+                "id": "d45c17f0-52b7-4990-a010-bcd2c4e6b703",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -94337,7 +94317,7 @@
                   "    pm.environment.set('firstEpisodeCode', json.results[0].episode);",
                   "});"
                 ],
-                "_lastExecutionId": "5cbcef43-23e7-4974-8e8e-0a58424fe81b"
+                "_lastExecutionId": "cf738032-a55a-4401-a5d2-40968d8c28f5"
               }
             }
           ]
@@ -94374,7 +94354,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "89b2bc8e-be6b-4cce-9ec9-6630e538aa53",
+              "value": "2ba73b0e-d177-474d-ad7b-0759b1d5ee99",
               "system": true
             },
             {
@@ -94396,13 +94376,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "a7e88a86-127e-48ee-8737-64b72abd6ce6",
+          "id": "ca4ce992-d06b-4fd4-9516-7481e468104d",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 01 Mar 2026 07:50:23 GMT"
+              "value": "Sun, 01 Mar 2026 07:50:15 GMT"
             },
             {
               "key": "Content-Type",
@@ -94446,11 +94426,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=0VIczmE3p6T0utlBRbX8kHVTUjJV8OD0WWmW74L7Z1kYN0sWR%2FWUYy95tP%2B2%2BZjaq1SCU2e7HSM2YH3E9oOXLmXfjdMCw%2FdMrLVkOxfQYK8DnOM%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=gH46Fj99rawX0GJsfant%2FxTt8hVT8dGZtHT9wcIkYOPL1zZt8rpWXBTie9xKpr2FRZtk2hCRhEsQG%2FBZt9byt1GyNY9i3VC7W%2BkpdZZg1viRWmE%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "515358"
+              "value": "515350"
             },
             {
               "key": "cf-cache-status",
@@ -94462,7 +94442,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9d56920c0fd72546-SJC"
+              "value": "9d5691dc38683354-SJC"
             },
             {
               "key": "alt-svc",
@@ -122618,10 +122598,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 11,
+          "responseTime": 13,
           "responseSize": 28143
         },
-        "id": "1c29219d-5154-4290-b7d2-dabac451c652",
+        "id": "b82ea76d-6066-46d4-902b-ce9bf09d6a67",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -122655,15 +122635,15 @@
       },
       {
         "cursor": {
-          "ref": "557eee74-e561-456e-974a-93aab1eec1ab",
+          "ref": "00d86547-3b24-48b8-ad3f-5dc046819314",
           "length": 15,
           "cycles": 1,
           "position": 9,
           "iteration": 0,
-          "httpRequestId": "3896b634-c7ff-452b-9866-917185799ecb"
+          "httpRequestId": "4984a142-c178-4803-be4d-ce3bca88068c"
         },
         "item": {
-          "id": "cd97c528-c6c5-43de-b5c1-a2107c7f345f",
+          "id": "b507d405-0ed3-49bb-9087-e947052189f6",
           "name": "2. Get Episode by ID",
           "request": {
             "url": {
@@ -122684,7 +122664,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "a0dd0f47-25c4-4f5e-b449-889d4ea3d434",
+                "id": "69cf0d34-65b4-4190-9f7f-9ead9b17155c",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -122709,7 +122689,7 @@
                   "    pm.expect(date.toString()).to.not.equal('Invalid Date');",
                   "});"
                 ],
-                "_lastExecutionId": "6eb663d0-8bb0-4a80-9bfb-a24d162dc201"
+                "_lastExecutionId": "5e101666-1aa1-4176-a487-63c05198b7b8"
               }
             }
           ]
@@ -122747,7 +122727,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "1ca88fd3-64fd-48e3-ab37-2b3e91426974",
+              "value": "bcc39af8-1eed-409e-b83d-7cd1be533526",
               "system": true
             },
             {
@@ -122769,13 +122749,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "f7c3e60e-6183-4b22-a894-d2c6617aafe5",
+          "id": "d02363dd-d875-4237-8928-ea7e8e466f58",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 01 Mar 2026 07:50:23 GMT"
+              "value": "Sun, 01 Mar 2026 07:50:15 GMT"
             },
             {
               "key": "Content-Type",
@@ -122819,11 +122799,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=HZhpHVgMxtOh8a1lmIGqqufzMbIKNGkCYKbGCKTRk37wjIMEv01A7CELZpT12yy%2FBZKyE%2F3whBBfm8F86XZH2oHoH870%2BmfIShOhW8Zcq18TbGc%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=mgtTV7aWTNRgsKD7zDQ2nQwyiPWMdX%2BHFYrkPqoCCq%2BUstin8gO0BwnDaAZzVrm7Rg2YZF1xr4j3WP6DVTaEXNLjudRsx572Fl96RKH%2BkU9LYso%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "840893"
+              "value": "840885"
             },
             {
               "key": "cf-cache-status",
@@ -122835,7 +122815,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9d56920c383c2546-SJC"
+              "value": "9d5691dc78c53354-SJC"
             },
             {
               "key": "alt-svc",
@@ -123929,7 +123909,7 @@
           "responseTime": 10,
           "responseSize": 1078
         },
-        "id": "cd97c528-c6c5-43de-b5c1-a2107c7f345f",
+        "id": "b507d405-0ed3-49bb-9087-e947052189f6",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -123959,15 +123939,15 @@
       },
       {
         "cursor": {
-          "ref": "3df8c06d-4b16-4a84-94eb-7f2b322b4dad",
+          "ref": "ffdffbf3-0bff-4688-87cc-f810078a6796",
           "length": 15,
           "cycles": 1,
           "position": 10,
           "iteration": 0,
-          "httpRequestId": "3336962d-fc18-4c59-a228-78d4fd5d47e3"
+          "httpRequestId": "bb74d1c3-7340-43e5-b325-0e773f96d4e8"
         },
         "item": {
-          "id": "6059cedc-dfe4-4845-a6fa-e37516eeea52",
+          "id": "b0a2c8b1-fba4-4f9f-938f-615c9b0857a2",
           "name": "3. Filter Episodes by Code",
           "request": {
             "url": {
@@ -123992,7 +123972,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "01e76c91-551b-4548-866b-d94712190a80",
+                "id": "979b0f51-06c8-42c0-96f8-9e40417bf5b1",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -124010,7 +123990,7 @@
                   "    pm.expect(json.results.length).to.be.greaterThan(0);",
                   "});"
                 ],
-                "_lastExecutionId": "61f87c08-b4f9-41cd-b37c-ed064542ed8c"
+                "_lastExecutionId": "eebd0a54-d3bd-4881-ab31-0b2f42468711"
               }
             }
           ]
@@ -124052,7 +124032,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "53962869-3ff5-41cd-b1d5-45948fca4555",
+              "value": "27a30470-ed18-4e05-9862-290ba3f54652",
               "system": true
             },
             {
@@ -124074,13 +124054,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "1fc57a76-7726-49f9-8703-0032ad3b50d4",
+          "id": "8fe9634f-0d8b-49d1-9874-a5dd3b5fa584",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 01 Mar 2026 07:50:23 GMT"
+              "value": "Sun, 01 Mar 2026 07:50:16 GMT"
             },
             {
               "key": "Content-Type",
@@ -124124,15 +124104,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=gqtErjbXsIYQtZQ6vRmLUZqvCXCCm7YjYdl1D1SH3ruhopA76TqUrt6Ec2x45dz1g5la3zzhEbfma7orRthxTu63mLe2t2USq9j6LengeQnSEZs%3D\"}]}"
-            },
-            {
-              "key": "Age",
-              "value": "7"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Rg%2FPVjeBsuCb%2BFP6m7OtGRPsIBzvI2unN%2BiUcml7PjeUB6iiuhc4rw0rFHYnR3CaoEzdaHEHC70qVXzpSQ9RjRe%2FQX8R%2BufBCuToRru4AD97OvI%3D\"}]}"
             },
             {
               "key": "cf-cache-status",
-              "value": "HIT"
+              "value": "MISS"
             },
             {
               "key": "Content-Encoding",
@@ -124140,7 +124116,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9d56920c687b2546-SJC"
+              "value": "9d5691dca91c3354-SJC"
             },
             {
               "key": "alt-svc",
@@ -125298,10 +125274,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 9,
+          "responseTime": 549,
           "responseSize": 1145
         },
-        "id": "6059cedc-dfe4-4845-a6fa-e37516eeea52",
+        "id": "b0a2c8b1-fba4-4f9f-938f-615c9b0857a2",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -125327,15 +125303,15 @@
       },
       {
         "cursor": {
-          "ref": "ad7241f2-5239-408b-8444-e61e4ed08002",
+          "ref": "b0a8b14b-5860-460b-a472-733c09a4c610",
           "length": 15,
           "cycles": 1,
           "position": 11,
           "iteration": 0,
-          "httpRequestId": "01490e31-bf1a-491c-9bcc-55358280aa8f"
+          "httpRequestId": "dc899718-afe6-49d0-a08b-5da363f6da55"
         },
         "item": {
-          "id": "940f87b6-38eb-42d7-91f9-7115bb63982f",
+          "id": "619c4a8b-0fd8-4d89-be9e-96e7d7c51115",
           "name": "4. Get Multiple Episodes",
           "request": {
             "url": {
@@ -125356,7 +125332,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "0a897d86-2a98-448d-928b-fbe2bc82bdb5",
+                "id": "eaa3c60c-6b2b-4956-b1c8-7946ff2101f2",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 200 OK', () => pm.response.to.have.status(200));",
@@ -125381,7 +125357,7 @@
                   "    }",
                   "});"
                 ],
-                "_lastExecutionId": "414c1a81-e329-4da1-b222-4e2bcd5b3d1c"
+                "_lastExecutionId": "c915d7e2-fd49-4a1a-8057-af574d8b4dd6"
               }
             }
           ]
@@ -125419,7 +125395,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "7551b69a-c5e9-490a-9a42-e93f700ccc4a",
+              "value": "0ae7ac07-7dec-4209-be8f-78bbd64c3eae",
               "system": true
             },
             {
@@ -125441,13 +125417,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "5eff2ce9-aaa0-4b53-9d00-1318d2735029",
+          "id": "a4b422e3-eb03-43ef-a088-96e082f5798a",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 01 Mar 2026 07:50:23 GMT"
+              "value": "Sun, 01 Mar 2026 07:50:16 GMT"
             },
             {
               "key": "Content-Type",
@@ -125491,11 +125467,7 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=8bAMjJNWB0qzPPgd5ScQD8kmIFlyTFTZ4I17o9JAYjjBSPZr0aUuBtiHfjh4K8Ppm%2BrRXKNQOpiA2WuVHvKVtM0iCcoRUnt%2BokyazPXwsiZAwrM%3D\"}]}"
-            },
-            {
-              "key": "Age",
-              "value": "260607"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=tNM080XhIDRnnFyHQ7J5gIdZYPDX3t0H2fMZ%2F9r0NEcB1QZTslbP3xsLqFyIZItYaOgmF94Y4jNVLs00TfmQuM%2FBPlZA%2Fp47BGdFl7bfvYQkxS0%3D\"}]}"
             },
             {
               "key": "cf-cache-status",
@@ -125507,7 +125479,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9d56920c98be2546-SJC"
+              "value": "9d5691e03e0e3354-SJC"
             },
             {
               "key": "alt-svc",
@@ -130963,10 +130935,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 9,
+          "responseTime": 166,
           "responseSize": 5443
         },
-        "id": "940f87b6-38eb-42d7-91f9-7115bb63982f",
+        "id": "619c4a8b-0fd8-4d89-be9e-96e7d7c51115",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -130996,15 +130968,15 @@
       },
       {
         "cursor": {
-          "ref": "ac5e4b6e-e556-4688-8745-0082aa4221c7",
+          "ref": "0e0968ab-d451-4f38-8df7-c7e56bb06fc6",
           "length": 15,
           "cycles": 1,
           "position": 12,
           "iteration": 0,
-          "httpRequestId": "72521995-f0bb-42db-88e9-b250f01d5897"
+          "httpRequestId": "eacd64c5-9ffb-40ac-8872-7dee07fbcc71"
         },
         "item": {
-          "id": "686d1b92-0788-4436-a74f-2178f3aa21fb",
+          "id": "486730ad-d687-44a8-a5f6-6b36d3fa9b02",
           "name": "1. Character Not Found (404)",
           "request": {
             "url": {
@@ -131025,7 +130997,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "bb24be38-380b-4711-a11a-caa912dab588",
+                "id": "99632a95-50be-4ec0-ae38-ebb5ce82a6b1",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 404 Not Found', () => pm.response.to.have.status(404));",
@@ -131048,7 +131020,7 @@
                   "    pm.expect(json.error.length).to.be.greaterThan(0);",
                   "});"
                 ],
-                "_lastExecutionId": "df1930a0-f78e-4a77-90a9-c93f7ddc292a"
+                "_lastExecutionId": "053cfaf9-07d1-462f-8fb4-51712af32d19"
               }
             }
           ]
@@ -131086,7 +131058,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "392be0cd-d175-42e2-8859-2ad42d60c5f3",
+              "value": "67f46fb5-948c-45b4-bf88-0279b13687bc",
               "system": true
             },
             {
@@ -131108,13 +131080,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "0fb62460-b064-461a-8519-404b3c1df7fa",
+          "id": "b518b42f-dc2a-4964-83b0-7f0dc8ffb029",
           "status": "Not Found",
           "code": 404,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 01 Mar 2026 07:50:23 GMT"
+              "value": "Sun, 01 Mar 2026 07:50:16 GMT"
             },
             {
               "key": "Content-Type",
@@ -131157,16 +131129,12 @@
               "value": "public, max-age=7776000, immutable"
             },
             {
-              "key": "Age",
-              "value": "6"
-            },
-            {
               "key": "cf-cache-status",
-              "value": "HIT"
+              "value": "MISS"
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=7mlaJce%2FvDrqCFOLmeKtna7Rk4HEUYhf7UImlELkii%2Fwt8rnzxxEfIFsJiF42IrPH8x3TUJfpxOX%2B4lstyjcaVNaO65eb0qxPJXC6dnr52AGWKE%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=c0%2BNGkUa75OUjX7Lmii0oTMAlzdvqMH4pcyvUkJx0vv6DdxeM%2BmYHGpWQwmI7%2F8TTpIl%2BSPO2LTjLnfYzvbfzAU5ybGk%2BUoeyTEwyLjyLLtXCU0%3D\"}]}"
             },
             {
               "key": "Content-Encoding",
@@ -131174,7 +131142,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9d56920cc8f92546-SJC"
+              "value": "9d5691e158133354-SJC"
             },
             {
               "key": "alt-svc",
@@ -131218,10 +131186,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 9,
+          "responseTime": 206,
           "responseSize": 31
         },
-        "id": "686d1b92-0788-4436-a74f-2178f3aa21fb",
+        "id": "486730ad-d687-44a8-a5f6-6b36d3fa9b02",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -131251,15 +131219,15 @@
       },
       {
         "cursor": {
-          "ref": "87c6ea2c-e42d-41e7-b612-484b175be27b",
+          "ref": "f7d1a6da-d03a-4afa-803c-9a212c188e27",
           "length": 15,
           "cycles": 1,
           "position": 13,
           "iteration": 0,
-          "httpRequestId": "809957a6-beb8-49af-8c80-08b982ec0bfd"
+          "httpRequestId": "665f0552-eff3-483e-9227-8d7a77496a8f"
         },
         "item": {
-          "id": "774a37b4-aae9-470d-ab99-7bbe7cd96522",
+          "id": "a054bead-1ad3-44f5-ae21-64fbf4be38dd",
           "name": "2. Invalid Endpoint (404)",
           "request": {
             "url": {
@@ -131280,7 +131248,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "9e8e88e4-5491-4a24-8ae9-f2ad2689c060",
+                "id": "02be77aa-554e-43dc-b99a-121ce295eb42",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Status 404 Not Found', () => pm.response.to.have.status(404));",
@@ -131291,7 +131259,7 @@
                   "    pm.expect(json).to.have.property('error');",
                   "});"
                 ],
-                "_lastExecutionId": "67e38ce6-232f-4e05-a387-15277b3cfde5"
+                "_lastExecutionId": "86cbb6fa-08a5-4d9a-aaca-129c0f1ac202"
               }
             }
           ]
@@ -131329,7 +131297,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "3ad3f8b3-3e19-4dbe-ac47-ad012eb807e0",
+              "value": "9c95193b-ddac-46e6-aa9a-de36c9de9526",
               "system": true
             },
             {
@@ -131351,13 +131319,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "02c932cd-791e-475d-a1ad-575d149fafc7",
+          "id": "0464fd72-63d7-4e65-9af0-e75e8fa0e5c6",
           "status": "Not Found",
           "code": 404,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 01 Mar 2026 07:50:23 GMT"
+              "value": "Sun, 01 Mar 2026 07:50:16 GMT"
             },
             {
               "key": "Content-Type",
@@ -131400,16 +131368,12 @@
               "value": "public, max-age=7776000, immutable"
             },
             {
-              "key": "Age",
-              "value": "6"
-            },
-            {
               "key": "cf-cache-status",
-              "value": "HIT"
+              "value": "MISS"
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=5n8wZsaCR9lKOQ6s2rd6GYNXaYXeRagfzqfqtnurOAyOwog51RgCgjRMaANtYH0iaas01xCdGOWjQiC92B4ADAig9Zs9%2FZDNir2xt7NzUU82%2FBs%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=1RHovrj%2BZ8nmD8vl8WesqQ%2Fod8AUoziXrRUjJebqpFOJUVoOTu50eDUS1k0HGd1mRAx9NYaQ4mvQ%2FITb73CSzQpslMYbcaZv6RUTGm1WmChXPEM%3D\"}]}"
             },
             {
               "key": "Content-Encoding",
@@ -131417,7 +131381,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9d56920cf9342546-SJC"
+              "value": "9d5691e2ca2f3354-SJC"
             },
             {
               "key": "alt-svc",
@@ -131464,10 +131428,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 10,
+          "responseTime": 190,
           "responseSize": 34
         },
-        "id": "774a37b4-aae9-470d-ab99-7bbe7cd96522",
+        "id": "a054bead-1ad3-44f5-ae21-64fbf4be38dd",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
@@ -131489,15 +131453,15 @@
       },
       {
         "cursor": {
-          "ref": "ec9118dd-3bc3-408e-b025-6b2252a15a62",
+          "ref": "aced24ef-c431-4885-b77e-fd01d995d3ff",
           "length": 15,
           "cycles": 1,
           "position": 14,
           "iteration": 0,
-          "httpRequestId": "a60a95a6-b229-42bb-bc02-ee2c215bebb9"
+          "httpRequestId": "43abc962-90b4-4a34-8861-8f78229a5c98"
         },
         "item": {
-          "id": "123443a4-5a78-4c00-9c91-75fff1da40a6",
+          "id": "bc672944-5085-4ea9-bc8b-15ddba75f88b",
           "name": "Response Time Check",
           "request": {
             "url": {
@@ -131518,7 +131482,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "9aa67744-d71b-4a17-ac54-6e2e5682bd5d",
+                "id": "58c67fe1-c6e8-4ad7-b5fe-c1e0727fd65a",
                 "type": "text/javascript",
                 "exec": [
                   "pm.test('Response time < 500ms', () => {",
@@ -131529,7 +131493,7 @@
                   "    pm.expect(pm.response.responseTime).to.be.below(1000);",
                   "});"
                 ],
-                "_lastExecutionId": "f3f1f99e-17d4-4116-bba5-e4af1e0b8659"
+                "_lastExecutionId": "f1336325-3d79-48ef-aa63-804ef797bd52"
               }
             }
           ]
@@ -131567,7 +131531,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "e79df19a-ad61-42f0-ac53-b95e60e2d554",
+              "value": "f915b10e-1cb5-4d9a-909a-c4bb7e64824d",
               "system": true
             },
             {
@@ -131589,13 +131553,13 @@
           "method": "GET"
         },
         "response": {
-          "id": "23728caf-0d4f-42e0-af08-a971586e645e",
+          "id": "11017ad7-474e-4bb3-8955-68b87b7e4292",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Date",
-              "value": "Sun, 01 Mar 2026 07:50:23 GMT"
+              "value": "Sun, 01 Mar 2026 07:50:16 GMT"
             },
             {
               "key": "Content-Type",
@@ -131639,11 +131603,11 @@
             },
             {
               "key": "Report-To",
-              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=LYdOn6viiBL6NfLfVNdbp467ZoXd%2FXKRZCKtW2zqk1HpGltPQCydSIirdIzXijSLvBL4qYyhjbbesDvHT1zbLJ4ypkR5225mSCbM%2B4iakl8SYA8%3D\"}]}"
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=oWpXmnx6qb%2BhQyPgCU7%2BpIk9MJUI0eBNeluwf0g%2FG7uRotcHEelniqH%2FPpLjJHXb72CDstWZ4HVSEfG9DijsI3tQH4IpoRGl7hp0W0kLN9hOawU%3D\"}]}"
             },
             {
               "key": "Age",
-              "value": "840939"
+              "value": "840933"
             },
             {
               "key": "cf-cache-status",
@@ -131655,7 +131619,7 @@
             },
             {
               "key": "CF-RAY",
-              "value": "9d56920d19892546-SJC"
+              "value": "9d5691e41c563354-SJC"
             },
             {
               "key": "alt-svc",
@@ -134387,10 +134351,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 10,
+          "responseTime": 9,
           "responseSize": 2719
         },
-        "id": "123443a4-5a78-4c00-9c91-75fff1da40a6",
+        "id": "bc672944-5085-4ea9-bc8b-15ddba75f88b",
         "assertions": [
           {
             "assertion": "Global: Response time < 3s",
